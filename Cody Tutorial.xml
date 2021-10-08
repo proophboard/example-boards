@@ -1,0 +1,38 @@
+<mxGraphModel dx="903.17" dy="298.46" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
+  <root>
+    <mxCell id="e975feae-1579-4c09-98d0-98cbf2108aec"/>
+    <mxCell id="7fe80d19-d317-4e9d-8296-96c598786d78" parent="e975feae-1579-4c09-98d0-98cbf2108aec"/>
+    <mxCell id="e8nngLQ6dTDsj3DxZbMUn3" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;Hi, nice that you made it to the Cody tutorial!&lt;/b&gt;&lt;/font&gt;" style="freeText;fillColor=#FFE6CC;" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+      <mxGeometry x="-352" y="-224" width="688" height="100" as="geometry"/>
+    </mxCell>
+    <icon label="" type="icon" id="dR8Xcp8Bc7BxxpvmddGMC1">
+      <mxCell style="icon;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 576 512&quot;&gt;&lt;path d=&quot;M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z&quot;/&gt;&lt;/svg&gt;;" vertex="1" parent="e8nngLQ6dTDsj3DxZbMUn3">
+        <mxGeometry x="-16" y="34" width="98.28571428571428" height="32" as="geometry"/>
+      </mxCell>
+    </icon>
+    <icon label="" type="icon" id="sdGazafksgueqgr4SmogoS">
+      <mxCell style="icon;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 576 512&quot;&gt;&lt;path d=&quot;M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z&quot;/&gt;&lt;/svg&gt;;" vertex="1" parent="e8nngLQ6dTDsj3DxZbMUn3">
+        <mxGeometry x="605.5581113801452" y="33.91525423728814" width="98.28571428571428" height="32" as="geometry"/>
+      </mxCell>
+    </icon>
+    <mxCell id="bM4YeSmRGpnj9FPCWwgrbB" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;To get started check out the Exercises at the prooph board wiki&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;&quot;&gt;(Y&lt;/font&gt;&lt;font style=&quot;&quot;&gt;ou can use this Cody Tutorial Board, just skip the step that asks you to create a new board)&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;" style="freeText;fillColor=#CCFFFF;" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+      <mxGeometry x="-352" y="-64" width="688" height="100" as="geometry"/>
+    </mxCell>
+    <icon label="" type="icon" id="2UJ667QBfoissWP1NQiSiZ">
+      <mxCell style="icon;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-143.6-28.9L288 302.6V120c0-13.3-10.7-24-24-24h-16c-13.3 0-24 10.7-24 24v182.6l-72.4-75.5c-9.3-9.7-24.8-9.9-34.3-.4l-10.9 11c-9.4 9.4-9.4 24.6 0 33.9L239 404.3c9.4 9.4 24.6 9.4 33.9 0l132.7-132.7c9.4-9.4 9.4-24.6 0-33.9l-10.9-11c-9.5-9.5-25-9.3-34.3.4z&quot;/&gt;&lt;/svg&gt;;" vertex="1" parent="bM4YeSmRGpnj9FPCWwgrbB">
+        <mxGeometry x="608" y="34" width="96" height="32" as="geometry"/>
+      </mxCell>
+    </icon>
+    <icon label="" type="icon" id="b4hTqeUb9Resec8X4RefPL">
+      <mxCell style="icon;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-143.6-28.9L288 302.6V120c0-13.3-10.7-24-24-24h-16c-13.3 0-24 10.7-24 24v182.6l-72.4-75.5c-9.3-9.7-24.8-9.9-34.3-.4l-10.9 11c-9.4 9.4-9.4 24.6 0 33.9L239 404.3c9.4 9.4 24.6 9.4 33.9 0l132.7-132.7c9.4-9.4 9.4-24.6 0-33.9l-10.9-11c-9.5-9.5-25-9.3-34.3.4z&quot;/&gt;&lt;/svg&gt;;" vertex="1" parent="bM4YeSmRGpnj9FPCWwgrbB">
+        <mxGeometry x="-16.152542372881385" y="33.91525423728814" width="96" height="32" as="geometry"/>
+      </mxCell>
+    </icon>
+    <mxCell id="mtSD4yek1iowydPLARN4Lf" value="&lt;a href=&quot;https://wiki.prooph-board.com/Node.js-Cody-Tutorial-Quick-Start&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;NodeJS Cody Tutorial&lt;/font&gt;&lt;/a&gt;" style="freeText;fillColor=#CCE5FF;" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+      <mxGeometry x="-288" y="96" width="224" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="mqnnX3keGcDuZgNgJbpS8A" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;a href=&quot;https://wiki.prooph-board.com/PHP-Cody-Tutorial&quot;&gt;PHP Cody Tutorial&lt;/a&gt;&lt;/font&gt;" style="freeText;fillColor=#CCCCFF;" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+      <mxGeometry x="29.466101694915267" y="95.91525423728814" width="224" height="100" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>
