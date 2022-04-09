@@ -1,0 +1,109 @@
+<mxGraphModel dx="1740.32" dy="1249.64" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
+  <root>
+    <mxCell id="e975feae-1579-4c09-98d0-98cbf2108aec"/>
+    <mxCell id="7fe80d19-d317-4e9d-8296-96c598786d78" parent="e975feae-1579-4c09-98d0-98cbf2108aec"/>
+    <boundedContext label="Logistics Administration" type="boundedContext" metadata="{&#xa;  &quot;summary&quot;: &quot;Backoffice System&quot;,&#xa;  &quot;description&quot;: &quot;Management app for customer shipping orders, flight booking and first mile commission&quot;&#xa;}" id="8jDM1mvEsVt8pxsqQ9sDYi">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
+        <mxGeometry x="-768" y="-636" width="800" height="600" as="geometry"/>
+      </mxCell>
+    </boundedContext>
+    <event label="Shipping Order Received" type="event" id="ekJFwn8kJgnYHjDC3KGE9C">
+      <mxCell style="event" vertex="1" parent="8jDM1mvEsVt8pxsqQ9sDYi">
+        <mxGeometry x="80" y="300" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <event label="Flight Route Calculated&lt;hr id=&quot;null&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Fully automated route calculation&lt;/div&gt;" type="event" metadata="{&#xa;  &quot;version&quot;: &quot;1.0.0&quot;,&#xa;  &quot;description&quot;: &quot;Flight routes are based on customer contract, origin and destination&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;type&quot;: &quot;object&quot;,&#xa;    &quot;properties&quot;: {&#xa;      &quot;warehouse&quot;: {&#xa;        &quot;type&quot;: &quot;string&quot;&#xa;      },&#xa;      &quot;destination&quot;: {&#xa;        &quot;type&quot;: &quot;string&quot;&#xa;      },&#xa;      &quot;route&quot;: {&#xa;        &quot;type&quot;: &quot;object&quot;&#xa;      }&#xa;    },&#xa;    &quot;required&quot;: [&#xa;      &quot;warehouse&quot;,&#xa;      &quot;destination&quot;,&#xa;      &quot;route&quot;&#xa;    ],&#xa;    &quot;additionalProperties&quot;: false&#xa;  }&#xa;}" id="9iPy2AJT7YM9wQ6iWrFYDH">
+      <mxCell style="event;autosize=1;" vertex="1" parent="8jDM1mvEsVt8pxsqQ9sDYi">
+        <mxGeometry x="320" y="300" width="160" height="148" as="geometry"/>
+      </mxCell>
+    </event>
+    <event label="First Mile Commissioned" type="event" id="nGoHtu3WTaj7NNjPUw36fM">
+      <mxCell style="event" vertex="1" parent="8jDM1mvEsVt8pxsqQ9sDYi">
+        <mxGeometry x="560" y="300" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <boundedContext label="First Mile&amp;nbsp;" type="boundedContext" id="ep1VUZ2GjVhKtBHEG19PGq">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
+        <mxGeometry x="80" y="-636" width="448" height="600" as="geometry">
+          <mxRectangle x="80" y="-636" width="448" height="600" as="alternateBounds"/>
+        </mxGeometry>
+      </mxCell>
+    </boundedContext>
+    <event label="Parcels Picked Up From Warehouse" type="event" id="uRSxvXrJEBBxZZQ6CMb736">
+      <mxCell style="event;autosize=1;" vertex="1" parent="ep1VUZ2GjVhKtBHEG19PGq">
+        <mxGeometry x="144" y="300" width="160" height="106" as="geometry"/>
+      </mxCell>
+    </event>
+    <boundedContext label="Airport Handling" type="boundedContext" metadata="{&#xa;  &quot;summary&quot;: &quot;Airport Agent App&quot;,&#xa;  &quot;description&quot;: &quot;iPad app for agents to scan parcels and manage transport units&quot;&#xa;}" id="j8jvenfLPovXP52ysx52ky">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
+        <mxGeometry x="576" y="-636" width="800" height="600" as="geometry"/>
+      </mxCell>
+    </boundedContext>
+    <event label="Parcel Added To Transport Unit" type="event" id="7VCJiGfgvUgCjYTrbVMFpE">
+      <mxCell style="event" vertex="1" parent="j8jvenfLPovXP52ysx52ky">
+        <mxGeometry x="272" y="300" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <event label="Transport Unit Booked On Flight&lt;hr id=&quot;null&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Ready for take off&lt;/div&gt;" type="event" metadata="{&#xa;  &quot;version&quot;: &quot;1.0.0&quot;,&#xa;  &quot;description&quot;: &quot;The system books flights automatically.&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;type&quot;: &quot;object&quot;,&#xa;    &quot;properties&quot;: {&#xa;      &quot;transportUnit&quot;: {&#xa;        &quot;type&quot;: &quot;string&quot;&#xa;      },&#xa;      &quot;flight&quot;: {&#xa;        &quot;type&quot;: &quot;string&quot;&#xa;      }&#xa;    },&#xa;    &quot;required&quot;: [&#xa;      &quot;transportUnit&quot;,&#xa;      &quot;flight&quot;&#xa;    ],&#xa;    &quot;additionalProperties&quot;: false&#xa;  }&#xa;}" id="31cyxiDBE1Z8vcyaMkyNjz">
+      <mxCell style="event;autosize=0;" vertex="1" parent="j8jvenfLPovXP52ysx52ky">
+        <mxGeometry x="480" y="300" width="192" height="109" as="geometry"/>
+      </mxCell>
+    </event>
+    <event label="Parcel Scanned At Airport" type="event" id="knHU9UvzF98X7EEBzuZP54">
+      <mxCell style="event" vertex="1" parent="j8jvenfLPovXP52ysx52ky">
+        <mxGeometry x="64" y="300" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <boundedContext label="Flights (external)" type="boundedContext" id="4RHaD7EXA8x5MjfEWuPKte">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
+        <mxGeometry x="1408" y="-636" width="800" height="600" as="geometry"/>
+      </mxCell>
+    </boundedContext>
+    <event label="Airplane Departed" type="event" id="anYcweZcAoaLqNRh1Rdgai">
+      <mxCell style="event" vertex="1" parent="4RHaD7EXA8x5MjfEWuPKte">
+        <mxGeometry x="144" y="300" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <event label="Airplane Arrived At Destination Airport" type="event" id="dMUtG1rfxZBjRHjYbUazXj">
+      <mxCell style="event;autosize=1;" vertex="1" parent="4RHaD7EXA8x5MjfEWuPKte">
+        <mxGeometry x="432" y="300" width="160" height="106" as="geometry"/>
+      </mxCell>
+    </event>
+    <boundedContext label="Last Mile" type="boundedContext" metadata="{&#xa;  &quot;summary&quot;: &quot;Last Mile Provider API&quot;,&#xa;  &quot;description&quot;: &quot;ACL for different Last Mile Provider API integrations&quot;&#xa;}" id="6XAfdsbtiPWpNTTED6Trvf">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
+        <mxGeometry x="2240" y="-636" width="800" height="600" as="geometry"/>
+      </mxCell>
+    </boundedContext>
+    <event label="Parcel Picked Up At Airport&lt;hr id=&quot;null&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Last Mile Provider picked up parcel&lt;/div&gt;" type="event" metadata="{&#xa;  &quot;version&quot;: &quot;1.0.0&quot;,&#xa;  &quot;description&quot;: &quot;Last mile provider is booked automatically after flight route is calculation&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;type&quot;: &quot;object&quot;,&#xa;    &quot;properties&quot;: {&#xa;      &quot;lastMileProvider&quot;: {&#xa;        &quot;type&quot;: &quot;string&quot;&#xa;      },&#xa;      &quot;parcels&quot;: {&#xa;        &quot;type&quot;: &quot;array&quot;,&#xa;        &quot;items&quot;: {&#xa;          &quot;type&quot;: &quot;string&quot;&#xa;        }&#xa;      }&#xa;    },&#xa;    &quot;required&quot;: [&quot;lastMileProvider&quot;, &quot;parcels&quot;],&#xa;    &quot;additionalProperties&quot;: false&#xa;  }&#xa;}" id="inGhDkRskijzUTZVmcudTq">
+      <mxCell style="event;autosize=1;" vertex="1" parent="6XAfdsbtiPWpNTTED6Trvf">
+        <mxGeometry x="112" y="300" width="160" height="170" as="geometry"/>
+      </mxCell>
+    </event>
+    <event label="Parcel Delivered&lt;hr id=&quot;null&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Well done!&lt;/div&gt;" type="event" id="s62FH8KCCNnyyaah2sZL9m">
+      <mxCell style="event;autosize=0;" vertex="1" parent="6XAfdsbtiPWpNTTED6Trvf">
+        <mxGeometry x="432" y="305" width="208" height="127" as="geometry"/>
+      </mxCell>
+    </event>
+    <icon label="" type="icon" id="ncY1GyiszBT7Y87DVJ3Mbu">
+      <mxCell style="icon;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;fill:#000000&quot; viewBox=&quot;0 0 496 512&quot;&gt;&lt;path d=&quot;M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z&quot;/&gt;&lt;/svg&gt;;" vertex="1" parent="s62FH8KCCNnyyaah2sZL9m">
+        <mxGeometry x="104" y="69" width="72" height="45" as="geometry"/>
+      </mxCell>
+    </icon>
+    <mxCell id="soHPnsHuapz3pFB7z8axRN" style="html=1;" edge="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" source="9iPy2AJT7YM9wQ6iWrFYDH" target="31cyxiDBE1Z8vcyaMkyNjz">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="-368" y="96"/>
+          <mxPoint x="1152" y="96"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="bii4FKQVfnHUz6qPCPs2VT" style="html=1;" edge="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" source="9iPy2AJT7YM9wQ6iWrFYDH" target="inGhDkRskijzUTZVmcudTq">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="-367" y="96"/>
+          <mxPoint x="2433" y="96"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>
