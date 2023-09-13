@@ -1,9 +1,9 @@
-<mxGraphModel dx="5098.31" dy="3153.34" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
+<mxGraphModel dx="-237.13" dy="1162.02" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
   <root>
     <mxCell id="e975feae-1579-4c09-98d0-98cbf2108aec"/>
     <mxCell id="7fe80d19-d317-4e9d-8296-96c598786d78" parent="e975feae-1579-4c09-98d0-98cbf2108aec"/>
     <boundedContext label="prooph board" type="boundedContext" tags="pb:connected" id="BnTtkzHiGx8wKToQ1fU8s">
-      <mxCell style="boundedContext;fontSize=106;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" alternateStyleEnabled="0" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" alternateStyleEnabled="0" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
         <mxGeometry x="-400" y="-272" width="1168" height="2368" as="geometry">
           <mxRectangle x="-400" y="-272" width="1168" height="2368" as="alternateBounds"/>
         </mxGeometry>
@@ -253,7 +253,7 @@
       </mxCell>
     </UserObject>
     <boundedContext label="Cody Wizard" type="boundedContext" tags="pb:connected" id="kDpU9oRaj5wVRQtpodbPAA">
-      <mxCell style="boundedContext;fontSize=106;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" alternateStyleEnabled="0" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" alternateStyleEnabled="0" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
         <mxGeometry x="-1616" y="-272" width="992" height="2352" as="geometry">
           <mxRectangle x="-1616" y="-272" width="992" height="2352" as="alternateBounds"/>
         </mxGeometry>
@@ -383,7 +383,7 @@
       <mxGeometry x="0.1392" y="5" relative="1" as="geometry"/>
     </mxCell>
     <boundedContext label="Cody Server" type="boundedContext" tags="pb:connected" id="4G5yE1wExyUoYHjnXQ1bRh">
-      <mxCell style="boundedContext;fontSize=106;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" alternateStyleEnabled="0" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" alternateStyleEnabled="0" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
         <mxGeometry x="1046" y="-262" width="1056" height="2352" as="geometry">
           <mxRectangle x="1168" y="-272" width="1056" height="2352" as="alternateBounds"/>
         </mxGeometry>
@@ -501,7 +501,7 @@
       </mxGeometry>
     </mxCell>
     <boundedContext label="Big Picture&amp;nbsp;&lt;div&gt;Event Storming&lt;/div&gt;" type="boundedContext" tags="pb:connected" id="kLLqSnJ2qqJQwSkwDTcGgo">
-      <mxCell style="boundedContext;fontSize=106;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" alternateStyleEnabled="0" isContainerSwimLane="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" alternateStyleEnabled="0" isContainerSwimLane="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
         <mxGeometry x="-3024" y="-286" width="1120" height="2350" as="geometry">
           <mxRectangle x="-3024" y="-286" width="1120" height="2350" as="alternateBounds"/>
         </mxGeometry>
@@ -755,7 +755,7 @@
       </mxGeometry>
     </mxCell>
     <boundedContext label="User Interface (fe)" type="boundedContext" tags="pb:connected" id="gvKAUeTAtkzqueqnz8zpzR">
-      <mxCell style="boundedContext;fontSize=106;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
         <mxGeometry x="2464" y="-2496" width="2640" height="1578" as="geometry"/>
       </mxCell>
     </boundedContext>
@@ -868,7 +868,7 @@
       </mxCell>
     </document>
     <boundedContext label="Shared Library (shared)" type="boundedContext" tags="pb:connected" id="b4qDqDTedKUSe1PMGunp64">
-      <mxCell style="boundedContext;fontSize=106;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
         <mxGeometry x="2464" y="-864" width="2640" height="720" as="geometry">
           <mxRectangle x="2464" y="-864" width="2640" height="720" as="alternateBounds"/>
         </mxGeometry>
@@ -955,7 +955,7 @@
       </mxCell>
     </command>
     <boundedContext label="Server (be)" type="boundedContext" tags="pb:connected" id="oQop9LE7gvEZviKun7VV5G">
-      <mxCell style="boundedContext;fontSize=106;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
         <mxGeometry x="2464" y="-91" width="2640" height="2125" as="geometry">
           <mxRectangle x="2464" y="-91" width="2640" height="2125" as="alternateBounds"/>
         </mxGeometry>
@@ -1071,24 +1071,24 @@
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <feature label="Business Rules" type="feature" tags="pb:connected" id="khQZKgVJgVbxFzF2or6X9E">
-      <mxCell style="feature;verticalAlign=middle;fontSize=106;" vertex="1" alternateStyle="feature;verticalAlign=middle;fontSize=56;" originalStyle="feature" alternateStyleEnabled="1" parent="oQop9LE7gvEZviKun7VV5G">
+      <mxCell style="feature" vertex="1" alternateStyle="feature;verticalAlign=middle;fontSize=56;" originalStyle="feature" alternateStyleEnabled="0" parent="oQop9LE7gvEZviKun7VV5G" isContainerSwimLane="1">
         <mxGeometry x="2144" y="505" width="480" height="263" as="geometry">
           <mxRectangle x="2144" y="505" width="480" height="263" as="alternateBounds"/>
         </mxGeometry>
       </mxCell>
     </feature>
     <aggregate label="&lt;a href=&quot;https://wiki.prooph-board.com/event_storming/basic-concepts.html#aggregate&quot;&gt;Aggregate&lt;/a&gt;:&lt;div&gt;Employee&lt;/div&gt;" type="aggregate" tags="pb:connected" metadata="{&#xa;  &quot;rules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;call&quot;: {&#xa;          &quot;service&quot;: &quot;AuthService&quot;,&#xa;          &quot;method&quot;: &quot;register&quot;,&#xa;          &quot;arguments&quot;: {&#xa;            &quot;displayName&quot;: &quot;command.name&quot;,&#xa;            &quot;email&quot;: &quot;command.email&quot;,&#xa;            &quot;roles&quot;: &quot;[command.role]&quot;&#xa;          },&#xa;          &quot;result&quot;: {&#xa;            &quot;variable&quot;: &quot;userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    },&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;record&quot;: {&#xa;          &quot;event&quot;: &quot;Employee Hired&quot;,&#xa;          &quot;mapping&quot;: {&#xa;            &quot;$merge&quot;: &quot;command&quot;,&#xa;            &quot;employeeId&quot;: &quot;userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="c4nBqq8SJWiF86XdwRCyic">
-      <mxCell style="aggregate" vertex="1" tempVisible="0" parent="khQZKgVJgVbxFzF2or6X9E">
+      <mxCell style="aggregate" vertex="1" tempVisible="1" parent="khQZKgVJgVbxFzF2or6X9E">
         <mxGeometry x="112" y="100" width="160" height="124" as="geometry"/>
       </mxCell>
     </aggregate>
     <policy label="&lt;a href=&quot;https://wiki.prooph-board.com/event_storming/basic-concepts.html#policy&quot;&gt;Policy&lt;/a&gt;&lt;hr id=&quot;null&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;On [Event]&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;do [Command]&lt;/div&gt;" type="policy" tags="pb:connected" id="qoRFHigGaiXm1aVT21UwtY">
-      <mxCell style="policy;autosize=1;" vertex="1" tempVisible="0" parent="khQZKgVJgVbxFzF2or6X9E">
+      <mxCell style="policy;autosize=1;" vertex="1" tempVisible="1" parent="khQZKgVJgVbxFzF2or6X9E">
         <mxGeometry x="297" y="100" width="160" height="126" as="geometry"/>
       </mxCell>
     </policy>
     <UserObject label="&amp;nbsp;" tags="pb:connected" id="fNUmkWZRVWdE7JcnTuSV7e">
-      <mxCell style="freeText" vertex="1" tempVisible="0" parent="khQZKgVJgVbxFzF2or6X9E">
+      <mxCell style="freeText" vertex="1" tempVisible="1" parent="khQZKgVJgVbxFzF2or6X9E">
         <mxGeometry x="33" y="37" width="32" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
@@ -1186,7 +1186,7 @@
       </mxGeometry>
     </mxCell>
     <boundedContext label="Cody Engine" type="boundedContext" tags="pb:connected" id="g3inRXxkv5TdYgNu7nexmY">
-      <mxCell style="boundedContext;fontSize=106;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
+      <mxCell style="boundedContext;fontSize=78;" vertex="1" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;" originalStyle="boundedContext" isContainerSwimLane="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" alternateStyleEnabled="0">
         <mxGeometry x="2464" y="-2832" width="2640" height="256" as="geometry">
           <mxRectangle x="2464" y="-3200" width="2640" height="256" as="alternateBounds"/>
         </mxGeometry>
