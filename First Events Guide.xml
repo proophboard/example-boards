@@ -1,0 +1,60 @@
+<mxGraphModel dx="1316.68" dy="404.78" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
+  <root>
+    <mxCell id="e975feae-1579-4c09-98d0-98cbf2108aec"/>
+    <mxCell id="7fe80d19-d317-4e9d-8296-96c598786d78" parent="e975feae-1579-4c09-98d0-98cbf2108aec"/>
+    <event label="" type="event" tags="pb:connected" id="i36GUkdfQHGLtYo9h8C9G2">
+      <mxCell style="event" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+        <mxGeometry x="-48" y="128" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <mxCell id="hjSkHTaQCjrxmv4aPPCfs5" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;dashed=1;dashPattern=none;" edge="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" source="qzNJLX6KMcnynCbUosAPi1" target="eizQvETWexZJz7isBddLXp">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="-592" y="154"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <icon label="" type="icon" tags="pb:connected" id="qzNJLX6KMcnynCbUosAPi1">
+      <mxCell style="icon;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;fill:#B3B3B3&quot; viewBox=&quot;0 0 448 512&quot;&gt;&lt;path d=&quot;M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z&quot;/&gt;&lt;/svg&gt;;" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+        <mxGeometry x="-640" y="-64" width="77" height="48" as="geometry"/>
+      </mxCell>
+    </icon>
+    <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;2.&lt;/font&gt; &lt;/b&gt;&lt;/font&gt;Pull more Event cards from the sidebar&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;(first card in top left corner)&lt;/font&gt;&lt;/div&gt;" tags="pb:connected" id="js22pBiBF3Ts6XYdCTnDcU">
+      <mxCell style="freeText" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+        <mxGeometry x="-563" y="-90" width="211" height="100" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <icon label="" type="icon" tags="pb:connected" id="iPA414Mrd4CFMM43xwXW12">
+      <mxCell style="icon;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;fill:#B3B3B3&quot; viewBox=&quot;0 0 448 512&quot;&gt;&lt;path d=&quot;M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z&quot;/&gt;&lt;/svg&gt;;" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+        <mxGeometry x="-11" y="64" width="86" height="54" as="geometry"/>
+      </mxCell>
+    </icon>
+    <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;1&lt;/font&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;. &lt;/span&gt;&lt;/b&gt;&lt;/font&gt;Start with your first Event by answering the question:&lt;br&gt;&lt;b&gt;How does your company make money?&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Double-click on the Event card below and write down the answer as an Event (Fact) using &lt;b&gt;past tense.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Examples:&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;SaaS product: &quot;&lt;b&gt;Subscription made&lt;/b&gt;&quot;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Online-Shop: &quot;&lt;b&gt;Product bought&quot;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Hotel Mgmt: &quot;&lt;b&gt;Hotel room booked&lt;/b&gt;&quot;&lt;/font&gt;&lt;/div&gt;" tags="pb:connected" id="5sG6UcnYK6Zj776bDcZH7L">
+      <mxCell style="freeText" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+        <mxGeometry x="-160" y="-253" width="384" height="301" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <icon label="before" type="icon" tags="pb:connected" id="eizQvETWexZJz7isBddLXp">
+      <mxCell style="icon;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;fill:#000000&quot; viewBox=&quot;0 0 384 512&quot;&gt;&lt;path d=&quot;M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z&quot;/&gt;&lt;/svg&gt;;" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+        <mxGeometry x="-313.5" y="130" width="77" height="48" as="geometry"/>
+      </mxCell>
+    </icon>
+    <mxCell id="bjV6USPFu5Hbc4cjSGb3S8" style="html=1;dashed=1;dashPattern=none;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78" source="pxEp1yUqx84TrJwqKGH6DC" target="i36GUkdfQHGLtYo9h8C9G2">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="32" y="273"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <UserObject label="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b style=&quot;&quot;&gt;3.&lt;/b&gt;&lt;/font&gt; &lt;b&gt;What Event needs to happen before the one to the right?&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Rinse and repeat the question and answer up to the very first Event of your value chain.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Once completed, continue in the other direction and answer the question:&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;What Event will happen after the Event to the right?&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;That&#39;s all you need to know for your first &lt;a href=&quot;https://youtu.be/vwuSDCRghb8&quot;&gt;Big Picture Event Storming&lt;/a&gt;.&amp;nbsp;&lt;/div&gt;" tags="pb:connected" id="pxEp1yUqx84TrJwqKGH6DC">
+      <mxCell style="freeText" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+        <mxGeometry x="-416" y="208" width="256" height="352" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <icon label="after" type="icon" tags="pb:connected" id="s6yRU8hxAWPCbK1Qd7ee6U">
+      <mxCell style="icon;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;fill:#000000&quot; viewBox=&quot;0 0 384 512&quot;&gt;&lt;path d=&quot;M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z&quot;/&gt;&lt;/svg&gt;;" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+        <mxGeometry x="297.54255319148933" y="154.2127659574468" width="77" height="48" as="geometry"/>
+      </mxCell>
+    </icon>
+  </root>
+</mxGraphModel>
