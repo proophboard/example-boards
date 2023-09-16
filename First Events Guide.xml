@@ -1,4 +1,4 @@
-<mxGraphModel dx="1316.68" dy="404.78" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
+<mxGraphModel dx="1230.06" dy="422.6" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
   <root>
     <mxCell id="e975feae-1579-4c09-98d0-98cbf2108aec"/>
     <mxCell id="7fe80d19-d317-4e9d-8296-96c598786d78" parent="e975feae-1579-4c09-98d0-98cbf2108aec"/>
@@ -46,9 +46,9 @@
         </Array>
       </mxGeometry>
     </mxCell>
-    <UserObject label="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b style=&quot;&quot;&gt;3.&lt;/b&gt;&lt;/font&gt; &lt;b&gt;What Event needs to happen before the one to the right?&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Rinse and repeat the question and answer it up to the very first Event of your value chain.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Once completed, continue in the other direction and answer the question:&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;What Event will happen after the Event to the right?&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;That&#39;s all you need to know for your first &lt;a href=&quot;https://youtu.be/vwuSDCRghb8&quot;&gt;Big Picture Event Storming&lt;/a&gt;.&amp;nbsp;&lt;/div&gt;" tags="pb:connected" id="pxEp1yUqx84TrJwqKGH6DC">
+    <UserObject label="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b style=&quot;&quot;&gt;3.&lt;/b&gt;&lt;/font&gt; &lt;b&gt;What Event needs to happen before the one to the right?&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Rinse and repeat the question and answer it up to the very first Event of your value chain.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Once completed, continue in the other direction and answer the question:&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;What Event will happen after the Event to the right?&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;That&#39;s all you need to know for your first &lt;a href=&quot;https://youtu.be/vwuSDCRghb8&quot;&gt;Big Picture Event Storming&lt;/a&gt;.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If you&#39;re curious what else prooph board has to offer, head over to the &lt;a href=&quot;https://free.prooph-board.com/inspectio/boards/import/https%3A%2F%2Fraw.githubusercontent.com%2Fevent-engine%2Finspectio%2Fmaster%2Fassets%2FExample%2520Boards%2Fprooph%20board%2520Example.xml&quot;&gt;Design &amp;amp; Prototyping&lt;/a&gt; board.&lt;/div&gt;" tags="pb:connected" id="pxEp1yUqx84TrJwqKGH6DC">
       <mxCell style="freeText" vertex="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
-        <mxGeometry x="-416" y="208" width="256" height="352" as="geometry"/>
+        <mxGeometry x="-416" y="208" width="256" height="432" as="geometry"/>
       </mxCell>
     </UserObject>
     <icon label="after" type="icon" tags="pb:connected" id="s6yRU8hxAWPCbK1Qd7ee6U">
