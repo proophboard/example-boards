@@ -1,0 +1,66 @@
+{
+  "playshotId": "f4bf7d77-cf2a-4a56-8523-bbcfedaf20e1",
+  "name": "Test Persona",
+  "boardId": "6f61e567-19dc-4d94-8147-e1fba934821e",
+  "playConfig": {
+    "appName": "Cody Play",
+    "theme": {},
+    "personas": [
+      {
+        "displayName": "Anyone",
+        "userId": "0299cda3-a2f7-4e94-9899-e1e37e5fe088",
+        "email": "anyone@example.local",
+        "roles": [
+          "Anyone"
+        ],
+        "avatar": "/assets/account-circle-outline.svg",
+        "description": "Anyone represents a standard user of the app without a specific role. This user has access to functionality that is not explicitly restricted."
+      },
+      {
+        "color": "#d72323",
+        "roles": [
+          "Anyone"
+        ],
+        "email": "alex@test.local",
+        "displayName": "Alex",
+        "description": "Test persona",
+        "attributes": {},
+        "userId": "858b6257-2a0b-4791-8e7b-70675db87fd1"
+      }
+    ],
+    "pages": {
+      "Dashboard": {
+        "service": "CrmTest",
+        "commands": [],
+        "components": [
+          "Core.Welcome"
+        ],
+        "sidebar": {
+          "label": "Dashboard",
+          "icon": "ViewDashboard",
+          "position": -1
+        },
+        "route": "/dashboard",
+        "topLevel": true,
+        "breadcrumb": "Dashboard"
+      }
+    },
+    "views": {},
+    "commands": {},
+    "commandHandlers": {},
+    "aggregates": {},
+    "events": {},
+    "eventReducers": {},
+    "queries": {},
+    "resolvers": {},
+    "types": {},
+    "definitions": {},
+    "eventPolicies": {}
+  },
+  "playData": {
+    "streams": {},
+    "documents": {}
+  },
+  "savedAt": "2024-06-09T13:16:55.686Z",
+  "savedBy": "f1c1512d-e1b9-44c2-940c-3f7cade64a29"
+}
