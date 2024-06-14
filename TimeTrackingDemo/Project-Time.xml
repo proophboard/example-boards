@@ -1,0 +1,710 @@
+<mxGraphModel dx="3032" dy="1162.5" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
+  <root>
+    <mxCell id="e975feae-1579-4c09-98d0-98cbf2108aec"/>
+    <mxCell id="7fe80d19-d317-4e9d-8296-96c598786d78" parent="e975feae-1579-4c09-98d0-98cbf2108aec"/>
+    <boundedContext label="Big Picture" type="boundedContext" tags="pb:connected" id="cLpwCDAoaaURzZBNgKQXs7">
+      <mxCell style="boundedContext;verticalAlign=middle;fontSize=92;fillColor=#a2a2a2;" vertex="1" originalStyle="boundedContext" alternateStyle="boundedContext;verticalAlign=middle;fontSize=112;fillColor=#a2a2a2;" alternateStyleEnabled="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+        <mxGeometry x="-224" y="-128" width="1680" height="656" as="geometry">
+          <mxRectangle x="-224" y="-128" width="1680" height="656" as="alternateBounds"/>
+        </mxGeometry>
+      </mxCell>
+    </boundedContext>
+    <event label="Employee Hired" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;employeeId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;email&quot;: &quot;string|format:email&quot;,&#xa;    &quot;role&quot;: &quot;/User/Role&quot;&#xa;  },&#xa;  &quot;applyRules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;information&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: [&#xa;              &quot;information&quot;,&#xa;              &quot;event&quot;&#xa;            ]&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="nZyp5gb36StuJTkTF6T7bW">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="131" y="293.5" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <event label="Client Acquired" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;clientId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;&#xa;  },&#xa;  &quot;applyRules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;information&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: [&#xa;              &quot;information&quot;,&#xa;              &quot;event&quot;&#xa;            ]&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="q6YzRWiLFAuifsZamXpQLx">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="353.5" y="298.5" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <event label="Client Project Set Up" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;pm&quot;: &quot;/Employee/EmployeeId&quot;,&#xa;    &quot;clientId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;applyRules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;information&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: [&#xa;              &quot;information&quot;,&#xa;              &quot;event&quot;&#xa;            ]&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="8GPRbjJbaenpb5yRah9q1U">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="593.5" y="304.5" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <role label="HR" type="role" tags="pb:connected,pb:lanehandle" id="2qM7EJBQc2sJFCQ7PTeEWw">
+      <mxCell style="role" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="96" y="384.5" width="70" height="90" as="geometry"/>
+      </mxCell>
+    </role>
+    <role label="PM" type="role" tags="pb:connected,pb:lanehandle" id="55FkbM4v6siVKMF9diURnK">
+      <mxCell style="role" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="558.5" y="391.5" width="70" height="90" as="geometry"/>
+      </mxCell>
+    </role>
+    <role label="PM" type="role" tags="pb:connected,pb:lanehandle" id="uzwsRikSkr2duigz18TiZT">
+      <mxCell style="role" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="318.39655172413813" y="391.6724137931034" width="70" height="90" as="geometry"/>
+      </mxCell>
+    </role>
+    <event label="Developer Assigned To Project" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;developer&quot;: &quot;/Employee/EmployeeId&quot;&#xa;  },&#xa;  &quot;applyRules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;information&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: &quot;information&quot;,&#xa;            &quot;developers&quot;: &quot;push(information.developers, event.developer)&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="58JibAGamsD2weNHtjCgAg">
+      <mxCell style="event;autosize=1;" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="829.5" y="300" width="160" height="106" as="geometry"/>
+      </mxCell>
+    </event>
+    <document label="Project Time Report" type="document" tags="pb:connected" id="2BB7XszTQDFQpHfLtfxMp6">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="1281.4999999999995" y="256" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <document label="Employee Time Report" type="document" tags="pb:connected" id="kLBEdKvCx15ZLq5YHDcZ">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="1281.4999999999995" y="406" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <role label="Dev" type="role" tags="pb:connected,pb:lanehandle" id="idWJPKNspycVJx74DAw3Wn">
+      <mxCell style="role" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="1011.5" y="393" width="70" height="90" as="geometry"/>
+      </mxCell>
+    </role>
+    <role label="PM" type="role" tags="pb:connected,pb:lanehandle" id="ibqZ9pnjosWfQvtKQrR7qN">
+      <mxCell style="role" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="1241.3965517241381" y="308.1724137931034" width="70" height="90" as="geometry"/>
+      </mxCell>
+    </role>
+    <role label="HR" type="role" tags="pb:connected,pb:lanehandle" id="vki9sD1pPNgA9uWK7mmMq9">
+      <mxCell style="role" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="1241.3965517241381" y="483.17241379310326" width="70" height="90" as="geometry"/>
+      </mxCell>
+    </role>
+    <role label="PM" type="role" tags="pb:connected,pb:lanehandle" id="nKgGerZhriAvb2JvEMFTv5">
+      <mxCell style="role" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="794.3965517241381" y="393.1724137931034" width="70" height="90" as="geometry"/>
+      </mxCell>
+    </role>
+    <role label="PM" type="role" tags="pb:connected,pb:lanehandle" id="cc67vZQk45LqSmt8NJXgB5">
+      <mxCell style="role" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="1081.3965517241381" y="393.1724137931034" width="70" height="90" as="geometry"/>
+      </mxCell>
+    </role>
+    <event label="Project Time Tracked" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectTimeId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;project&quot;: &quot;/Project/Project:projectId&quot;,&#xa;    &quot;employee&quot;: &quot;/Employee/Employee:employeeId&quot;,&#xa;    &quot;day&quot;: &quot;string|format:date&quot;,&#xa;    &quot;startTime&quot;: &quot;string|format:time&quot;,&#xa;    &quot;endTime&quot;: &quot;string|format:time&quot;&#xa;  },&#xa;  &quot;applyRules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;information&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: [&#xa;              &quot;information&quot;,&#xa;              &quot;event&quot;&#xa;            ]&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="nk6sYzGGcVevDu6Ys3XjP4">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="cLpwCDAoaaURzZBNgKQXs7">
+        <mxGeometry x="1011.5" y="291.5" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <boundedContext label="Event Model" type="boundedContext" tags="pb:eventmodel,pb:defaulteventmodel,pb:connected" id="uUDo9dNpCk971KQ7giTNPt">
+      <mxCell style="boundedContext;fillColor=none;rounded=1;arcSize=5;fontSize=92;" vertex="1" originalStyle="boundedContext;fillColor=none;rounded=1;arcSize=5;" alternateStyle="boundedContext;fillColor=#a2a2a2;rounded=1;arcSize=5;verticalAlign=middle;fontSize=112;" alternateStyleEnabled="0" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+        <mxGeometry x="-2256" y="1280" width="10848" height="2743" as="geometry">
+          <mxRectangle x="-2256" y="1280" width="10848" height="2743" as="alternateBounds"/>
+        </mxGeometry>
+      </mxCell>
+    </boundedContext>
+    <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="dsVaY13V9UzHGpd8xMwqXc">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10807.5" y="1337" width="20" height="112" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <icon label="" type="icon" tags="pb:connected,pb:lanehandle,pb:ethidden" id="dhic33kxZxP4LY5TWGgXoC">
+      <mxCell style="icon;locked=1;resizable=0;rotatable=0;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;fill:#4D4D4D&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z&quot;/&gt;&lt;/svg&gt;;" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="12.945945945945823" y="1376.9459459459458" width="48" height="30" as="geometry"/>
+      </mxCell>
+    </icon>
+    <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="bbQa81UnqVcdGoGDaAKFHg">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="13" y="1693" width="16" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="3k5XYDYFCJ3N6UnnANo1JT">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="17" y="1093" width="16" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="Employees" tags="pb:connected,pb:lanehandle" id="cfy41E6BQWW9znDCZ7stoa">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10" y="1493" width="198" height="100" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="" tags="pb:connected,pb:lanehandle,pb:apilabel,pb:ethidden" id="ofT2q5tZpnnpBXYV2t82dN">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0;fillColor=transparent;" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="9.959459459459367" y="1199" width="1" height="100" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="7EpWcCuQxvTPAGXcuhT5Ns">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10807.5" y="1093" width="20" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="whrJtCGVkgnTFGHqf1J9ft">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10807.5" y="1693" width="20" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="" tags="pb:connected" id="fuqxbhtEwgcfbHXwLPdc2H">
+      <mxCell style="html=1;strokeWidth=5;edgeStyle=isometricEdgeStyle" edge="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt" source="dhic33kxZxP4LY5TWGgXoC" target="dsVaY13V9UzHGpd8xMwqXc">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <mxCell id="6NY9Pv7fUMngaTc2kQoBDs" style="edgeStyle=isometricEdgeStyle;html=1;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt" source="bbQa81UnqVcdGoGDaAKFHg" target="whrJtCGVkgnTFGHqf1J9ft">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="xmp8o2e4BFAD1wtg2dutV" style="edgeStyle=isometricEdgeStyle;html=1;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt" source="3k5XYDYFCJ3N6UnnANo1JT" target="7EpWcCuQxvTPAGXcuhT5Ns">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="brU6n8QUYadEJuaQRVAtzp">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="17" y="793" width="16" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="2KwnXSjvn8Gu7F6SB26hHJ">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10807.5" y="793" width="20" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <mxCell id="aKrLVjHFAUSx6svfRAotGH" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt" source="brU6n8QUYadEJuaQRVAtzp" target="2KwnXSjvn8Gu7F6SB26hHJ">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="cKwtQ1enuzK31DLrJgik87">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="17" y="493" width="16" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="hMdcgEqQku4KEHDhHkwBp4">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10807.5" y="493" width="20" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <mxCell id="omAW9LMCQuJeUDReSgXfBc" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt" source="cKwtQ1enuzK31DLrJgik87" target="hMdcgEqQku4KEHDhHkwBp4">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <role label="HR" type="role" tags="pb:connected,pb:lanehandle" id="3sNyt7JeYPdm31GNjwqZcf">
+      <mxCell style="role" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="37" y="327" width="70" height="90" as="geometry"/>
+      </mxCell>
+    </role>
+    <role label="PM" type="role" tags="pb:connected,pb:lanehandle" id="m4ggbyWX1eVaM3fGBy22We">
+      <mxCell style="role" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="33" y="599" width="70" height="90" as="geometry"/>
+      </mxCell>
+    </role>
+    <role label="Dev" type="role" tags="pb:connected,pb:lanehandle" id="enYvRyJXGDmFt74qiB6Vso">
+      <mxCell style="role" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="37" y="898" width="70" height="90" as="geometry"/>
+      </mxCell>
+    </role>
+    <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="m1fxUxUnSRdXCxqWqDu8Kh">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="13" y="1993" width="16" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="rsVaHoVWgLy7NPHvVMw3rL">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10807.5" y="1993" width="20" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <mxCell id="wDUB36cFAGoS3Jxd5Mkc4A" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt" source="m1fxUxUnSRdXCxqWqDu8Kh" target="rsVaHoVWgLy7NPHvVMw3rL">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <UserObject label="Projects" tags="pb:connected,pb:lanehandle" id="rSZM2i3tb6ZrNL5Yb86rYh">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10" y="1793" width="198" height="100" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="42SjtsMnPEwRxNcivgrGrH">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="13" y="2293" width="16" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="tb6eYeCR8JvSxifxyjnyd1">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10807.5" y="2293" width="20" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <mxCell id="q1X7yb3NbQaXHe45gvWiq4" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt" source="42SjtsMnPEwRxNcivgrGrH" target="tb6eYeCR8JvSxifxyjnyd1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <UserObject label="Time Tracking" tags="pb:connected,pb:lanehandle" id="5Znf7pfHEKjxVwLx5SySvo">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10" y="2093" width="198" height="100" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="j1ub4PvHkBEsqFSamnvuEh">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="13" y="2593" width="16" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="fFQjzBzdYiQEDg6NBLfHvN">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10807.5" y="2593" width="20" height="12" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <mxCell id="a5M9VfDf6dMxHf4uBDNpZr" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt" source="j1ub4PvHkBEsqFSamnvuEh" target="fFQjzBzdYiQEDg6NBLfHvN">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <UserObject label="Auth" tags="pb:connected,pb:lanehandle" id="gCDY96x3sfLPBE1BnzsGDU">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="10" y="2393" width="198" height="100" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <feature label="Hire Employee" type="feature" tags="pb:connected,ready" id="kNVhn18aGnkDJGX6vfF9WH">
+      <mxCell style="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=92;" vertex="1" originalStyle="feature;fillColor=#B9E0A5;" alternateStyle="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=56;" alternateStyleEnabled="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="487" y="192" width="1552" height="2397" as="geometry">
+          <mxRectangle x="487" y="192" width="1552" height="2397" as="alternateBounds"/>
+        </mxGeometry>
+      </mxCell>
+    </feature>
+    <ui label="Employees" type="ui" metadata="{&#xa;  &quot;route&quot;: &quot;/time-tracker/employees&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Employees&quot;,&#xa;    &quot;icon&quot;: &quot;account-group&quot;,&#xa;    &quot;hidden:expr&quot;: &quot;!isRole(user, &#39;HR&#39;)&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Employees&quot;&#xa;}" tags="pb:connected" id="g4y9FCAYRbQfdNEe8suEVX">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH">
+        <mxGeometry x="544" y="151" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <ui label="Employees" type="ui" metadata="{&#xa;  &quot;route&quot;: &quot;/time-tracker/employees&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Employees&quot;,&#xa;    &quot;icon&quot;: &quot;account-group&quot;,&#xa;    &quot;hidden:expr&quot;: &quot;!isRole(user, &#39;HR&#39;)&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Employees&quot;&#xa;}" tags="pb:connected" id="PJo6ENiY4WNMTAtRWTP7z">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH">
+        <mxGeometry x="1297.5" y="141.2391304347825" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <document label="Role&lt;hr id=&quot;null&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;fixed configuration&lt;/div&gt;" type="document" tags="pb:connected" metadata="{&#xa;  &quot;ns&quot;: &quot;/User&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$type&quot;: &quot;enum:HR,PM,Dev&quot;&#xa;  }&#xa;}" id="9vcoqFquQQEDhLZk6Cq2vL">
+      <mxCell style="document;autosize=1;" vertex="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH">
+        <mxGeometry x="32" y="1019" width="160" height="126" as="geometry"/>
+      </mxCell>
+    </document>
+    <mxCell id="bKCqhzAkxKjjPGog2P3uGg" style="curved=1;html=1;startArrow=open;endArrow=open;" edge="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH" source="bqJMHmjHTvPvzUcrymGMqY" target="8hQ1FuARfEdtXe4GFn2mSJ">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="208" y="1283"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <externalSystem label="Auth Service&lt;hr id=&quot;null&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;register user&lt;/div&gt;" type="externalSystem" metadata="" tags="pb:connected" id="bqJMHmjHTvPvzUcrymGMqY">
+      <mxCell style="externalSystem" vertex="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH">
+        <mxGeometry x="112" y="2197" width="160" height="104" as="geometry"/>
+      </mxCell>
+    </externalSystem>
+    <mxCell id="damgpyu26DiVfEMmreemCB" style="curved=1;html=1;" edge="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH" source="g4y9FCAYRbQfdNEe8suEVX" target="n3hZguFXGmmf2TDrKXM9k2">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <command label="Hire Employee" type="command" metadata="{&#xa;  &quot;schema&quot;: {&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;email&quot;: &quot;string|format:email&quot;,&#xa;    &quot;role&quot;: &quot;/User/Role&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:button&quot;: {&#xa;      &quot;icon&quot;: &quot;account-check&quot;&#xa;    }&#xa;  },&#xa;  &quot;newAggregate&quot;: true,&#xa;  &quot;dependencies&quot;: {&#xa;    &quot;AuthService&quot;: {&#xa;      &quot;type&quot;: &quot;service&quot;&#xa;    }&#xa;  }&#xa;}" tags="pb:connected" id="n3hZguFXGmmf2TDrKXM9k2">
+      <mxCell style="command" vertex="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH">
+        <mxGeometry x="544" y="1031" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </command>
+    <mxCell id="5QxRjAtFWJH5XNuqXpi8V9" style="curved=1;html=1;" edge="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH" source="9vcoqFquQQEDhLZk6Cq2vL" target="n3hZguFXGmmf2TDrKXM9k2">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <aggregate label="Employee" type="aggregate" metadata="{&#xa;  &quot;rules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;call&quot;: {&#xa;          &quot;service&quot;: &quot;AuthService&quot;,&#xa;          &quot;method&quot;: &quot;register&quot;,&#xa;          &quot;arguments&quot;: {&#xa;            &quot;displayName&quot;: &quot;command.name&quot;,&#xa;            &quot;email&quot;: &quot;command.email&quot;,&#xa;            &quot;roles&quot;: &quot;[command.role]&quot;&#xa;          },&#xa;          &quot;result&quot;: {&#xa;            &quot;variable&quot;: &quot;userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    },&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;record&quot;: {&#xa;          &quot;event&quot;: &quot;Employee Hired&quot;,&#xa;          &quot;mapping&quot;: {&#xa;            &quot;$merge&quot;: &quot;command&quot;,&#xa;            &quot;employeeId&quot;: &quot;userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" tags="pb:disconnected" id="8hQ1FuARfEdtXe4GFn2mSJ">
+      <mxCell style="aggregate" vertex="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH">
+        <mxGeometry x="544" y="1233" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </aggregate>
+    <mxCell id="9WtZmJetDZyYaDSz3URa5Z" style="curved=1;html=1;" edge="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH" source="n3hZguFXGmmf2TDrKXM9k2" target="8hQ1FuARfEdtXe4GFn2mSJ">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <event label="Employee Hired" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;employeeId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;email&quot;: &quot;string|format:email&quot;,&#xa;    &quot;role&quot;: &quot;/User/Role&quot;&#xa;  },&#xa;  &quot;applyRules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;information&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: [&#xa;              &quot;information&quot;,&#xa;              &quot;event&quot;&#xa;            ]&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="wjP7wdWpRDpsRinq2CZvXe">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH">
+        <mxGeometry x="544" y="1395" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <mxCell id="6mnxKABZxjQACTfnwLdov7" style="curved=1;html=1;" edge="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH" source="8hQ1FuARfEdtXe4GFn2mSJ" target="wjP7wdWpRDpsRinq2CZvXe">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <document label="Employee Id" type="document" tags="pb:connected" metadata="{&#xa;  &quot;ns&quot;: &quot;/Employee&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$type&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;$type&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    }&#xa;  }&#xa;}" id="k3irL5KfEyEAejnzSbTRi2">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH">
+        <mxGeometry x="336" y="1333" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <document label="Employee" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/Employee&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;employeeId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;email&quot;: &quot;string|format:email&quot;,&#xa;    &quot;role&quot;: &quot;/User/Role&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;employeeId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;employeeId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    }&#xa;  },&#xa;  &quot;identifier&quot;: &quot;employeeId&quot;&#xa;}" tags="pb:connected" id="9waTSdRQN6E6sVzJn6fWew">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH">
+        <mxGeometry x="816" y="1029" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <mxCell id="nYE1AaBQba1FjFAxJnkXY4" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH" source="wjP7wdWpRDpsRinq2CZvXe" target="9waTSdRQN6E6sVzJn6fWew">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="8vv8V2AAvCN1KhzzdJbNvC" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH" source="w7QrYDDq2eyGc3QQgRUDGb" target="PJo6ENiY4WNMTAtRWTP7z">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1155" y="752"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <document label="Employee List" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/Employee&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: &quot;/Employee/Employee&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {},&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        {&#xa;          &quot;field&quot;: &quot;name&quot;,&#xa;          &quot;headerName&quot;: &quot;Name&quot;,&#xa;          &quot;flex&quot;: 1,&#xa;          &quot;pageLink&quot;: &quot;EmployeeDetails&quot;&#xa;        },&#xa;        {&#xa;          &quot;field&quot;: &quot;email&quot;,&#xa;          &quot;headerName&quot;: &quot;Email&quot;,&#xa;          &quot;flex&quot;: 1&#xa;        }&#xa;      ]&#xa;    }&#xa;  },&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;any&quot;: true&#xa;        }&#xa;      }&#xa;    }&#xa;  }&#xa;}" tags="pb:connected" id="w7QrYDDq2eyGc3QQgRUDGb">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH">
+        <mxGeometry x="1075" y="1029" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <mxCell id="aBuxDwTJjFsEGWFecNitug" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="kNVhn18aGnkDJGX6vfF9WH" source="9waTSdRQN6E6sVzJn6fWew" target="w7QrYDDq2eyGc3QQgRUDGb">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <feature label="Acquire Client" type="feature" tags="pb:connected,ready" id="8ZxMv7y1M6gYTwpsjgGUaC">
+      <mxCell style="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=92;" vertex="1" originalStyle="feature;fillColor=#B9E0A5;" alternateStyle="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=56;" alternateStyleEnabled="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="2350" y="505" width="1424" height="1495" as="geometry">
+          <mxRectangle x="2448" y="505" width="1424" height="1495" as="alternateBounds"/>
+        </mxGeometry>
+      </mxCell>
+    </feature>
+    <ui label="Clients" type="ui" metadata="{&#xa;  &quot;route&quot;: &quot;/time-tracker/clients&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Clients&quot;,&#xa;    &quot;icon&quot;: &quot;domain&quot;,&#xa;    &quot;hidden:expr&quot;: &quot;!isRole(user, &#39;PM&#39;)&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Clients&quot;&#xa;}" tags="pb:connected" id="f3pSZkiMh8sUvR4LQ8pgVF">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="8ZxMv7y1M6gYTwpsjgGUaC">
+        <mxGeometry x="361.5" y="136" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <ui label="Clients" type="ui" metadata="{&#xa;  &quot;route&quot;: &quot;/time-tracker/clients&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Clients&quot;,&#xa;    &quot;icon&quot;: &quot;domain&quot;,&#xa;    &quot;hidden:expr&quot;: &quot;!isRole(user, &#39;PM&#39;)&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Clients&quot;&#xa;}" tags="pb:connected" id="uVgxbDPo3NV2HQf4VFJUke">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="8ZxMv7y1M6gYTwpsjgGUaC">
+        <mxGeometry x="1165.705882352941" y="130.79411764705856" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <mxCell id="fpuYyVGT1vVv76octr1VUE" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="8ZxMv7y1M6gYTwpsjgGUaC" source="f3pSZkiMh8sUvR4LQ8pgVF" target="c9cQavJYb5xYFX38LKXxD6">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <command label="Acquire Client" type="command" metadata="{&#xa;  &quot;schema&quot;: {&#xa;    &quot;clientId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;clientId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;ui:button&quot;: {&#xa;      &quot;hidden&quot;: &quot;!isRole(user, &#39;PM&#39;)&quot;&#xa;    }&#xa;  },&#xa;  &quot;newAggregate&quot;: true&#xa;}" tags="pb:connected" id="c9cQavJYb5xYFX38LKXxD6">
+      <mxCell style="command" vertex="1" tempVisible="0" parent="8ZxMv7y1M6gYTwpsjgGUaC">
+        <mxGeometry x="361.717391304348" y="693.7608695652175" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </command>
+    <event label="Client Acquired" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;clientId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;&#xa;  },&#xa;  &quot;applyRules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;information&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: [&#xa;              &quot;information&quot;,&#xa;              &quot;event&quot;&#xa;            ]&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="nudCeoGbjQVuiWDVrYpj5P">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="8ZxMv7y1M6gYTwpsjgGUaC">
+        <mxGeometry x="362.217391304348" y="1287.7608695652175" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <mxCell id="7FPL5n8MMz42g5VTXSHvru" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="8ZxMv7y1M6gYTwpsjgGUaC" source="c9cQavJYb5xYFX38LKXxD6" target="nudCeoGbjQVuiWDVrYpj5P">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <document label="Client" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/Client&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;clientId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;clientId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;clientId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    }&#xa;  },&#xa;  &quot;identifier&quot;: &quot;clientId&quot;&#xa;}" tags="pb:connected" id="gRG6vux9SCk43Q6DCWwD86">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="8ZxMv7y1M6gYTwpsjgGUaC">
+        <mxGeometry x="669.5714285714284" y="693.7857142857142" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <mxCell id="mMsK1p4GWLL2KYUPMpJ6AY" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="8ZxMv7y1M6gYTwpsjgGUaC" source="nudCeoGbjQVuiWDVrYpj5P" target="gRG6vux9SCk43Q6DCWwD86">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="aAtRCHKp39VYXyCsohvCeV" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="8ZxMv7y1M6gYTwpsjgGUaC" source="tgjSXbhahNdFYV1vrLnrrd" target="uVgxbDPo3NV2HQf4VFJUke">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1019" y="181"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <document label="Client List" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/Client&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: &quot;/Client/Client&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {},&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        &quot;name&quot;&#xa;      ]&#xa;    },&#xa;    &quot;table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        {&#xa;          &quot;field&quot;: &quot;name&quot;,&#xa;          &quot;headerName&quot;: &quot;Name&quot;,&#xa;          &quot;flex&quot;: 1&#xa;        }&#xa;      ]&#xa;    }&#xa;  },&#xa;  &quot;resolve&quot;: {&#xa;    &quot;orderBy&quot;: {&#xa;      &quot;prop&quot;: &quot;name&quot;,&#xa;      &quot;sort&quot;: &quot;asc&quot;&#xa;    }&#xa;  }&#xa;}" tags="pb:connected" id="tgjSXbhahNdFYV1vrLnrrd">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="8ZxMv7y1M6gYTwpsjgGUaC">
+        <mxGeometry x="938.5714285714284" y="693.7857142857142" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <mxCell id="eZ4UtCwacYRwT2TBRx2ebm" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="8ZxMv7y1M6gYTwpsjgGUaC" source="gRG6vux9SCk43Q6DCWwD86" target="tgjSXbhahNdFYV1vrLnrrd">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="5gXprHMBsJSrFcNouBKhf1" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt" source="tgjSXbhahNdFYV1vrLnrrd" target="afsGx2PpVjX2a1iDovDyML">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="3838" y="1250"/>
+          <mxPoint x="3838" y="672"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <feature label="Set Up Client Project" type="feature" tags="pb:connected,ready" id="q8sQxt1qhMhydJmJbWKNC5">
+      <mxCell style="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=92;" vertex="1" originalStyle="feature;fillColor=#B9E0A5;" alternateStyle="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=56;" tempVisible="1" alternateStyleEnabled="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="4014" y="505" width="1193" height="1495" as="geometry">
+          <mxRectangle x="4007" y="505" width="1193" height="1495" as="alternateBounds"/>
+        </mxGeometry>
+      </mxCell>
+    </feature>
+    <ui label="Projects" type="ui" metadata="{&#xa;  &quot;route&quot;: &quot;/time-tracker/projects&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Projects&quot;,&#xa;    &quot;icon&quot;: &quot;wrench-clock&quot;,&#xa;    &quot;hidden:expr&quot;: &quot;!isRole(user, &#39;PM&#39;)&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Projects&quot;&#xa;}" tags="pb:connected" id="76uJ8x8qcfWr2fGw5YEnyR">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5">
+        <mxGeometry x="210.13636363636397" y="126.0454545454545" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <UserObject label="&amp;nbsp;" tags="pb:connected" id="afsGx2PpVjX2a1iDovDyML">
+      <mxCell style="freeText" vertex="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5">
+        <mxGeometry x="201" y="84" width="9" height="100" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <mxCell id="aWJTVEFC3Dhx7pWrU1j25B" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5" source="76uJ8x8qcfWr2fGw5YEnyR" target="uSw5dJy7yeqUwRqeUT1a62">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <command label="&amp;nbsp;Set Up Client Project" type="command" metadata="{&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;clientId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;projectId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;clientId&quot;: {&#xa;      &quot;ui:title&quot;: &quot;Client&quot;,&#xa;      &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;      &quot;ui:options&quot;: {&#xa;        &quot;data&quot;: &quot;/Client/ClientList&quot;,&#xa;        &quot;text&quot;: &quot;data.name&quot;,&#xa;        &quot;value&quot;: &quot;data.clientId&quot;&#xa;      }&#xa;    },&#xa;    &quot;ui:button&quot;: {&#xa;      &quot;hidden&quot;: &quot;!isRole(user, &#39;PM&#39;)&quot;&#xa;    }&#xa;  },&#xa;  &quot;newAggregate&quot;: true&#xa;}" tags="pb:connected" id="uSw5dJy7yeqUwRqeUT1a62">
+      <mxCell style="command" vertex="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5">
+        <mxGeometry x="210" y="677" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </command>
+    <aggregate label="Project&lt;hr id=&quot;null&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;auto. assign PM&lt;/div&gt;" type="aggregate" metadata="{&#xa;  &quot;rules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;record&quot;: {&#xa;          &quot;event&quot;: &quot;Client Project Set Up&quot;,&#xa;          &quot;mapping&quot;: {&#xa;            &quot;$merge&quot;: &quot;command&quot;,&#xa;            &quot;pm&quot;: &quot;meta.user.userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" tags="pb:disconnected" id="8r2XjsGfV6YEJ7Z7NJoWpL">
+      <mxCell style="aggregate;autosize=1;" vertex="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5">
+        <mxGeometry x="210" y="1205" width="160" height="104" as="geometry"/>
+      </mxCell>
+    </aggregate>
+    <mxCell id="5vxNGgGc3citcBzucvxXVh" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5" source="uSw5dJy7yeqUwRqeUT1a62" target="8r2XjsGfV6YEJ7Z7NJoWpL">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <event label="Client Project Set Up" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;pm&quot;: &quot;/Employee/EmployeeId&quot;,&#xa;    &quot;clientId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;applyRules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;information&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: [&#xa;              &quot;information&quot;,&#xa;              &quot;event&quot;&#xa;            ]&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="43DS1TQ1a3G4pdLM6Ak3sN">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5">
+        <mxGeometry x="210" y="1371" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <mxCell id="urYHosi3cPwwWEYAPANyS8" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5" source="8r2XjsGfV6YEJ7Z7NJoWpL" target="43DS1TQ1a3G4pdLM6Ak3sN">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <document label="Project" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/Project&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;pm&quot;: &quot;/Employee/EmployeeId&quot;,&#xa;    &quot;clientId?&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;developers&quot;: &quot;/Employee/EmployeeId[]&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;projectId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;clientId&quot;: {&#xa;      &quot;ui:title&quot;: &quot;Client&quot;,&#xa;      &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;      &quot;ui:options&quot;: {&#xa;        &quot;data&quot;: &quot;/Client/ClientList&quot;,&#xa;        &quot;text&quot;: &quot;data.name&quot;,&#xa;        &quot;value&quot;: &quot;data.clientId&quot;&#xa;      }&#xa;    },&#xa;    &quot;pm&quot;: {&#xa;      &quot;ui:title&quot;: &quot;Project Manager&quot;,&#xa;      &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;      &quot;ui:options&quot;: {&#xa;        &quot;data&quot;: &quot;/Employee/EmployeeList&quot;,&#xa;        &quot;text&quot;: &quot;data.name&quot;,&#xa;        &quot;value&quot;: &quot;data.employeeId&quot;&#xa;      }&#xa;    },&#xa;    &quot;developers&quot;: {&#xa;      &quot;items&quot;: {&#xa;        &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;        &quot;ui:options&quot;: {&#xa;          &quot;label&quot;: false,&#xa;          &quot;data&quot;: &quot;/Employee/Developers&quot;,&#xa;          &quot;text&quot;: &quot;data.name&quot;,&#xa;          &quot;value&quot;: &quot;data.employeeId&quot;&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;identifier&quot;: &quot;projectId&quot;,&#xa;  &quot;initialize&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;condition&quot;,&#xa;      &quot;if_not&quot;: &quot;data.developers&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;data&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: &quot;data&quot;,&#xa;            &quot;developers&quot;: &quot;[]&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" tags="pb:connected" id="fDDJfVEBmfNSDDH8WeQ5R6">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5">
+        <mxGeometry x="498" y="677" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <mxCell id="tYQrzDGsgYoA5QyyFa2DZD" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5" source="43DS1TQ1a3G4pdLM6Ak3sN" target="fDDJfVEBmfNSDDH8WeQ5R6">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="w9DqaKAjhbrvBzfMmgDpaD" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5" source="fDDJfVEBmfNSDDH8WeQ5R6" target="2S3Pq2Fj4mQT3UUrJcttHq">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <document label="Project List" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/Project&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: &quot;/Project/Project&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {},&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        {&#xa;          &quot;field&quot;: &quot;name&quot;,&#xa;          &quot;headerName&quot;: &quot;Name&quot;,&#xa;          &quot;flex&quot;: 1,&#xa;          &quot;pageLink&quot;: &quot;ProjectDetails&quot;&#xa;        },&#xa;        {&#xa;          &quot;field&quot;: &quot;clientId&quot;,&#xa;          &quot;headerName&quot;: &quot;Client&quot;,&#xa;          &quot;ref&quot;: {&#xa;            &quot;data&quot;: &quot;/Client/ClientList&quot;,&#xa;            &quot;value&quot;: &quot;data.name&quot;&#xa;          }&#xa;        },&#xa;        {&#xa;          &quot;field&quot;: &quot;pm&quot;,&#xa;          &quot;headerName&quot;: &quot;Project Manager&quot;,&#xa;          &quot;ref&quot;: {&#xa;            &quot;data&quot;: &quot;/Employee/EmployeeList&quot;,&#xa;            &quot;value&quot;: &quot;data.name&quot;&#xa;          }&#xa;        }&#xa;      ]&#xa;    }&#xa;  },&#xa;  &quot;resolve&quot;: {&#xa;    &quot;orderBy&quot;: {&#xa;      &quot;prop&quot;: &quot;name&quot;,&#xa;      &quot;sort&quot;: &quot;asc&quot;&#xa;    }&#xa;  }&#xa;}" tags="pb:connected" id="2S3Pq2Fj4mQT3UUrJcttHq">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5">
+        <mxGeometry x="802" y="677" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <ui label="Projects" type="ui" metadata="{&#xa;  &quot;route&quot;: &quot;/time-tracker/projects&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Projects&quot;,&#xa;    &quot;icon&quot;: &quot;wrench-clock&quot;,&#xa;    &quot;hidden:expr&quot;: &quot;!isRole(user, &#39;PM&#39;)&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Projects&quot;&#xa;}" tags="pb:connected" id="bVwvkwA8YTtJwmFehzRX9z">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5">
+        <mxGeometry x="962.195652173913" y="139.06521739130403" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <mxCell id="nx4V1u4my3E9xdd99NeAH3" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="q8sQxt1qhMhydJmJbWKNC5" source="2S3Pq2Fj4mQT3UUrJcttHq" target="bVwvkwA8YTtJwmFehzRX9z">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="pJvNdtkx8eM1fXwYxs5Xsf" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt" source="bVwvkwA8YTtJwmFehzRX9z" target="m11gtTBJwtgffFy7EaD1CN">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="nZR2NFFa2ps2vPdSdJV4EP" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt" source="fDDJfVEBmfNSDDH8WeQ5R6" target="m11gtTBJwtgffFy7EaD1CN">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="4592" y="879"/>
+          <mxPoint x="5359" y="879"/>
+          <mxPoint x="5359" y="694"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <feature label="Assign Developer to Project" type="feature" tags="pb:connected,ready" id="ePvBawRskcVKEtG9UFaz4A">
+      <mxCell style="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=92;" vertex="1" originalStyle="feature;fillColor=#B9E0A5;" alternateStyle="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=56;" alternateStyleEnabled="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="5319" y="505" width="976" height="1495" as="geometry">
+          <mxRectangle x="5312" y="505" width="976" height="1495" as="alternateBounds"/>
+        </mxGeometry>
+      </mxCell>
+    </feature>
+    <ui label="Project Details" type="ui" metadata="{&#xa;  &quot;routeParams&quot;: [&#xa;    &quot;projectId&quot;&#xa;  ],&#xa;  &quot;route&quot;: &quot;/time-tracker/projects/:projectId&quot;,&#xa;  &quot;breadcrumb&quot;: {&#xa;    &quot;data&quot;: &quot;/Project/Project&quot;,&#xa;    &quot;label&quot;: &quot;data.name&quot;&#xa;  }&#xa;}" tags="pb:connected" id="m11gtTBJwtgffFy7EaD1CN">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A">
+        <mxGeometry x="393" y="139" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <document label="Developers" type="document" tags="pb:connected" metadata="{&#xa;  &quot;ns&quot;: &quot;/Employee&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: &quot;/Employee/Employee&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {},&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;eq&quot;: {&#xa;            &quot;prop&quot;: &quot;role&quot;,&#xa;            &quot;value&quot;: &quot;&#39;Dev&#39;&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        &quot;name&quot;,&#xa;        &quot;email&quot;&#xa;      ]&#xa;    }&#xa;  }&#xa;}" id="m3LBEfmjnfo8W5ZyG6b1Fm">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A">
+        <mxGeometry x="153" y="677" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <mxCell id="b5VkcvTgx8J1xRCzWi2FXe" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A" source="hpAYxBKvuJbiRaDcRZQEdX" target="m3LBEfmjnfo8W5ZyG6b1Fm">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <event label="Employee Hired" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;employeeId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;email&quot;: &quot;string|format:email&quot;,&#xa;    &quot;role&quot;: &quot;/User/Role&quot;&#xa;  },&#xa;  &quot;applyRules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;information&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: [&#xa;              &quot;information&quot;,&#xa;              &quot;event&quot;&#xa;            ]&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="hpAYxBKvuJbiRaDcRZQEdX">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A">
+        <mxGeometry x="89" y="999" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <UserObject label="&amp;nbsp;" tags="pb:connected" id="ek5GUk5jy9BG6qwTRSCUKJ">
+      <mxCell style="freeText" vertex="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A">
+        <mxGeometry x="380" y="193" width="13" height="43" as="geometry"/>
+      </mxCell>
+    </UserObject>
+    <mxCell id="k5xFHAfd5dKMXR2GCF5mRS" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A" source="m3LBEfmjnfo8W5ZyG6b1Fm" target="ek5GUk5jy9BG6qwTRSCUKJ">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="232" y="216"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <event label="Developer Assigned To Project" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;developer&quot;: &quot;/Employee/EmployeeId&quot;&#xa;  },&#xa;  &quot;applyRules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;information&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: &quot;information&quot;,&#xa;            &quot;developers&quot;: &quot;push(information.developers, event.developer)&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="rNURpfaqY7gvvRMsFcW89g">
+      <mxCell style="event;autosize=1;" vertex="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A">
+        <mxGeometry x="393" y="1282" width="160" height="106" as="geometry"/>
+      </mxCell>
+    </event>
+    <mxCell id="VhPVCrLVHggFfyUsXKBQP" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A" source="m5eaYiaY437jtu8VfQ8oE6" target="rNURpfaqY7gvvRMsFcW89g">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <command label="Assign Developer To Project" type="command" metadata="{&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;developer&quot;: &quot;/Employee/EmployeeId&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;projectId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;ui:button&quot;: {&#xa;      &quot;hidden&quot;: &quot;!isRole(user, &#39;PM&#39;)&quot;&#xa;    },&#xa;    &quot;developer&quot;: {&#xa;      &quot;ui:title&quot;: &quot;Developer&quot;,&#xa;      &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;      &quot;ui:options&quot;: {&#xa;        &quot;data&quot;: &quot;/Employee/Developers&quot;,&#xa;        &quot;text&quot;: &quot;data.name&quot;,&#xa;        &quot;value&quot;: &quot;data.employeeId&quot;&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;newAggregate&quot;: false&#xa;}" tags="pb:connected" id="m5eaYiaY437jtu8VfQ8oE6">
+      <mxCell style="command" vertex="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A">
+        <mxGeometry x="393" y="677" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </command>
+    <mxCell id="nC5zzumk4sJYYBE24Pb21G" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A" source="m11gtTBJwtgffFy7EaD1CN" target="m5eaYiaY437jtu8VfQ8oE6">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="vTtRUypcWrw47UebGjk4H8" style="curved=1;html=1;startArrow=none;endArrow=open;" edge="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A" source="rNURpfaqY7gvvRMsFcW89g" target="gmoqCSctRZ2m9GFtppqj2z">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <document label="Project" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/Project&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;pm&quot;: &quot;/Employee/EmployeeId&quot;,&#xa;    &quot;clientId?&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;developers&quot;: &quot;/Employee/EmployeeId[]&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;projectId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;clientId&quot;: {&#xa;      &quot;ui:title&quot;: &quot;Client&quot;,&#xa;      &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;      &quot;ui:options&quot;: {&#xa;        &quot;data&quot;: &quot;/Client/ClientList&quot;,&#xa;        &quot;text&quot;: &quot;data.name&quot;,&#xa;        &quot;value&quot;: &quot;data.clientId&quot;&#xa;      }&#xa;    },&#xa;    &quot;pm&quot;: {&#xa;      &quot;ui:title&quot;: &quot;Project Manager&quot;,&#xa;      &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;      &quot;ui:options&quot;: {&#xa;        &quot;data&quot;: &quot;/Employee/EmployeeList&quot;,&#xa;        &quot;text&quot;: &quot;data.name&quot;,&#xa;        &quot;value&quot;: &quot;data.employeeId&quot;&#xa;      }&#xa;    },&#xa;    &quot;developers&quot;: {&#xa;      &quot;items&quot;: {&#xa;        &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;        &quot;ui:options&quot;: {&#xa;          &quot;label&quot;: false,&#xa;          &quot;data&quot;: &quot;/Employee/Developers&quot;,&#xa;          &quot;text&quot;: &quot;data.name&quot;,&#xa;          &quot;value&quot;: &quot;data.employeeId&quot;&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;identifier&quot;: &quot;projectId&quot;,&#xa;  &quot;initialize&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;condition&quot;,&#xa;      &quot;if_not&quot;: &quot;data.developers&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;data&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: &quot;data&quot;,&#xa;            &quot;developers&quot;: &quot;[]&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" tags="pb:connected" id="gmoqCSctRZ2m9GFtppqj2z">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A">
+        <mxGeometry x="697" y="677" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <document label="Assigned Projects" type="document" tags="pb:connected" metadata="{&#xa;  &quot;ns&quot;: &quot;/Project&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: &quot;/Project/Project&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {},&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;or&quot;: [&#xa;            {&#xa;              &quot;inArray&quot;: {&#xa;                &quot;prop&quot;: &quot;developers&quot;,&#xa;                &quot;value&quot;: &quot;meta.user.userId&quot;&#xa;              }&#xa;            },&#xa;            {&#xa;              &quot;eq&quot;: {&#xa;                &quot;prop&quot;: &quot;pm&quot;,&#xa;                &quot;value&quot;: &quot;meta.user.userId&quot;&#xa;              }&#xa;            }&#xa;          ]&#xa;        }&#xa;      }&#xa;    },&#xa;    &quot;orderBy&quot;: {&#xa;      &quot;prop&quot;: &quot;name&quot;,&#xa;      &quot;sort&quot;: &quot;asc&quot;&#xa;    }&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        &quot;name&quot;&#xa;      ]&#xa;    }&#xa;  }&#xa;}" id="vMuYkF9nZy3TJzBK99d6ap">
+      <mxCell style="document;autosize=1;" vertex="1" tempVisible="0" parent="ePvBawRskcVKEtG9UFaz4A">
+        <mxGeometry x="697" y="677" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <feature label="Track Project Time" type="feature" tags="pb:connected,ready" id="Ss8P9PiwaWLQijJyJ4gwN">
+      <mxCell style="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=92;" vertex="1" originalStyle="feature;fillColor=#B9E0A5;" alternateStyle="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=56;" alternateStyleEnabled="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="6560" y="805" width="816" height="1483" as="geometry">
+          <mxRectangle x="6560" y="805" width="816" height="1483" as="alternateBounds"/>
+        </mxGeometry>
+      </mxCell>
+    </feature>
+    <ui label="Timesheet" type="ui" metadata="{&#xa;  &quot;route&quot;: &quot;/project-time/timesheet&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Timesheet&quot;,&#xa;    &quot;icon&quot;: &quot;timetable&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Timesheet&quot;&#xa;}" tags="pb:connected" id="kQPfTsEeDygnJGjJpW34af">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="Ss8P9PiwaWLQijJyJ4gwN">
+        <mxGeometry x="320.06521739130403" y="94" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <event label="Project Time Tracked" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectTimeId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;project&quot;: &quot;/Project/Project:projectId&quot;,&#xa;    &quot;employee&quot;: &quot;/Employee/Employee:employeeId&quot;,&#xa;    &quot;day&quot;: &quot;string|format:date&quot;,&#xa;    &quot;startTime&quot;: &quot;string|format:time&quot;,&#xa;    &quot;endTime&quot;: &quot;string|format:time&quot;&#xa;  },&#xa;  &quot;applyRules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;information&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: [&#xa;              &quot;information&quot;,&#xa;              &quot;event&quot;&#xa;            ]&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="kD4KVU5Zo65AwaS2v119dW">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="Ss8P9PiwaWLQijJyJ4gwN">
+        <mxGeometry x="320.06521739130403" y="1367.891304347826" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </event>
+    <command label="Track Project Time" type="command" metadata="{&#xa;  &quot;newAggregate&quot;: true,&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectTimeId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;project&quot;: &quot;/Project/Project:projectId&quot;,&#xa;    &quot;day&quot;: &quot;string|format:date&quot;,&#xa;    &quot;startTime&quot;: &quot;string|format:time&quot;,&#xa;    &quot;endTime&quot;: &quot;string|format:time&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;projectTimeId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;project&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;      &quot;ui:options&quot;: {&#xa;        &quot;data&quot;: &quot;/Project/AssignedProjects&quot;,&#xa;        &quot;value&quot;: &quot;data.projectId&quot;,&#xa;        &quot;text&quot;: &quot;data.name&quot;&#xa;      }&#xa;    }&#xa;  }&#xa;}" tags="pb:connected" id="aFZS7M8DLrUxHzMKsRtjfa">
+      <mxCell style="command" vertex="1" tempVisible="0" parent="Ss8P9PiwaWLQijJyJ4gwN">
+        <mxGeometry x="320.06521739130403" y="394" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </command>
+    <mxCell id="3A9KZG3N9xqiRFQsa86ymV" value="" style="curved=1;html=1;" edge="1" tempVisible="0" parent="Ss8P9PiwaWLQijJyJ4gwN" source="kQPfTsEeDygnJGjJpW34af" target="aFZS7M8DLrUxHzMKsRtjfa">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="evDmBGnyycDMuATJEBWZVs" value="" style="curved=1;html=1;" edge="1" tempVisible="0" parent="Ss8P9PiwaWLQijJyJ4gwN" source="jbizqSVUXmraPGsYdkLBN6" target="kD4KVU5Zo65AwaS2v119dW">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <aggregate label="Assign time tracking to currently signed in employee" type="aggregate" metadata="{&#xa;  &quot;rules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;record&quot;: {&#xa;          &quot;event&quot;: &quot;Project Time Tracked&quot;,&#xa;          &quot;mapping&quot;: {&#xa;            &quot;$merge&quot;: &quot;command&quot;,&#xa;            &quot;employee&quot;: &quot;meta.user.userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="jbizqSVUXmraPGsYdkLBN6">
+      <mxCell style="aggregate;autosize=1;" vertex="1" tempVisible="0" parent="Ss8P9PiwaWLQijJyJ4gwN">
+        <mxGeometry x="320" y="1209" width="160" height="128" as="geometry"/>
+      </mxCell>
+    </aggregate>
+    <mxCell id="b4mkbW3b6msLuw626mHgkD" value="" style="curved=1;html=1;" edge="1" tempVisible="0" parent="Ss8P9PiwaWLQijJyJ4gwN" source="aFZS7M8DLrUxHzMKsRtjfa" target="jbizqSVUXmraPGsYdkLBN6">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="9207.326305689989" y="8959.759796379281" as="sourcePoint"/>
+        <mxPoint x="9207.326305689989" y="11577.612233796935" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <document label="Project Time" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/App&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectTimeId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;project&quot;: &quot;/Project/Project:projectId&quot;,&#xa;    &quot;employee&quot;: &quot;/Employee/Employee:employeeId&quot;,&#xa;    &quot;day&quot;: &quot;string|format:date&quot;,&#xa;    &quot;startTime&quot;: &quot;string|format:time&quot;,&#xa;    &quot;endTime&quot;: &quot;string|format:time&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;projectTimeId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;project&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;      &quot;ui:options&quot;: {&#xa;        &quot;data&quot;: &quot;/Project/ProjectList&quot;,&#xa;        &quot;value&quot;: &quot;data.projectId&quot;,&#xa;        &quot;text&quot;: &quot;data.name&quot;&#xa;      }&#xa;    },&#xa;    &quot;employee&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;      &quot;ui:options&quot;: {&#xa;        &quot;data&quot;: &quot;/Employee/EmployeeList&quot;,&#xa;        &quot;value&quot;: &quot;data.employeeId&quot;,&#xa;        &quot;text&quot;: &quot;data.email&quot;&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;identifier&quot;: &quot;projectTimeId&quot;,&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;projectTimeId&quot;: &quot;string|format:uuid&quot;&#xa;  }&#xa;}" tags="pb:connected" id="rY4ASmkZyZPEZB1tgiKHLJ">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="Ss8P9PiwaWLQijJyJ4gwN">
+        <mxGeometry x="576" y="394" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <mxCell id="6W8s9b6UpraDNmABTpW6Kv" style="curved=1;html=1;" edge="1" tempVisible="0" parent="Ss8P9PiwaWLQijJyJ4gwN" source="kD4KVU5Zo65AwaS2v119dW" target="rY4ASmkZyZPEZB1tgiKHLJ">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="g9caHk6WyAoTV1CDCPZgZc" style="curved=1;html=1;" edge="1" tempVisible="0" parent="Ss8P9PiwaWLQijJyJ4gwN" source="adYvL1nPPh5wGzhvVnxSfG" target="aFZS7M8DLrUxHzMKsRtjfa">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <document label="Assigned Projects" type="document" tags="pb:connected" metadata="{&#xa;  &quot;ns&quot;: &quot;/Project&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: &quot;/Project/Project&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {},&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;or&quot;: [&#xa;            {&#xa;              &quot;inArray&quot;: {&#xa;                &quot;prop&quot;: &quot;developers&quot;,&#xa;                &quot;value&quot;: &quot;meta.user.userId&quot;&#xa;              }&#xa;            },&#xa;            {&#xa;              &quot;eq&quot;: {&#xa;                &quot;prop&quot;: &quot;pm&quot;,&#xa;                &quot;value&quot;: &quot;meta.user.userId&quot;&#xa;              }&#xa;            }&#xa;          ]&#xa;        }&#xa;      }&#xa;    },&#xa;    &quot;orderBy&quot;: {&#xa;      &quot;prop&quot;: &quot;name&quot;,&#xa;      &quot;sort&quot;: &quot;asc&quot;&#xa;    }&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        &quot;name&quot;&#xa;      ]&#xa;    }&#xa;  }&#xa;}" id="adYvL1nPPh5wGzhvVnxSfG">
+      <mxCell style="document;autosize=1;" vertex="1" tempVisible="0" parent="Ss8P9PiwaWLQijJyJ4gwN">
+        <mxGeometry x="63.83333333333303" y="393.55555555555566" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <feature label="View Timesheet" type="feature" tags="pb:connected,ready" id="3mcLCbqBLdS5j2SfrTMXjr">
+      <mxCell style="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=92;" vertex="1" originalStyle="feature;fillColor=#B9E0A5;" alternateStyle="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=56;" alternateStyleEnabled="1" tempVisible="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="7406" y="800" width="740" height="592" as="geometry">
+          <mxRectangle x="7406" y="800" width="740" height="592" as="alternateBounds"/>
+        </mxGeometry>
+      </mxCell>
+    </feature>
+    <ui label="Timesheet" type="ui" metadata="{&#xa;  &quot;route&quot;: &quot;/project-time/timesheet&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Timesheet&quot;,&#xa;    &quot;icon&quot;: &quot;timetable&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Timesheet&quot;&#xa;}" tags="pb:connected" id="8VsA8fRjijYPCQ7j35EGA4">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="3mcLCbqBLdS5j2SfrTMXjr">
+        <mxGeometry x="370.05555555555566" y="99" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <mxCell id="mem74ka5fdCBq78QWdUqST" style="curved=1;html=1;" edge="1" tempVisible="0" parent="3mcLCbqBLdS5j2SfrTMXjr" source="eBtvDGrcK19frDo7Ce2KNZ" target="8VsA8fRjijYPCQ7j35EGA4">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="226" y="149"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <document label="Timesheet" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/App&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: &quot;/App/ProjectTime&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        {&#xa;          &quot;field&quot;: &quot;project&quot;,&#xa;          &quot;ref&quot;: {&#xa;            &quot;data&quot;: &quot;/Project/ProjectList&quot;,&#xa;            &quot;value&quot;: &quot;data.name&quot;&#xa;          }&#xa;        },&#xa;        &quot;day&quot;,&#xa;        &quot;startTime&quot;,&#xa;        &quot;endTime&quot;,&#xa;        {&#xa;          &quot;field&quot;: &quot;employee&quot;,&#xa;          &quot;ref&quot;: {&#xa;            &quot;data&quot;: &quot;/Employee/EmployeeList&quot;,&#xa;            &quot;value&quot;: &quot;data.name&quot;&#xa;          }&#xa;        }&#xa;      ]&#xa;    }&#xa;  },&#xa;  &quot;querySchema&quot;: {},&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;eq&quot;: {&#xa;            &quot;prop&quot;: &quot;employee&quot;,&#xa;            &quot;value&quot;: &quot;meta.user.userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  }&#xa;}" tags="pb:connected" id="eBtvDGrcK19frDo7Ce2KNZ">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="3mcLCbqBLdS5j2SfrTMXjr">
+        <mxGeometry x="130" y="399" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <feature label="Project Time Report" type="feature" tags="pb:connected,ready" id="aRm4BxK52wDNS4mzzTCzob">
+      <mxCell style="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=92;" vertex="1" originalStyle="feature;fillColor=#B9E0A5;" alternateStyle="feature;fillColor=#B9E0A5;verticalAlign=middle;fontSize=56;" alternateStyleEnabled="1" parent="uUDo9dNpCk971KQ7giTNPt">
+        <mxGeometry x="8349" y="505" width="867" height="871" as="geometry">
+          <mxRectangle x="8349" y="505" width="867" height="871" as="alternateBounds"/>
+        </mxGeometry>
+      </mxCell>
+    </feature>
+    <ui label="Project Details" type="ui" metadata="{&#xa;  &quot;routeParams&quot;: [&#xa;    &quot;projectId&quot;&#xa;  ],&#xa;  &quot;route&quot;: &quot;/time-tracker/projects/:projectId&quot;,&#xa;  &quot;breadcrumb&quot;: {&#xa;    &quot;data&quot;: &quot;/Project/Project&quot;,&#xa;    &quot;label&quot;: &quot;data.name&quot;&#xa;  }&#xa;}" tags="pb:connected" id="c77ucYJqHd2D5ihM5iDDXJ">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="aRm4BxK52wDNS4mzzTCzob">
+        <mxGeometry x="627" y="103" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <mxCell id="msrit2S5VRuznSHnPHad2q" style="curved=1;html=1;" edge="1" parent="aRm4BxK52wDNS4mzzTCzob" source="7JDgynFpxGLAZCEUhGJ1sk" target="c77ucYJqHd2D5ihM5iDDXJ" tempVisible="0">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="228" y="152"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <document label="Project" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/Project&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;pm&quot;: &quot;/Employee/EmployeeId&quot;,&#xa;    &quot;clientId?&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;developers&quot;: &quot;/Employee/EmployeeId[]&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;projectId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;clientId&quot;: {&#xa;      &quot;ui:title&quot;: &quot;Client&quot;,&#xa;      &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;      &quot;ui:options&quot;: {&#xa;        &quot;data&quot;: &quot;/Client/ClientList&quot;,&#xa;        &quot;text&quot;: &quot;data.name&quot;,&#xa;        &quot;value&quot;: &quot;data.clientId&quot;&#xa;      }&#xa;    },&#xa;    &quot;pm&quot;: {&#xa;      &quot;ui:title&quot;: &quot;Project Manager&quot;,&#xa;      &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;      &quot;ui:options&quot;: {&#xa;        &quot;data&quot;: &quot;/Employee/EmployeeList&quot;,&#xa;        &quot;text&quot;: &quot;data.name&quot;,&#xa;        &quot;value&quot;: &quot;data.employeeId&quot;&#xa;      }&#xa;    },&#xa;    &quot;developers&quot;: {&#xa;      &quot;items&quot;: {&#xa;        &quot;ui:widget&quot;: &quot;DataSelect&quot;,&#xa;        &quot;ui:options&quot;: {&#xa;          &quot;label&quot;: false,&#xa;          &quot;data&quot;: &quot;/Employee/Developers&quot;,&#xa;          &quot;text&quot;: &quot;data.name&quot;,&#xa;          &quot;value&quot;: &quot;data.employeeId&quot;&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;identifier&quot;: &quot;projectId&quot;,&#xa;  &quot;initialize&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;condition&quot;,&#xa;      &quot;if_not&quot;: &quot;data.developers&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;assign&quot;: {&#xa;          &quot;variable&quot;: &quot;data&quot;,&#xa;          &quot;value&quot;: {&#xa;            &quot;$merge&quot;: &quot;data&quot;,&#xa;            &quot;developers&quot;: &quot;[]&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" tags="pb:connected" id="7JDgynFpxGLAZCEUhGJ1sk">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="aRm4BxK52wDNS4mzzTCzob">
+        <mxGeometry x="163" y="704" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <mxCell id="hEe4GH8SdVdnBEiU6xpFie" style="curved=1;html=1;" edge="1" parent="aRm4BxK52wDNS4mzzTCzob" source="wH5ya6XBzUYFvrunH6QLZe" target="c77ucYJqHd2D5ihM5iDDXJ" tempVisible="0">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="403" y="152"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <document label="Project Time Report" type="document" tags="pb:connected" metadata="{&#xa;  &quot;ns&quot;: &quot;/Timesheet&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: &quot;/App/ProjectTime&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;projectId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;eq&quot;: {&#xa;            &quot;prop&quot;: &quot;project&quot;,&#xa;            &quot;value&quot;: &quot;query.projectId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    },&#xa;    &quot;orderBy&quot;: [&#xa;      {&#xa;        &quot;prop&quot;: &quot;day&quot;,&#xa;        &quot;sort&quot;: &quot;asc&quot;&#xa;      },&#xa;      {&#xa;        &quot;prop&quot;: &quot;startTime&quot;,&#xa;        &quot;sort&quot;: &quot;asc&quot;&#xa;      }&#xa;    ]&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;density&quot;: &quot;compact&quot;,&#xa;      &quot;pageSize&quot;: 25,&#xa;      &quot;pageSizeOptions&quot;: [&#xa;        10,&#xa;        25,&#xa;        50&#xa;      ],&#xa;      &quot;columns&quot;: [&#xa;        {&#xa;          &quot;field&quot;: &quot;employee&quot;,&#xa;          &quot;ref&quot;: {&#xa;            &quot;data&quot;: &quot;/Employee/EmployeeList&quot;,&#xa;            &quot;value&quot;: &quot;data.name&quot;&#xa;          }&#xa;        },&#xa;        {&#xa;          &quot;field&quot;: &quot;day&quot;,&#xa;          &quot;headerName&quot;: &quot;Day&quot;,&#xa;          &quot;value&quot;: &quot;row.day|localDate&quot;,&#xa;          &quot;flex&quot;: 1&#xa;        },&#xa;        {&#xa;          &quot;field&quot;: &quot;startTime&quot;,&#xa;          &quot;headerName&quot;: &quot;Start Time&quot;,&#xa;          &quot;flex&quot;: 1,&#xa;          &quot;value&quot;: &quot;(row.day+&#39;T&#39;+row.startTime)|hours|twoDigit + &#39;:&#39; + (row.day+&#39;T&#39;+row.startTime)|minutes|twoDigit&quot;&#xa;        },&#xa;        {&#xa;          &quot;field&quot;: &quot;endTime&quot;,&#xa;          &quot;headerName&quot;: &quot;End Time&quot;,&#xa;          &quot;flex&quot;: 1,&#xa;          &quot;value&quot;: &quot;(row.day+&#39;T&#39;+row.endTime)|hours|twoDigit + &#39;:&#39; + (row.day+&#39;T&#39;+row.endTime)|minutes|twoDigit&quot;&#xa;        },&#xa;        {&#xa;          &quot;field&quot;: &quot;project&quot;,&#xa;          &quot;ref&quot;: {&#xa;            &quot;data&quot;: &quot;/Project/ProjectList&quot;,&#xa;            &quot;value&quot;: &quot;data.name&quot;&#xa;          }&#xa;        }&#xa;      ]&#xa;    }&#xa;  }&#xa;}" id="wH5ya6XBzUYFvrunH6QLZe">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="aRm4BxK52wDNS4mzzTCzob">
+        <mxGeometry x="339" y="706" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <ui label="Projects" type="ui" metadata="{&#xa;  &quot;route&quot;: &quot;/time-tracker/projects&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Projects&quot;,&#xa;    &quot;icon&quot;: &quot;wrench-clock&quot;,&#xa;    &quot;hidden:expr&quot;: &quot;!isRole(user, &#39;PM&#39;)&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Projects&quot;&#xa;}" tags="pb:connected" id="GR5aU2YGL8neKCbnXdu7L">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="aRm4BxK52wDNS4mzzTCzob">
+        <mxGeometry x="291" y="103" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <mxCell id="4AUEB5jecvYD5kCybCt42V" style="curved=1;html=1;" edge="1" parent="aRm4BxK52wDNS4mzzTCzob" source="GR5aU2YGL8neKCbnXdu7L" target="c77ucYJqHd2D5ihM5iDDXJ" tempVisible="0">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="9ASZLreNS1a7Gaxxu3jD4v" style="curved=1;html=1;" edge="1" parent="uUDo9dNpCk971KQ7giTNPt" source="kD4KVU5Zo65AwaS2v119dW" target="wH5ya6XBzUYFvrunH6QLZe">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <feature label="Employee Time Report" type="feature" tags="pb:connected,ready" id="gvMuBhpFs4BbWh3tdmAFjT">
+      <mxCell style="feature;verticalAlign=middle;fontSize=92;fillColor=#B9E0A5;" vertex="1" originalStyle="feature;fillColor=#B9E0A5;" alternateStyle="feature;verticalAlign=middle;fontSize=56;fillColor=#B9E0A5;" parent="uUDo9dNpCk971KQ7giTNPt" alternateStyleEnabled="1">
+        <mxGeometry x="9392" y="92" width="818" height="1284" as="geometry">
+          <mxRectangle x="9392" y="92" width="818" height="1284" as="alternateBounds"/>
+        </mxGeometry>
+      </mxCell>
+    </feature>
+    <ui label="Employees" type="ui" metadata="{&#xa;  &quot;route&quot;: &quot;/time-tracker/employees&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Employees&quot;,&#xa;    &quot;icon&quot;: &quot;account-group&quot;,&#xa;    &quot;hidden:expr&quot;: &quot;!isRole(user, &#39;HR&#39;)&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Employees&quot;&#xa;}" tags="pb:connected" id="dmPosGNRncFr6wq8AxVmdN">
+      <mxCell style="ui" vertex="1" tempVisible="1" parent="gvMuBhpFs4BbWh3tdmAFjT">
+        <mxGeometry x="192" y="151" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <ui label="Employee Details" type="ui" tags="pb:connected" metadata="{&#xa;  &quot;route&quot;: &quot;/time-tracker/employees/:employeeId&quot;,&#xa;  &quot;breadcrumb&quot;: {&#xa;    &quot;data&quot;: &quot;/Employee/Employee&quot;,&#xa;    &quot;label&quot;: &quot;data.name&quot;&#xa;  },&#xa;  &quot;routeParams&quot;: [&#xa;    &quot;employeeId&quot;&#xa;  ]&#xa;}" id="2VCRDq2odhXDg9TtCxgRTu">
+      <mxCell style="ui" vertex="1" tempVisible="1" parent="gvMuBhpFs4BbWh3tdmAFjT">
+        <mxGeometry x="496.14285714285506" y="150.99999999999955" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </ui>
+    <mxCell id="qCih9XQz7HYKLx27yVYPt3" style="curved=1;html=1;" edge="1" parent="gvMuBhpFs4BbWh3tdmAFjT" source="dmPosGNRncFr6wq8AxVmdN" target="2VCRDq2odhXDg9TtCxgRTu">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="pxhtZC7JQXBYG7WCMomf7v" style="curved=1;html=1;" edge="1" parent="gvMuBhpFs4BbWh3tdmAFjT" source="odqrGj2mDM46TSd3Chph4f" target="2VCRDq2odhXDg9TtCxgRTu">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="368" y="201"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <document label="Employee Time Report" type="document" tags="pb:connected" metadata="{&#xa;  &quot;ns&quot;: &quot;/TimeEntry&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: &quot;/App/ProjectTime&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;employeeId&quot;: &quot;/Employee/EmployeeId&quot;&#xa;  },&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;eq&quot;: {&#xa;            &quot;prop&quot;: &quot;employee&quot;,&#xa;            &quot;value&quot;: &quot;query.employeeId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    },&#xa;    &quot;orderBy&quot;: [&#xa;      {&#xa;        &quot;prop&quot;: &quot;day&quot;,&#xa;        &quot;sort&quot;: &quot;asc&quot;&#xa;      },&#xa;      {&#xa;        &quot;prop&quot;: &quot;startTime&quot;,&#xa;        &quot;sort&quot;: &quot;asc&quot;&#xa;      }&#xa;    ]&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;density&quot;: &quot;compact&quot;,&#xa;      &quot;pageSize&quot;: 25,&#xa;      &quot;pageSizeOptions&quot;: [&#xa;        10,&#xa;        25,&#xa;        50&#xa;      ],&#xa;      &quot;columns&quot;: [&#xa;        {&#xa;          &quot;field&quot;: &quot;project&quot;,&#xa;          &quot;ref&quot;: {&#xa;            &quot;data&quot;: &quot;/Project/ProjectList&quot;,&#xa;            &quot;value&quot;: &quot;data.name&quot;&#xa;          }&#xa;        },&#xa;        {&#xa;          &quot;field&quot;: &quot;day&quot;,&#xa;          &quot;headerName&quot;: &quot;Day&quot;,&#xa;          &quot;value&quot;: &quot;row.day|localDate&quot;,&#xa;          &quot;flex&quot;: 1&#xa;        },&#xa;        {&#xa;          &quot;field&quot;: &quot;startTime&quot;,&#xa;          &quot;headerName&quot;: &quot;Start Time&quot;,&#xa;          &quot;flex&quot;: 1,&#xa;          &quot;value&quot;: &quot;(row.day+&#39;T&#39;+row.startTime)|hours|twoDigit + &#39;:&#39; + (row.day+&#39;T&#39;+row.startTime)|minutes|twoDigit&quot;&#xa;        },&#xa;        {&#xa;          &quot;field&quot;: &quot;endTime&quot;,&#xa;          &quot;headerName&quot;: &quot;End Time&quot;,&#xa;          &quot;flex&quot;: 1,&#xa;          &quot;value&quot;: &quot;(row.day+&#39;T&#39;+row.endTime)|hours|twoDigit + &#39;:&#39; + (row.day+&#39;T&#39;+row.endTime)|minutes|twoDigit&quot;&#xa;        },&#xa;        {&#xa;          &quot;field&quot;: &quot;employee&quot;,&#xa;          &quot;ref&quot;: {&#xa;            &quot;data&quot;: &quot;/Employee/EmployeeList&quot;,&#xa;            &quot;value&quot;: &quot;data.email&quot;&#xa;          }&#xa;        }&#xa;      ]&#xa;    }&#xa;  }&#xa;}" id="odqrGj2mDM46TSd3Chph4f">
+      <mxCell style="document" vertex="1" tempVisible="1" parent="gvMuBhpFs4BbWh3tdmAFjT">
+        <mxGeometry x="288.0869565217399" y="1106.6521739130435" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <mxCell id="vSWdrui1pwTrFJ1cUFTGJm" style="curved=1;html=1;" edge="1" parent="gvMuBhpFs4BbWh3tdmAFjT" source="nJ3DQ4B1yfyEBsTbuzKwCM" target="2VCRDq2odhXDg9TtCxgRTu">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="192" y="201"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <document label="Employee" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/Employee&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;employeeId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;email&quot;: &quot;string|format:email&quot;,&#xa;    &quot;role&quot;: &quot;/User/Role&quot;&#xa;  },&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;employeeId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;employeeId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    }&#xa;  },&#xa;  &quot;identifier&quot;: &quot;employeeId&quot;&#xa;}" tags="pb:connected" id="nJ3DQ4B1yfyEBsTbuzKwCM">
+      <mxCell style="document" vertex="1" tempVisible="1" parent="gvMuBhpFs4BbWh3tdmAFjT">
+        <mxGeometry x="112" y="1108" width="160" height="100" as="geometry"/>
+      </mxCell>
+    </document>
+    <mxCell id="tsHna7ePh7n2x1x1KcShEi" style="curved=1;html=1;" parent="uUDo9dNpCk971KQ7giTNPt" source="kD4KVU5Zo65AwaS2v119dW" target="odqrGj2mDM46TSd3Chph4f" edge="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

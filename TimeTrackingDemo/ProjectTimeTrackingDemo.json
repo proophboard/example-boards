@@ -1,0 +1,2811 @@
+{
+  "playshotId": "b407e323-221f-49a8-831d-c0c5367dfbcf",
+  "boardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+  "name": "Project Time Tracking Demo",
+  "savedAt": "2024-06-14T10:49:06+00:00",
+  "savedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+  "playConfig": {
+    "appName": "Cody Play",
+    "theme": {},
+    "personas": [
+      {
+        "displayName": "Anyone",
+        "userId": "0299cda3-a2f7-4e94-9899-e1e37e5fe088",
+        "email": "anyone@example.local",
+        "roles": [
+          "Anyone"
+        ],
+        "avatar": "/assets/account-circle-outline.svg",
+        "description": "Anyone represents a standard user of the app without a specific role. This user has access to functionality that is not explicitly restricted."
+      },
+      {
+        "color": "#83ea75",
+        "roles": [
+          "HR"
+        ],
+        "displayName": "Jane",
+        "email": "jane@awesome.agency",
+        "description": "Jane is responsible for everything HR related. She hires and fires employees.\n\nRole: HR",
+        "userId": "a3b0900b-56db-4de9-8dd5-98b81aa3f591"
+      },
+      {
+        "color": "#69c7f2",
+        "roles": [
+          "PM"
+        ],
+        "userId": "44b0e07e-1d57-4041-b530-a4ee49d9a85f",
+        "displayName": "Alex",
+        "email": "alex@awesome.agency",
+        "description": "Alex is responsible for client acquisition and setting up projects. He keeps track of the time spent on a project.\n\nRole: PM"
+      },
+      {
+        "color": "#fc31ce",
+        "roles": [
+          "Dev"
+        ],
+        "userId": "efe3e2b5-72f8-4e43-ad00-c92cc0b51f83",
+        "displayName": "Maxi",
+        "email": "maxi@awesome.agency",
+        "description": "Maxi represents a developer of the team. She works on different projects and tracks her time.\n\nRole: Dev"
+      }
+    ],
+    "pages": {
+      "Dashboard": {
+        "service": "CrmTest",
+        "commands": [],
+        "components": [
+          "Core.Welcome"
+        ],
+        "sidebar": {
+          "label": "Dashboard",
+          "icon": "ViewDashboard",
+          "position": -1
+        },
+        "route": "/dashboard",
+        "topLevel": true,
+        "breadcrumb": "Dashboard"
+      },
+      "ProjectTime.Employees": {
+        "service": "ProjectTime",
+        "route": "/time-tracker/employees",
+        "commands": [
+          "ProjectTime.HireEmployee"
+        ],
+        "components": [
+          "ProjectTime.Employee.EmployeeList"
+        ],
+        "topLevel": true,
+        "sidebar": {
+          "label": "Employees",
+          "icon": "AccountGroup",
+          "invisible": "!isRole(user, 'HR')",
+          "position": 5
+        },
+        "breadcrumb": "Employees"
+      },
+      "ProjectTime.Clients": {
+        "service": "ProjectTime",
+        "route": "/time-tracker/clients",
+        "commands": [
+          "ProjectTime.AcquireClient"
+        ],
+        "components": [
+          "ProjectTime.Client.ClientList"
+        ],
+        "topLevel": true,
+        "sidebar": {
+          "label": "Clients",
+          "icon": "Domain",
+          "invisible": "!isRole(user, 'PM')",
+          "position": 5
+        },
+        "breadcrumb": "Clients"
+      },
+      "ProjectTime.Projects": {
+        "service": "ProjectTime",
+        "route": "/time-tracker/projects",
+        "commands": [
+          "ProjectTime.SetUpClientProject"
+        ],
+        "components": [
+          "ProjectTime.Project.ProjectList"
+        ],
+        "topLevel": true,
+        "sidebar": {
+          "label": "Projects",
+          "icon": "WrenchClock",
+          "invisible": "!isRole(user, 'PM')",
+          "position": 5
+        },
+        "breadcrumb": "Projects"
+      },
+      "ProjectTime.ProjectDetails": {
+        "service": "ProjectTime",
+        "route": "/time-tracker/projects/:projectId",
+        "routeParams": [
+          "projectId"
+        ],
+        "commands": [
+          "ProjectTime.AssignDeveloperToProject"
+        ],
+        "components": [
+          "ProjectTime.Project.Project",
+          "ProjectTime.Timesheet.ProjectTimeReport"
+        ],
+        "topLevel": false,
+        "breadcrumb": {
+          "data": "/Project/Project",
+          "label": "data.name"
+        }
+      },
+      "ProjectTime.Timesheet": {
+        "service": "ProjectTime",
+        "route": "/project-time/timesheet",
+        "commands": [
+          "ProjectTime.TrackProjectTime"
+        ],
+        "components": [
+          "ProjectTime.App.Timesheet"
+        ],
+        "topLevel": true,
+        "sidebar": {
+          "label": "Timesheet",
+          "icon": "Timetable",
+          "position": 5
+        },
+        "breadcrumb": "Timesheet"
+      },
+      "ProjectTime.EmployeeDetails": {
+        "service": "ProjectTime",
+        "route": "/time-tracker/employees/:employeeId",
+        "routeParams": [
+          "employeeId"
+        ],
+        "commands": [],
+        "components": [
+          "ProjectTime.Employee.Employee",
+          "ProjectTime.TimeEntry.EmployeeTimeReport"
+        ],
+        "topLevel": false,
+        "breadcrumb": {
+          "data": "/Employee/Employee",
+          "label": "data.name"
+        }
+      }
+    },
+    "views": {
+      "ProjectTime.User.Role": {
+        "information": "ProjectTime.User.Role"
+      },
+      "ProjectTime.Employee.EmployeeId": {
+        "information": "ProjectTime.Employee.EmployeeId"
+      },
+      "ProjectTime.Employee.Employee": {
+        "information": "ProjectTime.Employee.Employee"
+      },
+      "ProjectTime.Employee.EmployeeList": {
+        "information": "ProjectTime.Employee.EmployeeList"
+      },
+      "ProjectTime.Client.Client": {
+        "information": "ProjectTime.Client.Client"
+      },
+      "ProjectTime.Client.ClientList": {
+        "information": "ProjectTime.Client.ClientList"
+      },
+      "ProjectTime.Project.Project": {
+        "information": "ProjectTime.Project.Project"
+      },
+      "ProjectTime.Project.ProjectList": {
+        "information": "ProjectTime.Project.ProjectList"
+      },
+      "ProjectTime.Employee.Developers": {
+        "information": "ProjectTime.Employee.Developers"
+      },
+      "ProjectTime.Project.AssignedProjects": {
+        "information": "ProjectTime.Project.AssignedProjects"
+      },
+      "ProjectTime.App.ProjectTime": {
+        "information": "ProjectTime.App.ProjectTime"
+      },
+      "ProjectTime.App.Timesheet": {
+        "information": "ProjectTime.App.Timesheet"
+      },
+      "ProjectTime.Timesheet.ProjectTimeReport": {
+        "information": "ProjectTime.Timesheet.ProjectTimeReport"
+      },
+      "ProjectTime.TimeEntry.EmployeeTimeReport": {
+        "information": "ProjectTime.TimeEntry.EmployeeTimeReport"
+      }
+    },
+    "commands": {
+      "ProjectTime.HireEmployee": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "n3hZguFXGmmf2TDrKXM9k2",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=n3hZguFXGmmf2TDrKXM9k2&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-03T21:06:10.354Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:11:42.980Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "dependencies": {
+            "AuthService": {
+              "type": "service"
+            }
+          },
+          "name": "ProjectTime.HireEmployee",
+          "aggregateCommand": true,
+          "deleteState": false,
+          "deleteHistory": false,
+          "newAggregate": true,
+          "aggregateName": "ProjectTime.Employee",
+          "aggregateIdentifier": "employeeId"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Name"
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "title": "Email"
+            },
+            "role": {
+              "$ref": "/definitions/project-time/user/role",
+              "title": "Role"
+            }
+          },
+          "required": [
+            "name",
+            "email",
+            "role"
+          ],
+          "additionalProperties": false,
+          "title": "Hire Employee",
+          "$id": "/definitions/project-time/commands/hire-employee"
+        },
+        "uiSchema": {
+          "ui:button": {
+            "icon": "account-check"
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.AcquireClient": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "c9cQavJYb5xYFX38LKXxD6",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=c9cQavJYb5xYFX38LKXxD6&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:20:08.467Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:20:08.467Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.AcquireClient",
+          "aggregateCommand": true,
+          "newAggregate": true,
+          "aggregateName": "ProjectTime.Client",
+          "aggregateIdentifier": "clientId",
+          "deleteState": false,
+          "deleteHistory": false
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "clientId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Client Id"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Name"
+            }
+          },
+          "required": [
+            "clientId",
+            "name"
+          ],
+          "additionalProperties": false,
+          "title": "Acquire Client",
+          "$id": "/definitions/project-time/commands/acquire-client"
+        },
+        "uiSchema": {
+          "clientId": {
+            "ui:widget": "hidden"
+          },
+          "ui:button": {
+            "hidden": "!isRole(user, 'PM')"
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.SetUpClientProject": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "uSw5dJy7yeqUwRqeUT1a62",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=uSw5dJy7yeqUwRqeUT1a62&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:41:29.923Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:41:29.923Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.SetUpClientProject",
+          "aggregateCommand": true,
+          "newAggregate": true,
+          "aggregateName": "ProjectTime.Project",
+          "aggregateIdentifier": "projectId",
+          "deleteState": false,
+          "deleteHistory": false
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "projectId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Project Id"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Name"
+            },
+            "clientId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Client Id"
+            }
+          },
+          "required": [
+            "projectId",
+            "name",
+            "clientId"
+          ],
+          "additionalProperties": false,
+          "title": "Set Up Client Project",
+          "$id": "/definitions/project-time/commands/set-up-client-project"
+        },
+        "uiSchema": {
+          "projectId": {
+            "ui:widget": "hidden"
+          },
+          "clientId": {
+            "ui:title": "Client",
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/Client/ClientList",
+              "text": "data.name",
+              "value": "data.clientId"
+            }
+          },
+          "ui:button": {
+            "hidden": "!isRole(user, 'PM')"
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.AssignDeveloperToProject": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "m5eaYiaY437jtu8VfQ8oE6",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=m5eaYiaY437jtu8VfQ8oE6&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:59:03.490Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:59:03.490Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.AssignDeveloperToProject",
+          "aggregateCommand": true,
+          "newAggregate": false,
+          "aggregateName": "ProjectTime.Project",
+          "aggregateIdentifier": "projectId",
+          "deleteState": false,
+          "deleteHistory": false
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "projectId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Project Id"
+            },
+            "developer": {
+              "$ref": "/definitions/project-time/employee/employee-id",
+              "title": "Developer"
+            }
+          },
+          "required": [
+            "projectId",
+            "developer"
+          ],
+          "additionalProperties": false,
+          "title": "Assign Developer To Project",
+          "$id": "/definitions/project-time/commands/assign-developer-to-project"
+        },
+        "uiSchema": {
+          "projectId": {
+            "ui:widget": "hidden"
+          },
+          "ui:button": {
+            "hidden": "!isRole(user, 'PM')"
+          },
+          "developer": {
+            "ui:title": "Developer",
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/Employee/Developers",
+              "text": "data.name",
+              "value": "data.employeeId"
+            }
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.TrackProjectTime": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "aFZS7M8DLrUxHzMKsRtjfa",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=aFZS7M8DLrUxHzMKsRtjfa&clicks=1",
+          "_pbVersion": 3,
+          "_pbCreatedAt": "2024-06-14T10:21:34.681Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:29:26.853Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.TrackProjectTime",
+          "aggregateCommand": true,
+          "newAggregate": true,
+          "aggregateName": "ProjectTime.ProjectTime",
+          "aggregateIdentifier": "projectTimeId",
+          "deleteState": false,
+          "deleteHistory": false
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "projectTimeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Project Time Id"
+            },
+            "project": {
+              "$ref": "/definitions/project-time/project/project:projectId",
+              "title": "Project"
+            },
+            "day": {
+              "type": "string",
+              "format": "date",
+              "title": "Day"
+            },
+            "startTime": {
+              "type": "string",
+              "format": "time",
+              "title": "Start Time"
+            },
+            "endTime": {
+              "type": "string",
+              "format": "time",
+              "title": "End Time"
+            }
+          },
+          "required": [
+            "projectTimeId",
+            "project",
+            "day",
+            "startTime",
+            "endTime"
+          ],
+          "additionalProperties": false,
+          "title": "Track Project Time",
+          "$id": "/definitions/project-time/commands/track-project-time"
+        },
+        "uiSchema": {
+          "projectTimeId": {
+            "ui:widget": "hidden"
+          },
+          "project": {
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/Project/AssignedProjects",
+              "value": "data.projectId",
+              "text": "data.name"
+            }
+          }
+        },
+        "factory": []
+      }
+    },
+    "commandHandlers": {
+      "ProjectTime.HireEmployee": [
+        {
+          "rule": "always",
+          "then": {
+            "call": {
+              "service": "AuthService",
+              "method": "register",
+              "arguments": {
+                "displayName": "command.name",
+                "email": "command.email",
+                "roles": "[command.role]"
+              },
+              "result": {
+                "variable": "userId"
+              }
+            }
+          }
+        },
+        {
+          "rule": "always",
+          "then": {
+            "record": {
+              "event": "ProjectTime.Employee.EmployeeHired",
+              "mapping": {
+                "$merge": "command",
+                "employeeId": "userId"
+              }
+            }
+          }
+        }
+      ],
+      "ProjectTime.AcquireClient": [
+        {
+          "rule": "always",
+          "then": {
+            "record": {
+              "event": "ProjectTime.Client.ClientAcquired",
+              "mapping": "command"
+            }
+          }
+        }
+      ],
+      "ProjectTime.SetUpClientProject": [
+        {
+          "rule": "always",
+          "then": {
+            "record": {
+              "event": "ProjectTime.Project.ClientProjectSetUp",
+              "mapping": {
+                "$merge": "command",
+                "pm": "meta.user.userId"
+              }
+            }
+          }
+        }
+      ],
+      "ProjectTime.AssignDeveloperToProject": [
+        {
+          "rule": "always",
+          "then": {
+            "record": {
+              "event": "ProjectTime.Project.DeveloperAssignedToProject",
+              "mapping": "command"
+            }
+          }
+        }
+      ],
+      "ProjectTime.TrackProjectTime": [
+        {
+          "rule": "always",
+          "then": {
+            "record": {
+              "event": "ProjectTime.ProjectTime.ProjectTimeTracked",
+              "mapping": {
+                "$merge": "command",
+                "employee": "meta.user.userId"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "aggregates": {
+      "ProjectTime.Employee": {
+        "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+        "_pbCardId": "8hQ1FuARfEdtXe4GFn2mSJ",
+        "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=8hQ1FuARfEdtXe4GFn2mSJ&clicks=1",
+        "_pbVersion": 2,
+        "_pbCreatedAt": "2024-06-03T21:09:06.938Z",
+        "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "_pbLastUpdatedAt": "2024-06-03T21:10:49.047Z",
+        "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "name": "ProjectTime.Employee",
+        "identifier": "employeeId",
+        "collection": "employee_collection",
+        "stream": "write_model_stream",
+        "state": "ProjectTime.Employee.Employee"
+      },
+      "ProjectTime.Client": {
+        "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+        "_pbCardId": "c9cQavJYb5xYFX38LKXxD6",
+        "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=c9cQavJYb5xYFX38LKXxD6&clicks=1",
+        "_pbVersion": 1,
+        "_pbCreatedAt": "2024-06-03T21:20:08.467Z",
+        "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "_pbLastUpdatedAt": "2024-06-03T21:20:08.467Z",
+        "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "name": "ProjectTime.Client",
+        "identifier": "clientId",
+        "collection": "client_collection",
+        "stream": "write_model_stream",
+        "state": "ProjectTime.Client.Client"
+      },
+      "ProjectTime.Project": {
+        "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+        "_pbCardId": "m5eaYiaY437jtu8VfQ8oE6",
+        "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=m5eaYiaY437jtu8VfQ8oE6&clicks=1",
+        "_pbVersion": 1,
+        "_pbCreatedAt": "2024-06-03T21:59:03.490Z",
+        "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "_pbLastUpdatedAt": "2024-06-03T21:59:03.490Z",
+        "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "name": "ProjectTime.Project",
+        "identifier": "projectId",
+        "collection": "project_collection",
+        "stream": "write_model_stream",
+        "state": "ProjectTime.Project.Project"
+      },
+      "ProjectTime.ProjectTime": {
+        "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+        "_pbCardId": "jbizqSVUXmraPGsYdkLBN6",
+        "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=jbizqSVUXmraPGsYdkLBN6&clicks=1",
+        "_pbVersion": 2,
+        "_pbCreatedAt": "2024-06-14T10:21:39.589Z",
+        "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "_pbLastUpdatedAt": "2024-06-14T10:22:44.871Z",
+        "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "name": "ProjectTime.ProjectTime",
+        "identifier": "projectTimeId",
+        "collection": "project_time_collection",
+        "stream": "write_model_stream",
+        "state": "ProjectTime.App.ProjectTime"
+      }
+    },
+    "events": {
+      "ProjectTime.Employee.EmployeeHired": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "wjP7wdWpRDpsRinq2CZvXe",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=wjP7wdWpRDpsRinq2CZvXe&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-03T21:09:08.829Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:10:45.665Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Employee.EmployeeHired",
+          "aggregateEvent": true,
+          "aggregateIdentifier": "employeeId",
+          "aggregateState": "ProjectTime.Employee.Employee"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "employeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Employee Id"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Name"
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "title": "Email"
+            },
+            "role": {
+              "$ref": "/definitions/project-time/user/role",
+              "title": "Role"
+            }
+          },
+          "required": [
+            "employeeId",
+            "name",
+            "email",
+            "role"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/project-time/employee/employee-hired",
+          "title": "Employee Hired"
+        },
+        "factory": []
+      },
+      "ProjectTime.Client.ClientAcquired": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "nudCeoGbjQVuiWDVrYpj5P",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=nudCeoGbjQVuiWDVrYpj5P&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:20:10.166Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:20:10.166Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Client.ClientAcquired",
+          "aggregateEvent": true,
+          "aggregateIdentifier": "clientId",
+          "aggregateState": "ProjectTime.Client.Client"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "clientId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Client Id"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Name"
+            }
+          },
+          "required": [
+            "clientId",
+            "name"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/project-time/client/client-acquired",
+          "title": "Client Acquired"
+        },
+        "factory": []
+      },
+      "ProjectTime.Project.ClientProjectSetUp": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "43DS1TQ1a3G4pdLM6Ak3sN",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=43DS1TQ1a3G4pdLM6Ak3sN&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:41:33.799Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:41:33.799Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Project.ClientProjectSetUp",
+          "aggregateEvent": true,
+          "aggregateIdentifier": "projectId",
+          "aggregateState": "ProjectTime.Project.Project"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "projectId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Project Id"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Name"
+            },
+            "pm": {
+              "$ref": "/definitions/project-time/employee/employee-id",
+              "title": "Pm"
+            },
+            "clientId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Client Id"
+            }
+          },
+          "required": [
+            "projectId",
+            "name",
+            "pm",
+            "clientId"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/project-time/project/client-project-set-up",
+          "title": "Client Project Set Up"
+        },
+        "factory": []
+      },
+      "ProjectTime.Project.DeveloperAssignedToProject": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "rNURpfaqY7gvvRMsFcW89g",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=rNURpfaqY7gvvRMsFcW89g&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:59:05.162Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:59:05.162Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Project.DeveloperAssignedToProject",
+          "aggregateEvent": true,
+          "aggregateIdentifier": "projectId",
+          "aggregateState": "ProjectTime.Project.Project"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "projectId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Project Id"
+            },
+            "developer": {
+              "$ref": "/definitions/project-time/employee/employee-id",
+              "title": "Developer"
+            }
+          },
+          "required": [
+            "projectId",
+            "developer"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/project-time/project/developer-assigned-to-project",
+          "title": "Developer Assigned To Project"
+        },
+        "factory": []
+      },
+      "ProjectTime.ProjectTime.ProjectTimeTracked": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "kD4KVU5Zo65AwaS2v119dW",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=kD4KVU5Zo65AwaS2v119dW&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-14T10:21:45.468Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:21:45.468Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.ProjectTime.ProjectTimeTracked",
+          "aggregateEvent": true,
+          "aggregateIdentifier": "projectTimeId",
+          "aggregateState": "ProjectTime.App.ProjectTime"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "projectTimeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Project Time Id"
+            },
+            "project": {
+              "$ref": "/definitions/project-time/project/project:projectId",
+              "title": "Project"
+            },
+            "employee": {
+              "$ref": "/definitions/project-time/employee/employee:employeeId",
+              "title": "Employee"
+            },
+            "day": {
+              "type": "string",
+              "format": "date",
+              "title": "Day"
+            },
+            "startTime": {
+              "type": "string",
+              "format": "time",
+              "title": "Start Time"
+            },
+            "endTime": {
+              "type": "string",
+              "format": "time",
+              "title": "End Time"
+            }
+          },
+          "required": [
+            "projectTimeId",
+            "project",
+            "employee",
+            "day",
+            "startTime",
+            "endTime"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/project-time/project-time/project-time-tracked",
+          "title": "Project Time Tracked"
+        },
+        "factory": []
+      }
+    },
+    "eventReducers": {
+      "ProjectTime.Employee": {
+        "ProjectTime.Employee.EmployeeHired": [
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": {
+                  "$merge": [
+                    "information",
+                    "event"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "ProjectTime.Client": {
+        "ProjectTime.Client.ClientAcquired": [
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": {
+                  "$merge": [
+                    "information",
+                    "event"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "ProjectTime.Project": {
+        "ProjectTime.Project.ClientProjectSetUp": [
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": {
+                  "$merge": [
+                    "information",
+                    "event"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "ProjectTime.Project.DeveloperAssignedToProject": [
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": {
+                  "$merge": "information",
+                  "developers": "push(information.developers, event.developer)"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "ProjectTime.ProjectTime": {
+        "ProjectTime.ProjectTime.ProjectTimeTracked": [
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": {
+                  "$merge": [
+                    "information",
+                    "event"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "queries": {
+      "": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "k3irL5KfEyEAejnzSbTRi2",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=k3irL5KfEyEAejnzSbTRi2&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-03T21:07:13.501Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:09:04.702Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "",
+          "returnType": "ProjectTime.Employee.EmployeeId"
+        },
+        "schema": {},
+        "factory": []
+      },
+      "ProjectTime.GetEmployee": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "9waTSdRQN6E6sVzJn6fWew",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=9waTSdRQN6E6sVzJn6fWew&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-03T21:09:13.672Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:10:41.839Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetEmployee",
+          "returnType": "ProjectTime.Employee.Employee"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "employeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Employee Id"
+            }
+          },
+          "required": [
+            "employeeId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Employee"
+        },
+        "factory": []
+      },
+      "ProjectTime.GetEmployeeList": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "w7QrYDDq2eyGc3QQgRUDGb",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=w7QrYDDq2eyGc3QQgRUDGb&clicks=1",
+          "_pbVersion": 3,
+          "_pbCreatedAt": "2024-06-03T21:09:19.860Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:47:27.564Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetEmployeeList",
+          "returnType": "ProjectTime.Employee.EmployeeList"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "title": "Get Employee List"
+        },
+        "factory": []
+      },
+      "ProjectTime.GetClient": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "gRG6vux9SCk43Q6DCWwD86",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=gRG6vux9SCk43Q6DCWwD86&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:20:11.895Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:20:11.895Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetClient",
+          "returnType": "ProjectTime.Client.Client"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "clientId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Client Id"
+            }
+          },
+          "required": [
+            "clientId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Client"
+        },
+        "factory": []
+      },
+      "ProjectTime.GetClientList": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "tgjSXbhahNdFYV1vrLnrrd",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=tgjSXbhahNdFYV1vrLnrrd&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:20:13.432Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:20:13.432Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetClientList",
+          "returnType": "ProjectTime.Client.ClientList"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "title": "Get Client List"
+        },
+        "factory": []
+      },
+      "ProjectTime.GetProject": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "fDDJfVEBmfNSDDH8WeQ5R6",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=fDDJfVEBmfNSDDH8WeQ5R6&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:41:35.219Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:41:35.219Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetProject",
+          "returnType": "ProjectTime.Project.Project"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "projectId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Project Id"
+            }
+          },
+          "required": [
+            "projectId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Project"
+        },
+        "factory": []
+      },
+      "ProjectTime.GetProjectList": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "2S3Pq2Fj4mQT3UUrJcttHq",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=2S3Pq2Fj4mQT3UUrJcttHq&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-03T21:41:36.604Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:59:39.515Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetProjectList",
+          "returnType": "ProjectTime.Project.ProjectList"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "title": "Get Project List"
+        },
+        "factory": []
+      },
+      "ProjectTime.GetDevelopers": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "m3LBEfmjnfo8W5ZyG6b1Fm",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=m3LBEfmjnfo8W5ZyG6b1Fm&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:59:01.245Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:59:01.245Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetDevelopers",
+          "returnType": "ProjectTime.Employee.Developers"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "title": "Get Developers"
+        },
+        "factory": []
+      },
+      "ProjectTime.GetAssignedProjects": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "vMuYkF9nZy3TJzBK99d6ap",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=vMuYkF9nZy3TJzBK99d6ap&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:59:07.427Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:59:07.427Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetAssignedProjects",
+          "returnType": "ProjectTime.Project.AssignedProjects"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "title": "Get Assigned Projects"
+        },
+        "factory": []
+      },
+      "ProjectTime.GetProjectTime": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "rY4ASmkZyZPEZB1tgiKHLJ",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=rY4ASmkZyZPEZB1tgiKHLJ&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-14T10:21:50.892Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:21:50.892Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetProjectTime",
+          "returnType": "ProjectTime.App.ProjectTime"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "projectTimeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Project Time Id"
+            }
+          },
+          "required": [
+            "projectTimeId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Project Time"
+        },
+        "factory": []
+      },
+      "ProjectTime.GetTimesheet": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "eBtvDGrcK19frDo7Ce2KNZ",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=eBtvDGrcK19frDo7Ce2KNZ&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-14T10:25:49.841Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:28:05.222Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetTimesheet",
+          "returnType": "ProjectTime.App.Timesheet"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "title": "Get Timesheet"
+        },
+        "factory": []
+      },
+      "ProjectTime.GetProjectTimeReport": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "wH5ya6XBzUYFvrunH6QLZe",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=wH5ya6XBzUYFvrunH6QLZe&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-14T10:40:16.335Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:40:16.335Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetProjectTimeReport",
+          "returnType": "ProjectTime.Timesheet.ProjectTimeReport"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "projectId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Project Id"
+            }
+          },
+          "required": [
+            "projectId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Project Time Report"
+        },
+        "factory": []
+      },
+      "ProjectTime.GetEmployeeTimeReport": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "odqrGj2mDM46TSd3Chph4f",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=odqrGj2mDM46TSd3Chph4f&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-14T10:46:16.559Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:46:16.559Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.GetEmployeeTimeReport",
+          "returnType": "ProjectTime.TimeEntry.EmployeeTimeReport"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "employeeId": {
+              "$ref": "/definitions/project-time/employee/employee-id",
+              "title": "Employee Id"
+            }
+          },
+          "required": [
+            "employeeId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Employee Time Report"
+        },
+        "factory": []
+      }
+    },
+    "resolvers": {
+      "": {},
+      "ProjectTime.GetEmployee": {},
+      "ProjectTime.GetEmployeeList": {
+        "where": {
+          "rule": "always",
+          "then": {
+            "filter": {
+              "any": true
+            }
+          }
+        }
+      },
+      "ProjectTime.GetClient": {},
+      "ProjectTime.GetClientList": {
+        "orderBy": {
+          "prop": "name",
+          "sort": "asc"
+        }
+      },
+      "ProjectTime.GetProject": {},
+      "ProjectTime.GetProjectList": {
+        "orderBy": {
+          "prop": "name",
+          "sort": "asc"
+        }
+      },
+      "ProjectTime.GetDevelopers": {
+        "where": {
+          "rule": "always",
+          "then": {
+            "filter": {
+              "eq": {
+                "prop": "role",
+                "value": "'Dev'"
+              }
+            }
+          }
+        }
+      },
+      "ProjectTime.GetAssignedProjects": {
+        "where": {
+          "rule": "always",
+          "then": {
+            "filter": {
+              "or": [
+                {
+                  "inArray": {
+                    "prop": "developers",
+                    "value": "meta.user.userId"
+                  }
+                },
+                {
+                  "eq": {
+                    "prop": "pm",
+                    "value": "meta.user.userId"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "orderBy": {
+          "prop": "name",
+          "sort": "asc"
+        }
+      },
+      "ProjectTime.GetProjectTime": {},
+      "ProjectTime.GetTimesheet": {
+        "where": {
+          "rule": "always",
+          "then": {
+            "filter": {
+              "eq": {
+                "prop": "employee",
+                "value": "meta.user.userId"
+              }
+            }
+          }
+        }
+      },
+      "ProjectTime.GetProjectTimeReport": {
+        "where": {
+          "rule": "always",
+          "then": {
+            "filter": {
+              "eq": {
+                "prop": "project",
+                "value": "query.projectId"
+              }
+            }
+          }
+        },
+        "orderBy": [
+          {
+            "prop": "day",
+            "sort": "asc"
+          },
+          {
+            "prop": "startTime",
+            "sort": "asc"
+          }
+        ]
+      },
+      "ProjectTime.GetEmployeeTimeReport": {
+        "where": {
+          "rule": "always",
+          "then": {
+            "filter": {
+              "eq": {
+                "prop": "employee",
+                "value": "query.employeeId"
+              }
+            }
+          }
+        },
+        "orderBy": [
+          {
+            "prop": "day",
+            "sort": "asc"
+          },
+          {
+            "prop": "startTime",
+            "sort": "asc"
+          }
+        ]
+      }
+    },
+    "types": {
+      "ProjectTime.User.Role": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "9vcoqFquQQEDhLZk6Cq2vL",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=9vcoqFquQQEDhLZk6Cq2vL&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:07:13.501Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:07:13.501Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.User.Role",
+          "hasIdentifier": false,
+          "isList": false,
+          "isQueryable": false
+        },
+        "schema": {
+          "enum": [
+            "HR",
+            "PM",
+            "Dev"
+          ],
+          "$id": "/definitions/project-time/user/role",
+          "title": "Role"
+        },
+        "factory": []
+      },
+      "ProjectTime.Employee.EmployeeId": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "k3irL5KfEyEAejnzSbTRi2",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=k3irL5KfEyEAejnzSbTRi2&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:09:04.701Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:09:04.701Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Employee.EmployeeId",
+          "hasIdentifier": false,
+          "isList": false,
+          "isQueryable": false
+        },
+        "schema": {
+          "type": "string",
+          "format": "uuid",
+          "$id": "/definitions/project-time/employee/employee-id",
+          "title": "Employee Id"
+        },
+        "uiSchema": {
+          "$type": {
+            "ui:widget": "hidden"
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.Employee.Employee": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "9waTSdRQN6E6sVzJn6fWew",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=9waTSdRQN6E6sVzJn6fWew&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-03T21:09:13.671Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:10:41.838Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Employee.Employee",
+          "hasIdentifier": true,
+          "identifier": "employeeId",
+          "isList": false,
+          "isQueryable": true,
+          "query": "ProjectTime.GetEmployee",
+          "collection": "employee_collection"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "employeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Employee Id"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Name"
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "title": "Email"
+            },
+            "role": {
+              "$ref": "/definitions/project-time/user/role",
+              "title": "Role"
+            }
+          },
+          "required": [
+            "employeeId",
+            "name",
+            "email",
+            "role"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/project-time/employee/employee",
+          "title": "Employee"
+        },
+        "uiSchema": {
+          "employeeId": {
+            "ui:widget": "hidden"
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.Employee.EmployeeList": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "w7QrYDDq2eyGc3QQgRUDGb",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=w7QrYDDq2eyGc3QQgRUDGb&clicks=1",
+          "_pbVersion": 3,
+          "_pbCreatedAt": "2024-06-03T21:09:19.860Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:47:27.564Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Employee.EmployeeList",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "employeeId",
+          "itemType": "ProjectTime.Employee.Employee",
+          "query": "ProjectTime.GetEmployeeList",
+          "collection": "employee_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/project-time/employee/employee"
+          },
+          "$id": "/definitions/project-time/employee/employee-list",
+          "title": "Employee List"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "columns": [
+              {
+                "field": "name",
+                "headerName": "Name",
+                "flex": 1,
+                "pageLink": "EmployeeDetails"
+              },
+              {
+                "field": "email",
+                "headerName": "Email",
+                "flex": 1
+              }
+            ]
+          },
+          "table": {
+            "columns": [
+              {
+                "field": "name",
+                "headerName": "Name",
+                "flex": 1,
+                "pageLink": "EmployeeDetails"
+              },
+              {
+                "field": "email",
+                "headerName": "Email",
+                "flex": 1
+              }
+            ]
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.Client.Client": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "gRG6vux9SCk43Q6DCWwD86",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=gRG6vux9SCk43Q6DCWwD86&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:20:11.894Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:20:11.894Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Client.Client",
+          "hasIdentifier": true,
+          "identifier": "clientId",
+          "isList": false,
+          "isQueryable": true,
+          "query": "ProjectTime.GetClient",
+          "collection": "client_collection"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "clientId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Client Id"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Name"
+            }
+          },
+          "required": [
+            "clientId",
+            "name"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/project-time/client/client",
+          "title": "Client"
+        },
+        "uiSchema": {
+          "clientId": {
+            "ui:widget": "hidden"
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.Client.ClientList": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "tgjSXbhahNdFYV1vrLnrrd",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=tgjSXbhahNdFYV1vrLnrrd&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:20:13.432Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:20:13.432Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Client.ClientList",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "clientId",
+          "itemType": "ProjectTime.Client.Client",
+          "query": "ProjectTime.GetClientList",
+          "collection": "client_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/project-time/client/client"
+          },
+          "$id": "/definitions/project-time/client/client-list",
+          "title": "Client List"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "columns": [
+              "name"
+            ]
+          },
+          "table": {
+            "columns": [
+              "name"
+            ]
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.Project.Project": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "fDDJfVEBmfNSDDH8WeQ5R6",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=fDDJfVEBmfNSDDH8WeQ5R6&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:41:35.218Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:41:35.218Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Project.Project",
+          "hasIdentifier": true,
+          "identifier": "projectId",
+          "isList": false,
+          "isQueryable": true,
+          "query": "ProjectTime.GetProject",
+          "collection": "project_collection"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "projectId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Project Id"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Name"
+            },
+            "pm": {
+              "$ref": "/definitions/project-time/employee/employee-id",
+              "title": "Pm"
+            },
+            "clientId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Client Id"
+            },
+            "developers": {
+              "type": "array",
+              "items": {
+                "$ref": "/definitions/project-time/employee/employee-id"
+              },
+              "title": "Developers"
+            }
+          },
+          "required": [
+            "projectId",
+            "name",
+            "pm",
+            "developers"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/project-time/project/project",
+          "title": "Project"
+        },
+        "uiSchema": {
+          "projectId": {
+            "ui:widget": "hidden"
+          },
+          "clientId": {
+            "ui:title": "Client",
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/Client/ClientList",
+              "text": "data.name",
+              "value": "data.clientId"
+            }
+          },
+          "pm": {
+            "ui:title": "Project Manager",
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/Employee/EmployeeList",
+              "text": "data.name",
+              "value": "data.employeeId"
+            }
+          },
+          "developers": {
+            "items": {
+              "ui:widget": "DataSelect",
+              "ui:options": {
+                "label": false,
+                "data": "/Employee/Developers",
+                "text": "data.name",
+                "value": "data.employeeId"
+              }
+            }
+          }
+        },
+        "factory": [
+          {
+            "rule": "condition",
+            "if_not": "data.developers",
+            "then": {
+              "assign": {
+                "variable": "data",
+                "value": {
+                  "$merge": "data",
+                  "developers": "[]"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "ProjectTime.Project.ProjectList": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "2S3Pq2Fj4mQT3UUrJcttHq",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=2S3Pq2Fj4mQT3UUrJcttHq&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-03T21:41:36.603Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:59:39.515Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Project.ProjectList",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "projectId",
+          "itemType": "ProjectTime.Project.Project",
+          "query": "ProjectTime.GetProjectList",
+          "collection": "project_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/project-time/project/project"
+          },
+          "$id": "/definitions/project-time/project/project-list",
+          "title": "Project List"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "columns": [
+              {
+                "field": "name",
+                "headerName": "Name",
+                "flex": 1,
+                "pageLink": "ProjectDetails"
+              },
+              {
+                "field": "clientId",
+                "headerName": "Client",
+                "ref": {
+                  "data": "/Client/ClientList",
+                  "value": "data.name"
+                },
+                "flex": 1
+              },
+              {
+                "field": "pm",
+                "headerName": "Project Manager",
+                "ref": {
+                  "data": "/Employee/EmployeeList",
+                  "value": "data.name"
+                },
+                "flex": 1
+              }
+            ]
+          },
+          "table": {
+            "columns": [
+              {
+                "field": "name",
+                "headerName": "Name",
+                "flex": 1,
+                "pageLink": "ProjectDetails"
+              },
+              {
+                "field": "clientId",
+                "headerName": "Client",
+                "ref": {
+                  "data": "/Client/ClientList",
+                  "value": "data.name"
+                },
+                "flex": 1
+              },
+              {
+                "field": "pm",
+                "headerName": "Project Manager",
+                "ref": {
+                  "data": "/Employee/EmployeeList",
+                  "value": "data.name"
+                },
+                "flex": 1
+              }
+            ]
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.Employee.Developers": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "m3LBEfmjnfo8W5ZyG6b1Fm",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=m3LBEfmjnfo8W5ZyG6b1Fm&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:59:01.245Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:59:01.245Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Employee.Developers",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "employeeId",
+          "itemType": "ProjectTime.Employee.Employee",
+          "query": "ProjectTime.GetDevelopers",
+          "collection": "employee_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/project-time/employee/employee"
+          },
+          "$id": "/definitions/project-time/employee/developers",
+          "title": "Developers"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "columns": [
+              "name",
+              "email"
+            ]
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.Project.AssignedProjects": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "vMuYkF9nZy3TJzBK99d6ap",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=vMuYkF9nZy3TJzBK99d6ap&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-03T21:59:07.426Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-03T21:59:07.426Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Project.AssignedProjects",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "projectId",
+          "itemType": "ProjectTime.Project.Project",
+          "query": "ProjectTime.GetAssignedProjects",
+          "collection": "project_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/project-time/project/project"
+          },
+          "$id": "/definitions/project-time/project/assigned-projects",
+          "title": "Assigned Projects"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "columns": [
+              "name"
+            ]
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.App.ProjectTime": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "rY4ASmkZyZPEZB1tgiKHLJ",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=rY4ASmkZyZPEZB1tgiKHLJ&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-14T10:21:50.891Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:21:50.891Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.App.ProjectTime",
+          "hasIdentifier": true,
+          "identifier": "projectTimeId",
+          "isList": false,
+          "isQueryable": true,
+          "query": "ProjectTime.GetProjectTime",
+          "collection": "project_time_collection"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "projectTimeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Project Time Id"
+            },
+            "project": {
+              "$ref": "/definitions/project-time/project/project:projectId",
+              "title": "Project"
+            },
+            "employee": {
+              "$ref": "/definitions/project-time/employee/employee:employeeId",
+              "title": "Employee"
+            },
+            "day": {
+              "type": "string",
+              "format": "date",
+              "title": "Day"
+            },
+            "startTime": {
+              "type": "string",
+              "format": "time",
+              "title": "Start Time"
+            },
+            "endTime": {
+              "type": "string",
+              "format": "time",
+              "title": "End Time"
+            }
+          },
+          "required": [
+            "projectTimeId",
+            "project",
+            "employee",
+            "day",
+            "startTime",
+            "endTime"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/project-time/app/project-time",
+          "title": "Project Time"
+        },
+        "uiSchema": {
+          "projectTimeId": {
+            "ui:widget": "hidden"
+          },
+          "project": {
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/Project/ProjectList",
+              "value": "data.projectId",
+              "text": "data.name"
+            }
+          },
+          "employee": {
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/Employee/EmployeeList",
+              "value": "data.employeeId",
+              "text": "data.email"
+            }
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.App.Timesheet": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "eBtvDGrcK19frDo7Ce2KNZ",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=eBtvDGrcK19frDo7Ce2KNZ&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-14T10:25:49.840Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:28:05.222Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.App.Timesheet",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "projectTimeId",
+          "itemType": "ProjectTime.App.ProjectTime",
+          "query": "ProjectTime.GetTimesheet",
+          "collection": "project_time_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/project-time/app/project-time"
+          },
+          "$id": "/definitions/project-time/app/timesheet",
+          "title": "Timesheet"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "columns": [
+              {
+                "field": "project",
+                "ref": {
+                  "data": "/Project/ProjectList",
+                  "value": "data.name"
+                },
+                "headerName": "Project",
+                "flex": 1
+              },
+              "day",
+              "startTime",
+              "endTime",
+              {
+                "field": "employee",
+                "ref": {
+                  "data": "/Employee/EmployeeList",
+                  "value": "data.name"
+                },
+                "headerName": "Employee",
+                "flex": 1
+              }
+            ]
+          },
+          "table": {
+            "columns": [
+              {
+                "field": "project",
+                "ref": {
+                  "data": "/Project/ProjectList",
+                  "value": "data.name"
+                },
+                "headerName": "Project",
+                "flex": 1
+              },
+              "day",
+              "startTime",
+              "endTime",
+              {
+                "field": "employee",
+                "ref": {
+                  "data": "/Employee/EmployeeList",
+                  "value": "data.name"
+                },
+                "headerName": "Employee",
+                "flex": 1
+              }
+            ]
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.Timesheet.ProjectTimeReport": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "wH5ya6XBzUYFvrunH6QLZe",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=wH5ya6XBzUYFvrunH6QLZe&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-14T10:40:16.334Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:40:16.334Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.Timesheet.ProjectTimeReport",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "projectTimeId",
+          "itemType": "ProjectTime.App.ProjectTime",
+          "query": "ProjectTime.GetProjectTimeReport",
+          "collection": "project_time_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/project-time/app/project-time"
+          },
+          "$id": "/definitions/project-time/timesheet/project-time-report",
+          "title": "Project Time Report"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "density": "compact",
+            "pageSize": 25,
+            "pageSizeOptions": [
+              10,
+              25,
+              50
+            ],
+            "columns": [
+              {
+                "field": "employee",
+                "ref": {
+                  "data": "/Employee/EmployeeList",
+                  "value": "data.name"
+                },
+                "headerName": "Employee",
+                "flex": 1
+              },
+              {
+                "field": "day",
+                "headerName": "Day",
+                "value": "row.day|localDate",
+                "flex": 1
+              },
+              {
+                "field": "startTime",
+                "headerName": "Start Time",
+                "flex": 1,
+                "value": "(row.day+'T'+row.startTime)|hours|twoDigit + ':' + (row.day+'T'+row.startTime)|minutes|twoDigit"
+              },
+              {
+                "field": "endTime",
+                "headerName": "End Time",
+                "flex": 1,
+                "value": "(row.day+'T'+row.endTime)|hours|twoDigit + ':' + (row.day+'T'+row.endTime)|minutes|twoDigit"
+              },
+              {
+                "field": "project",
+                "ref": {
+                  "data": "/Project/ProjectList",
+                  "value": "data.name"
+                },
+                "headerName": "Project",
+                "flex": 1
+              }
+            ]
+          },
+          "table": {
+            "density": "compact",
+            "pageSize": 25,
+            "pageSizeOptions": [
+              10,
+              25,
+              50
+            ],
+            "columns": [
+              {
+                "field": "employee",
+                "ref": {
+                  "data": "/Employee/EmployeeList",
+                  "value": "data.name"
+                },
+                "headerName": "Employee",
+                "flex": 1
+              },
+              {
+                "field": "day",
+                "headerName": "Day",
+                "value": "row.day|localDate",
+                "flex": 1
+              },
+              {
+                "field": "startTime",
+                "headerName": "Start Time",
+                "flex": 1,
+                "value": "(row.day+'T'+row.startTime)|hours|twoDigit + ':' + (row.day+'T'+row.startTime)|minutes|twoDigit"
+              },
+              {
+                "field": "endTime",
+                "headerName": "End Time",
+                "flex": 1,
+                "value": "(row.day+'T'+row.endTime)|hours|twoDigit + ':' + (row.day+'T'+row.endTime)|minutes|twoDigit"
+              },
+              {
+                "field": "project",
+                "ref": {
+                  "data": "/Project/ProjectList",
+                  "value": "data.name"
+                },
+                "headerName": "Project",
+                "flex": 1
+              }
+            ]
+          }
+        },
+        "factory": []
+      },
+      "ProjectTime.TimeEntry.EmployeeTimeReport": {
+        "desc": {
+          "_pbBoardId": "a3a07d06-d0f6-4c0f-9a57-8af17b350b86",
+          "_pbCardId": "odqrGj2mDM46TSd3Chph4f",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/a3a07d06-d0f6-4c0f-9a57-8af17b350b86?cells=odqrGj2mDM46TSd3Chph4f&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-14T10:46:16.559Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-14T10:46:16.559Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "ProjectTime.TimeEntry.EmployeeTimeReport",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "projectTimeId",
+          "itemType": "ProjectTime.App.ProjectTime",
+          "query": "ProjectTime.GetEmployeeTimeReport",
+          "collection": "project_time_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/project-time/app/project-time"
+          },
+          "$id": "/definitions/project-time/time-entry/employee-time-report",
+          "title": "Employee Time Report"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "density": "compact",
+            "pageSize": 25,
+            "pageSizeOptions": [
+              10,
+              25,
+              50
+            ],
+            "columns": [
+              {
+                "field": "project",
+                "ref": {
+                  "data": "/Project/ProjectList",
+                  "value": "data.name"
+                },
+                "headerName": "Project",
+                "flex": 1
+              },
+              {
+                "field": "day",
+                "headerName": "Day",
+                "value": "row.day|localDate",
+                "flex": 1
+              },
+              {
+                "field": "startTime",
+                "headerName": "Start Time",
+                "flex": 1,
+                "value": "(row.day+'T'+row.startTime)|hours|twoDigit + ':' + (row.day+'T'+row.startTime)|minutes|twoDigit"
+              },
+              {
+                "field": "endTime",
+                "headerName": "End Time",
+                "flex": 1,
+                "value": "(row.day+'T'+row.endTime)|hours|twoDigit + ':' + (row.day+'T'+row.endTime)|minutes|twoDigit"
+              },
+              {
+                "field": "employee",
+                "ref": {
+                  "data": "/Employee/EmployeeList",
+                  "value": "data.email"
+                },
+                "headerName": "Employee",
+                "flex": 1
+              }
+            ]
+          },
+          "table": {
+            "density": "compact",
+            "pageSize": 25,
+            "pageSizeOptions": [
+              10,
+              25,
+              50
+            ],
+            "columns": [
+              {
+                "field": "project",
+                "ref": {
+                  "data": "/Project/ProjectList",
+                  "value": "data.name"
+                },
+                "headerName": "Project",
+                "flex": 1
+              },
+              {
+                "field": "day",
+                "headerName": "Day",
+                "value": "row.day|localDate",
+                "flex": 1
+              },
+              {
+                "field": "startTime",
+                "headerName": "Start Time",
+                "flex": 1,
+                "value": "(row.day+'T'+row.startTime)|hours|twoDigit + ':' + (row.day+'T'+row.startTime)|minutes|twoDigit"
+              },
+              {
+                "field": "endTime",
+                "headerName": "End Time",
+                "flex": 1,
+                "value": "(row.day+'T'+row.endTime)|hours|twoDigit + ':' + (row.day+'T'+row.endTime)|minutes|twoDigit"
+              },
+              {
+                "field": "employee",
+                "ref": {
+                  "data": "/Employee/EmployeeList",
+                  "value": "data.email"
+                },
+                "headerName": "Employee",
+                "flex": 1
+              }
+            ]
+          }
+        },
+        "factory": []
+      }
+    },
+    "definitions": {
+      "/definitions/project-time/user/role": {
+        "enum": [
+          "HR",
+          "PM",
+          "Dev"
+        ],
+        "$id": "/definitions/project-time/user/role",
+        "title": "Role"
+      },
+      "/definitions/project-time/employee/employee-id": {
+        "type": "string",
+        "format": "uuid",
+        "$id": "/definitions/project-time/employee/employee-id",
+        "title": "Employee Id"
+      },
+      "/definitions/project-time/employee/employee": {
+        "type": "object",
+        "properties": {
+          "employeeId": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Employee Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          },
+          "role": {
+            "$ref": "/definitions/project-time/user/role",
+            "title": "Role"
+          }
+        },
+        "required": [
+          "employeeId",
+          "name",
+          "email",
+          "role"
+        ],
+        "additionalProperties": false,
+        "$id": "/definitions/project-time/employee/employee",
+        "title": "Employee"
+      },
+      "/definitions/project-time/employee/employee-list": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/project-time/employee/employee"
+        },
+        "$id": "/definitions/project-time/employee/employee-list",
+        "title": "Employee List"
+      },
+      "/definitions/project-time/client/client": {
+        "type": "object",
+        "properties": {
+          "clientId": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Client Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          }
+        },
+        "required": [
+          "clientId",
+          "name"
+        ],
+        "additionalProperties": false,
+        "$id": "/definitions/project-time/client/client",
+        "title": "Client"
+      },
+      "/definitions/project-time/client/client-list": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/project-time/client/client"
+        },
+        "$id": "/definitions/project-time/client/client-list",
+        "title": "Client List"
+      },
+      "/definitions/project-time/project/project": {
+        "type": "object",
+        "properties": {
+          "projectId": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Project Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "pm": {
+            "$ref": "/definitions/project-time/employee/employee-id",
+            "title": "Pm"
+          },
+          "clientId": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Client Id"
+          },
+          "developers": {
+            "type": "array",
+            "items": {
+              "$ref": "/definitions/project-time/employee/employee-id"
+            },
+            "title": "Developers"
+          }
+        },
+        "required": [
+          "projectId",
+          "name",
+          "pm",
+          "developers"
+        ],
+        "additionalProperties": false,
+        "$id": "/definitions/project-time/project/project",
+        "title": "Project"
+      },
+      "/definitions/project-time/project/project-list": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/project-time/project/project"
+        },
+        "$id": "/definitions/project-time/project/project-list",
+        "title": "Project List"
+      },
+      "/definitions/project-time/employee/developers": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/project-time/employee/employee"
+        },
+        "$id": "/definitions/project-time/employee/developers",
+        "title": "Developers"
+      },
+      "/definitions/project-time/project/assigned-projects": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/project-time/project/project"
+        },
+        "$id": "/definitions/project-time/project/assigned-projects",
+        "title": "Assigned Projects"
+      },
+      "/definitions/project-time/app/project-time": {
+        "type": "object",
+        "properties": {
+          "projectTimeId": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Project Time Id"
+          },
+          "project": {
+            "$ref": "/definitions/project-time/project/project:projectId",
+            "title": "Project"
+          },
+          "employee": {
+            "$ref": "/definitions/project-time/employee/employee:employeeId",
+            "title": "Employee"
+          },
+          "day": {
+            "type": "string",
+            "format": "date",
+            "title": "Day"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "time",
+            "title": "Start Time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "time",
+            "title": "End Time"
+          }
+        },
+        "required": [
+          "projectTimeId",
+          "project",
+          "employee",
+          "day",
+          "startTime",
+          "endTime"
+        ],
+        "additionalProperties": false,
+        "$id": "/definitions/project-time/app/project-time",
+        "title": "Project Time"
+      },
+      "/definitions/project-time/app/timesheet": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/project-time/app/project-time"
+        },
+        "$id": "/definitions/project-time/app/timesheet",
+        "title": "Timesheet"
+      },
+      "/definitions/project-time/timesheet/project-time-report": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/project-time/app/project-time"
+        },
+        "$id": "/definitions/project-time/timesheet/project-time-report",
+        "title": "Project Time Report"
+      },
+      "/definitions/project-time/time-entry/employee-time-report": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/project-time/app/project-time"
+        },
+        "$id": "/definitions/project-time/time-entry/employee-time-report",
+        "title": "Employee Time Report"
+      }
+    },
+    "eventPolicies": {}
+  },
+  "playData": {
+    "streams": {
+      "write_model_stream": [
+        {
+          "uuid": "f31c25ed-ca58-4835-bd37-06191c7ce298",
+          "name": "ProjectTime.Employee.EmployeeHired",
+          "payload": {
+            "name": "Alex",
+            "email": "alex@prooph.de",
+            "role": "PM",
+            "employeeId": "44b0e07e-1d57-4041-b530-a4ee49d9a85f"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "0299cda3-a2f7-4e94-9899-e1e37e5fe088",
+            "aggregateId": "44b0e07e-1d57-4041-b530-a4ee49d9a85f",
+            "aggregateType": "ProjectTime.Employee",
+            "aggregateVersion": 1,
+            "causationId": "b43163e6-63b3-452a-93af-af25bf543853",
+            "causationName": "ProjectTime.HireEmployee"
+          },
+          "createdAt": "2024-06-03T21:12:01.231Z"
+        },
+        {
+          "uuid": "23e191f1-b68b-44c2-8fc9-091cb27d0144",
+          "name": "ProjectTime.Client.ClientAcquired",
+          "payload": {
+            "clientId": "6c065db9-a5e2-429a-9e5c-9f75c9b82d44",
+            "name": "Big Enterprise Inc."
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "44b0e07e-1d57-4041-b530-a4ee49d9a85f",
+            "aggregateId": "6c065db9-a5e2-429a-9e5c-9f75c9b82d44",
+            "aggregateType": "ProjectTime.Client",
+            "aggregateVersion": 1,
+            "causationId": "79ae967e-97a3-4ea5-94e1-035935203abd",
+            "causationName": "ProjectTime.AcquireClient"
+          },
+          "createdAt": "2024-06-03T21:31:12.162Z"
+        },
+        {
+          "uuid": "381de1ec-7eef-4ad9-84d8-f307b1aeae3f",
+          "name": "ProjectTime.Project.ClientProjectSetUp",
+          "payload": {
+            "projectId": "63b71eec-904a-4760-8469-28c1aaa1862e",
+            "name": "ERP Modernization",
+            "clientId": "6c065db9-a5e2-429a-9e5c-9f75c9b82d44",
+            "pm": "44b0e07e-1d57-4041-b530-a4ee49d9a85f"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "44b0e07e-1d57-4041-b530-a4ee49d9a85f",
+            "aggregateId": "63b71eec-904a-4760-8469-28c1aaa1862e",
+            "aggregateType": "ProjectTime.Project",
+            "aggregateVersion": 1,
+            "causationId": "e5b4ec76-228e-4ac4-bf08-fd8e17873cb2",
+            "causationName": "ProjectTime.SetUpClientProject"
+          },
+          "createdAt": "2024-06-03T21:42:57.732Z"
+        },
+        {
+          "uuid": "afe5e70d-52ec-47e4-be6a-38418aa28544",
+          "name": "ProjectTime.Employee.EmployeeHired",
+          "payload": {
+            "name": "Maxi",
+            "email": "maxi@awesome.agency",
+            "role": "Dev",
+            "employeeId": "efe3e2b5-72f8-4e43-ad00-c92cc0b51f83"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "a3b0900b-56db-4de9-8dd5-98b81aa3f591",
+            "aggregateId": "efe3e2b5-72f8-4e43-ad00-c92cc0b51f83",
+            "aggregateType": "ProjectTime.Employee",
+            "aggregateVersion": 1,
+            "causationId": "fefcab47-3d46-46f2-bd02-a1d46a6fff42",
+            "causationName": "ProjectTime.HireEmployee"
+          },
+          "createdAt": "2024-06-07T09:02:59.936Z"
+        },
+        {
+          "uuid": "c73cfecb-9de3-4a4b-bfe6-527d79a5f246",
+          "name": "ProjectTime.Project.DeveloperAssignedToProject",
+          "payload": {
+            "projectId": "63b71eec-904a-4760-8469-28c1aaa1862e",
+            "developer": "efe3e2b5-72f8-4e43-ad00-c92cc0b51f83"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "44b0e07e-1d57-4041-b530-a4ee49d9a85f",
+            "aggregateId": "63b71eec-904a-4760-8469-28c1aaa1862e",
+            "aggregateType": "ProjectTime.Project",
+            "aggregateVersion": 2,
+            "causationId": "2c5a48a8-f8aa-48f8-8602-78998079bfe2",
+            "causationName": "ProjectTime.AssignDeveloperToProject"
+          },
+          "createdAt": "2024-06-14T10:29:45.466Z"
+        },
+        {
+          "uuid": "7b9a11f8-3977-41bc-82fc-b3d644605063",
+          "name": "ProjectTime.ProjectTime.ProjectTimeTracked",
+          "payload": {
+            "projectTimeId": "713227ee-ad71-4fc4-bc95-b35202e7b7bb",
+            "project": "63b71eec-904a-4760-8469-28c1aaa1862e",
+            "day": "2024-06-14",
+            "startTime": "12:30:00",
+            "endTime": "13:30:00",
+            "employee": "efe3e2b5-72f8-4e43-ad00-c92cc0b51f83"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "efe3e2b5-72f8-4e43-ad00-c92cc0b51f83",
+            "aggregateId": "713227ee-ad71-4fc4-bc95-b35202e7b7bb",
+            "aggregateType": "ProjectTime.ProjectTime",
+            "aggregateVersion": 1,
+            "causationId": "ce55cf69-dd01-4556-b95e-981b57e140b3",
+            "causationName": "ProjectTime.TrackProjectTime"
+          },
+          "createdAt": "2024-06-14T10:30:08.435Z"
+        }
+      ]
+    },
+    "documents": {
+      "employee_collection": {
+        "44b0e07e-1d57-4041-b530-a4ee49d9a85f": {
+          "doc": {
+            "name": "Alex",
+            "email": "alex@prooph.de",
+            "role": "PM",
+            "employeeId": "44b0e07e-1d57-4041-b530-a4ee49d9a85f"
+          },
+          "version": 1
+        },
+        "efe3e2b5-72f8-4e43-ad00-c92cc0b51f83": {
+          "doc": {
+            "name": "Maxi",
+            "email": "maxi@awesome.agency",
+            "role": "Dev",
+            "employeeId": "efe3e2b5-72f8-4e43-ad00-c92cc0b51f83"
+          },
+          "version": 1
+        }
+      },
+      "client_collection": {
+        "6c065db9-a5e2-429a-9e5c-9f75c9b82d44": {
+          "doc": {
+            "clientId": "6c065db9-a5e2-429a-9e5c-9f75c9b82d44",
+            "name": "Big Enterprise Inc."
+          },
+          "version": 1
+        }
+      },
+      "project_collection": {
+        "63b71eec-904a-4760-8469-28c1aaa1862e": {
+          "doc": {
+            "projectId": "63b71eec-904a-4760-8469-28c1aaa1862e",
+            "name": "ERP Modernization",
+            "clientId": "6c065db9-a5e2-429a-9e5c-9f75c9b82d44",
+            "pm": "44b0e07e-1d57-4041-b530-a4ee49d9a85f",
+            "developers": [
+              "efe3e2b5-72f8-4e43-ad00-c92cc0b51f83"
+            ]
+          },
+          "version": 2
+        }
+      },
+      "project_time_collection": {
+        "713227ee-ad71-4fc4-bc95-b35202e7b7bb": {
+          "doc": {
+            "projectTimeId": "713227ee-ad71-4fc4-bc95-b35202e7b7bb",
+            "project": "63b71eec-904a-4760-8469-28c1aaa1862e",
+            "day": "2024-06-14",
+            "startTime": "12:30:00",
+            "endTime": "13:30:00",
+            "employee": "efe3e2b5-72f8-4e43-ad00-c92cc0b51f83"
+          },
+          "version": 1
+        }
+      }
+    }
+  }
+}
