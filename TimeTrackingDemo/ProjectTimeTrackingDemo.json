@@ -2628,7 +2628,7 @@
           "name": "ProjectTime.Employee.EmployeeHired",
           "payload": {
             "name": "Alex",
-            "email": "alex@prooph.de",
+            "email": "alex@awesome.agency",
             "role": "PM",
             "employeeId": "44b0e07e-1d57-4041-b530-a4ee49d9a85f"
           },
@@ -2754,7 +2754,7 @@
         "44b0e07e-1d57-4041-b530-a4ee49d9a85f": {
           "doc": {
             "name": "Alex",
-            "email": "alex@prooph.de",
+            "email": "alex@awesome.agency",
             "role": "PM",
             "employeeId": "44b0e07e-1d57-4041-b530-a4ee49d9a85f"
           },
