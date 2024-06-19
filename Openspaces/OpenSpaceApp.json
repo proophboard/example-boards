@@ -1,0 +1,2650 @@
+{
+  "playshotId": "0909ee00-2953-46d7-947d-dffd0ee363b6",
+  "boardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+  "name": "Open Spaces App",
+  "savedAt": "2024-06-19T11:14:47+00:00",
+  "savedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+  "playConfig": {
+    "appName": "Open Spaces",
+    "theme": {
+      "palette": {
+        "primary": {
+          "main": "#8b5aca",
+          "contrastText": "#faa630"
+        },
+        "secondary": {
+          "main": "#ddd"
+        }
+      },
+      "components": {
+        "MuiGrid2": {
+          "styleOverrides": {
+            "root": {
+              "& .MuiDataGrid-overlayWrapper": {
+                "minHeight": "250px"
+              },
+              "& .MuiDataGrid-cell a": {
+                "color": "#8b5aca",
+                "fontWeight": 500,
+                "textDecoration": "none"
+              }
+            }
+          }
+        }
+      }
+    },
+    "personas": [
+      {
+        "displayName": "Anyone",
+        "userId": "0299cda3-a2f7-4e94-9899-e1e37e5fe088",
+        "email": "anyone@example.local",
+        "roles": [
+          "Anyone"
+        ],
+        "avatar": "/assets/account-circle-outline.svg",
+        "description": "Anyone represents a standard user of the app without a specific role. This user has access to functionality that is not explicitly restricted."
+      },
+      {
+        "color": "#0634ea",
+        "roles": [
+          "Organizer"
+        ],
+        "email": "contact@prooph.de",
+        "displayName": "Alex",
+        "description": "Alex has the role \"Organizer\" and therefor access to the Open Space Planning.",
+        "attributes": {},
+        "userId": "0a7f6291-4a31-4876-83b7-9d00f1a67d89"
+      },
+      {
+        "color": "#700067",
+        "roles": [
+          "Anyone"
+        ],
+        "displayName": "Jane",
+        "email": "jane@attendee.local",
+        "description": "Jane attends the Event Modeling Open Space Berlin.",
+        "userId": "8924ac40-68a4-4203-83b2-72a1e5df81f6"
+      }
+    ],
+    "pages": {
+      "Dashboard": {
+        "service": "CrmTest",
+        "commands": [],
+        "components": [
+          "Core.Welcome"
+        ],
+        "sidebar": {
+          "label": "Dashboard",
+          "icon": "ViewDashboard",
+          "position": -1
+        },
+        "route": "/dashboard",
+        "topLevel": true,
+        "breadcrumb": "Dashboard"
+      },
+      "OpenSpaceApp.OpenSpacePlanning": {
+        "service": "OpenSpaceApp",
+        "route": "/open-space-app/open-space-planning",
+        "commands": [
+          "OpenSpaceApp.PlanOpenSpace"
+        ],
+        "components": [
+          "OpenSpaceApp.App.OpenSpaceList"
+        ],
+        "topLevel": true,
+        "sidebar": {
+          "label": "Open Space Planning",
+          "icon": "CalendarClock",
+          "invisible": "!isRole(user, 'Organizer')",
+          "position": 5
+        },
+        "breadcrumb": "Open Space Planning"
+      },
+      "OpenSpaceApp.OpenSpaces": {
+        "service": "OpenSpaceApp",
+        "route": "/open-space-app/open-spaces",
+        "commands": [],
+        "components": [
+          "OpenSpaceApp.App.OpenSpaceList"
+        ],
+        "topLevel": true,
+        "sidebar": {
+          "label": "Open Spaces",
+          "icon": "CalendarHeart",
+          "position": 5
+        },
+        "breadcrumb": "Open Spaces"
+      },
+      "OpenSpaceApp.OpenSpaceInfo": {
+        "service": "OpenSpaceApp",
+        "route": "/open-space-app/open-spaces/:openSpaceId",
+        "routeParams": [
+          "openSpaceId"
+        ],
+        "commands": [
+          "OpenSpaceApp.Register",
+          "OpenSpaceApp.SuggestTopic"
+        ],
+        "components": [
+          "OpenSpaceApp.App.OpenSpace",
+          "OpenSpaceApp.App.AttendeeList",
+          "OpenSpaceApp.App.VotedTopics"
+        ],
+        "topLevel": false,
+        "breadcrumb": {
+          "data": "/App/OpenSpace",
+          "label": "data.name"
+        }
+      },
+      "OpenSpaceApp.Voting": {
+        "service": "OpenSpaceApp",
+        "route": "/open-space-app/open-spaces/:openSpaceId/attendee/:attendeeId",
+        "routeParams": [
+          "openSpaceId",
+          "attendeeId"
+        ],
+        "commands": [
+          "OpenSpaceApp.VoteTopic"
+        ],
+        "components": [
+          "OpenSpaceApp.App.Attendee",
+          "OpenSpaceApp.App.NotificationList"
+        ],
+        "topLevel": false,
+        "breadcrumb": "Voting"
+      }
+    },
+    "views": {
+      "OpenSpaceApp.App.OpenSpace": {
+        "information": "OpenSpaceApp.App.OpenSpace"
+      },
+      "OpenSpaceApp.App.OpenSpaceList": {
+        "information": "OpenSpaceApp.App.OpenSpaceList"
+      },
+      "OpenSpaceApp.App.Topic": {
+        "information": "OpenSpaceApp.App.Topic"
+      },
+      "OpenSpaceApp.App.TopicList": {
+        "information": "OpenSpaceApp.App.TopicList"
+      },
+      "OpenSpaceApp.App.Attendee": {
+        "information": "OpenSpaceApp.App.Attendee"
+      },
+      "OpenSpaceApp.App.AttendeeList": {
+        "information": "OpenSpaceApp.App.AttendeeList"
+      },
+      "OpenSpaceApp.App.Notification": {
+        "information": "OpenSpaceApp.App.Notification"
+      },
+      "OpenSpaceApp.App.NotificationList": {
+        "information": "OpenSpaceApp.App.NotificationList"
+      },
+      "OpenSpaceApp.App.Vote": {
+        "information": "OpenSpaceApp.App.Vote"
+      },
+      "OpenSpaceApp.App.VotedTopics": {
+        "information": "OpenSpaceApp.App.VotedTopics"
+      },
+      "OpenSpaceApp.App.VotedTopic": {
+        "information": "OpenSpaceApp.App.VotedTopic"
+      }
+    },
+    "commands": {
+      "OpenSpaceApp.PlanOpenSpace": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "4xcaBzL2nwumJfomMjKJs8",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=4xcaBzL2nwumJfomMjKJs8&clicks=1",
+          "_pbVersion": 3,
+          "_pbCreatedAt": "2024-06-13T18:33:58.948Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:17:43.417Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.PlanOpenSpace",
+          "aggregateCommand": true,
+          "newAggregate": true,
+          "aggregateName": "OpenSpaceApp.OpenSpace",
+          "aggregateIdentifier": "openSpaceId",
+          "deleteState": false,
+          "deleteHistory": false
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "openSpaceId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Open Space Id"
+            },
+            "name": {
+              "type": "string",
+              "title": "Name"
+            }
+          },
+          "required": [
+            "openSpaceId",
+            "name"
+          ],
+          "additionalProperties": false,
+          "title": "Plan Open Space",
+          "$id": "/definitions/open-space-app/commands/plan-open-space"
+        },
+        "uiSchema": {
+          "openSpaceId": {
+            "ui:widget": "hidden"
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.SuggestTopic": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "8gkyth2SS36bUTGcrpLLye",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=8gkyth2SS36bUTGcrpLLye&clicks=1",
+          "_pbVersion": 6,
+          "_pbCreatedAt": "2024-06-13T18:46:46.793Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T22:26:22.406Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.SuggestTopic",
+          "aggregateCommand": true,
+          "newAggregate": true,
+          "aggregateName": "OpenSpaceApp.Topic",
+          "aggregateIdentifier": "topicId",
+          "deleteState": false,
+          "deleteHistory": false
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "topicId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Topic Id"
+            },
+            "openSpaceId": {
+              "$ref": "/definitions/open-space-app/app/open-space:openSpaceId",
+              "title": "Open Space Id"
+            },
+            "name": {
+              "type": "string",
+              "title": "Name"
+            }
+          },
+          "required": [
+            "topicId",
+            "openSpaceId",
+            "name"
+          ],
+          "additionalProperties": false,
+          "title": "Suggest Topic",
+          "$id": "/definitions/open-space-app/commands/suggest-topic"
+        },
+        "uiSchema": {
+          "topicId": {
+            "ui:widget": "hidden"
+          },
+          "openSpaceId": {
+            "ui:widget": "hidden"
+          },
+          "ui:button": {
+            "icon": "message-plus-outline",
+            "disabled": "!count(page|data('/App/AttendeeList', [])[.userId == user.userId])"
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.Register": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "FzxieN4feX1fgGujhzMBJ",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=FzxieN4feX1fgGujhzMBJ&clicks=1",
+          "_pbVersion": 5,
+          "_pbCreatedAt": "2024-06-15T12:52:31.688Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T22:23:15.477Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "dependencies": {
+            "OpenSpaceApp.GetAttendeeList": {
+              "type": "query",
+              "alias": "attendeeList"
+            }
+          },
+          "name": "OpenSpaceApp.Register",
+          "aggregateCommand": true,
+          "newAggregate": true,
+          "aggregateName": "OpenSpaceApp.Attendee",
+          "aggregateIdentifier": "attendeeId",
+          "deleteState": false,
+          "deleteHistory": false
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "attendeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Attendee Id"
+            },
+            "openSpaceId": {
+              "$ref": "/definitions/open-space-app/app/open-space:openSpaceId",
+              "title": "Open Space Id"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Name"
+            }
+          },
+          "required": [
+            "attendeeId",
+            "openSpaceId",
+            "name"
+          ],
+          "additionalProperties": false,
+          "title": "Register",
+          "$id": "/definitions/open-space-app/commands/register"
+        },
+        "uiSchema": {
+          "attendeeId": {
+            "ui:widget": "hidden"
+          },
+          "openSpaceId": {
+            "ui:widget": "hidden"
+          },
+          "userId": {
+            "ui:widget": "hidden"
+          },
+          "ui:button": {
+            "icon": "account-plus",
+            "disabled": "count(page|data('/App/AttendeeList', [])[.userId == user.userId])"
+          },
+          "ui:description": "Register for the open space to be able to vote for topics"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.VoteTopic": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "gDA7oaAr19ym3QRiGd8Y7m",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=gDA7oaAr19ym3QRiGd8Y7m&clicks=1",
+          "_pbVersion": 5,
+          "_pbCreatedAt": "2024-06-15T13:05:28.284Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T22:27:56.096Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.VoteTopic",
+          "aggregateCommand": true,
+          "newAggregate": false,
+          "aggregateName": "OpenSpaceApp.Attendee",
+          "aggregateIdentifier": "attendeeId",
+          "deleteState": false,
+          "deleteHistory": false
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "topicId": {
+              "$ref": "/definitions/open-space-app/app/topic:topicId",
+              "title": "Topic Id"
+            },
+            "attendeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Attendee Id"
+            }
+          },
+          "required": [
+            "topicId",
+            "attendeeId"
+          ],
+          "additionalProperties": false,
+          "title": "Vote Topic",
+          "$id": "/definitions/open-space-app/commands/vote-topic"
+        },
+        "uiSchema": {
+          "topicId": {
+            "ui:title": "Choose a topic",
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/App/TopicList",
+              "value": "data.topicId",
+              "text": "data.name"
+            }
+          },
+          "attendeeId": {
+            "ui:widget": "hidden"
+          },
+          "ui:button": {
+            "icon": "vote",
+            "hidden": "user.userId != page|data('/App/Attendee', {userId: ''}).userId"
+          },
+          "ui:description": "You'll receive a notification, if voting limit is reached"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.SendNotification": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "vPKwTvy6F8Ce7F4WY4aKWd",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=vPKwTvy6F8Ce7F4WY4aKWd&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-15T13:40:20.902Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:40:20.902Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.SendNotification",
+          "aggregateCommand": true,
+          "newAggregate": true,
+          "aggregateName": "OpenSpaceApp.Notification",
+          "aggregateIdentifier": "notificationId",
+          "deleteState": false,
+          "deleteHistory": false
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "notificationId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Notification Id"
+            },
+            "attendeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Attendee Id"
+            },
+            "msg": {
+              "type": "string",
+              "title": "Msg"
+            }
+          },
+          "required": [
+            "notificationId",
+            "attendeeId",
+            "msg"
+          ],
+          "additionalProperties": false,
+          "title": "Send Notification",
+          "$id": "/definitions/open-space-app/commands/send-notification"
+        },
+        "uiSchema": {
+          "notificationId": {
+            "ui:widget": "hidden"
+          },
+          "attendeeId": {
+            "ui:widget": "hidden"
+          }
+        },
+        "factory": []
+      }
+    },
+    "commandHandlers": {
+      "OpenSpaceApp.PlanOpenSpace": [
+        {
+          "rule": "always",
+          "then": {
+            "record": {
+              "event": "OpenSpaceApp.OpenSpace.OpenSpacePlanned",
+              "mapping": "command"
+            }
+          }
+        }
+      ],
+      "OpenSpaceApp.SuggestTopic": [
+        {
+          "rule": "always",
+          "then": {
+            "record": {
+              "event": "OpenSpaceApp.Topic.TopicSuggested",
+              "mapping": "command"
+            }
+          }
+        }
+      ],
+      "OpenSpaceApp.Register": [
+        {
+          "rule": "always",
+          "then": {
+            "assign": {
+              "variable": "isAlreadyRegistered",
+              "value": "false"
+            }
+          }
+        },
+        {
+          "rule": "always",
+          "then": {
+            "forEach": {
+              "then": {
+                "execute": {
+                  "rules": [
+                    {
+                      "rule": "condition",
+                      "if": "item.attendeeId == meta.user.userId",
+                      "then": {
+                        "assign": {
+                          "variable": "isAlreadyRegistered",
+                          "value": "true"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "variable": "attendeeList"
+            }
+          }
+        },
+        {
+          "rule": "condition",
+          "if": "isAlreadyRegistered",
+          "then": {
+            "throw": {
+              "error": "'You have already registered for the Open Space'"
+            }
+          },
+          "stop": true
+        },
+        {
+          "rule": "always",
+          "then": {
+            "record": {
+              "event": "OpenSpaceApp.Attendee.AttendeeRegistered",
+              "mapping": {
+                "$merge": "command",
+                "userId": "meta.user.userId"
+              }
+            }
+          }
+        }
+      ],
+      "OpenSpaceApp.VoteTopic": [
+        {
+          "rule": "condition",
+          "if": "count(information.votes) == 3",
+          "then": {
+            "record": {
+              "event": "OpenSpaceApp.Attendee.VotingLimitReached",
+              "mapping": {
+                "attendeeId": "command.attendeeId"
+              }
+            }
+          },
+          "else": {
+            "record": {
+              "event": "OpenSpaceApp.Attendee.TopicVoted",
+              "mapping": "command"
+            }
+          }
+        }
+      ],
+      "OpenSpaceApp.SendNotification": [
+        {
+          "rule": "always",
+          "then": {
+            "record": {
+              "event": "OpenSpaceApp.Notification.NotificationSent",
+              "mapping": "command"
+            }
+          }
+        }
+      ]
+    },
+    "aggregates": {
+      "OpenSpaceApp.OpenSpace": {
+        "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+        "_pbCardId": "4xcaBzL2nwumJfomMjKJs8",
+        "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=4xcaBzL2nwumJfomMjKJs8&clicks=1",
+        "_pbVersion": 3,
+        "_pbCreatedAt": "2024-06-13T18:33:58.948Z",
+        "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "_pbLastUpdatedAt": "2024-06-15T13:17:43.417Z",
+        "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "name": "OpenSpaceApp.OpenSpace",
+        "aggregateCommand": true,
+        "newAggregate": true,
+        "aggregateName": "OpenSpaceApp.OpenSpace",
+        "aggregateIdentifier": "openSpaceId",
+        "deleteState": false,
+        "deleteHistory": false,
+        "identifier": "openSpaceId",
+        "collection": "open_space_collection",
+        "stream": "write_model_stream",
+        "state": "OpenSpaceApp.App.OpenSpace"
+      },
+      "OpenSpaceApp.Topic": {
+        "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+        "_pbCardId": "8gkyth2SS36bUTGcrpLLye",
+        "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=8gkyth2SS36bUTGcrpLLye&clicks=1",
+        "_pbVersion": 6,
+        "_pbCreatedAt": "2024-06-13T18:46:46.793Z",
+        "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "_pbLastUpdatedAt": "2024-06-15T22:26:22.406Z",
+        "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "name": "OpenSpaceApp.Topic",
+        "aggregateCommand": true,
+        "newAggregate": true,
+        "aggregateName": "OpenSpaceApp.Topic",
+        "aggregateIdentifier": "topicId",
+        "deleteState": false,
+        "deleteHistory": false,
+        "identifier": "topicId",
+        "collection": "topic_collection",
+        "stream": "write_model_stream",
+        "state": "OpenSpaceApp.App.Topic"
+      },
+      "OpenSpaceApp.Attendee": {
+        "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+        "_pbCardId": "gjiq9TsSsgHKeDZdaV7Nea",
+        "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=gjiq9TsSsgHKeDZdaV7Nea&clicks=1",
+        "_pbVersion": 8,
+        "_pbCreatedAt": "2024-06-15T12:52:41.113Z",
+        "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "_pbLastUpdatedAt": "2024-06-15T18:24:30.518Z",
+        "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "name": "OpenSpaceApp.Attendee",
+        "identifier": "attendeeId",
+        "collection": "attendee_collection",
+        "stream": "write_model_stream",
+        "state": "OpenSpaceApp.App.Attendee"
+      },
+      "OpenSpaceApp.Notification": {
+        "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+        "_pbCardId": "vPKwTvy6F8Ce7F4WY4aKWd",
+        "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=vPKwTvy6F8Ce7F4WY4aKWd&clicks=1",
+        "_pbVersion": 1,
+        "_pbCreatedAt": "2024-06-15T13:40:20.902Z",
+        "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "_pbLastUpdatedAt": "2024-06-15T13:40:20.902Z",
+        "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+        "name": "OpenSpaceApp.Notification",
+        "identifier": "notificationId",
+        "collection": "notification_collection",
+        "stream": "write_model_stream",
+        "state": "OpenSpaceApp.App.Notification"
+      }
+    },
+    "events": {
+      "OpenSpaceApp.OpenSpace.OpenSpacePlanned": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "khoNpYuiSoFWvpPMBpWhT1",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=khoNpYuiSoFWvpPMBpWhT1&clicks=1",
+          "_pbVersion": 3,
+          "_pbCreatedAt": "2024-06-13T18:34:12.452Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:17:48.998Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.OpenSpace.OpenSpacePlanned",
+          "aggregateEvent": true,
+          "aggregateIdentifier": "openSpaceId",
+          "aggregateState": "OpenSpaceApp.App.OpenSpace"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "openSpaceId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Open Space Id"
+            },
+            "name": {
+              "type": "string",
+              "title": "Name"
+            }
+          },
+          "required": [
+            "openSpaceId",
+            "name"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/open-space/open-space-planned",
+          "title": "Open Space Planned"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.Topic.TopicSuggested": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "k5ni2j4R6GELtDZbuH7mzD",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=k5ni2j4R6GELtDZbuH7mzD&clicks=1",
+          "_pbVersion": 3,
+          "_pbCreatedAt": "2024-06-13T18:46:53.153Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T22:05:51.768Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.Topic.TopicSuggested",
+          "aggregateEvent": true,
+          "aggregateIdentifier": "topicId",
+          "aggregateState": "OpenSpaceApp.App.Topic"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "topicId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Topic Id"
+            },
+            "openSpaceId": {
+              "$ref": "/definitions/open-space-app/app/open-space:openSpaceId",
+              "title": "Open Space Id"
+            },
+            "name": {
+              "type": "string",
+              "title": "Name"
+            }
+          },
+          "required": [
+            "topicId",
+            "openSpaceId",
+            "name"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/topic/topic-suggested",
+          "title": "Topic Suggested"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.Attendee.AttendeeRegistered": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "pkjCYhotMmmZJpKL96hnff",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=pkjCYhotMmmZJpKL96hnff&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-15T12:52:46.394Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T18:24:41.700Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.Attendee.AttendeeRegistered",
+          "aggregateEvent": true,
+          "aggregateIdentifier": "attendeeId",
+          "aggregateState": "OpenSpaceApp.App.Attendee"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "attendeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Attendee Id"
+            },
+            "openSpaceId": {
+              "$ref": "/definitions/open-space-app/app/open-space:openSpaceId",
+              "title": "Open Space Id"
+            },
+            "name": {
+              "type": "string",
+              "title": "Name"
+            },
+            "userId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "User Id"
+            }
+          },
+          "required": [
+            "attendeeId",
+            "openSpaceId",
+            "name",
+            "userId"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/attendee/attendee-registered",
+          "title": "Attendee Registered"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.Attendee.TopicVoted": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "a3UwzfHZBeqJYJDdW3zuTm",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=a3UwzfHZBeqJYJDdW3zuTm&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-15T13:21:04.623Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T18:48:29.330Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.Attendee.TopicVoted",
+          "aggregateEvent": true,
+          "aggregateIdentifier": "attendeeId",
+          "aggregateState": "OpenSpaceApp.App.Attendee"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "topicId": {
+              "$ref": "/definitions/open-space-app/app/topic:topicId",
+              "title": "Topic Id"
+            },
+            "attendeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Attendee Id"
+            }
+          },
+          "required": [
+            "topicId",
+            "attendeeId"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/attendee/topic-voted",
+          "title": "Topic Voted"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.Attendee.VotingLimitReached": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "gJpkZtCkCq5wcSCAEU4VTe",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=gJpkZtCkCq5wcSCAEU4VTe&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-15T13:21:10.137Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:33:19.365Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.Attendee.VotingLimitReached",
+          "aggregateEvent": true,
+          "aggregateIdentifier": "attendeeId",
+          "aggregateState": "OpenSpaceApp.App.Attendee"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "attendeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Attendee Id"
+            }
+          },
+          "required": [
+            "attendeeId"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/attendee/voting-limit-reached",
+          "title": "Voting Limit Reached"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.Notification.NotificationSent": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "bERhL1tjJbjLvX7jXpvBSV",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=bERhL1tjJbjLvX7jXpvBSV&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-15T13:28:12.415Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:36:41.634Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.Notification.NotificationSent",
+          "aggregateEvent": true,
+          "aggregateIdentifier": "notificationId",
+          "aggregateState": "OpenSpaceApp.App.Notification"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "notificationId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Notification Id"
+            },
+            "attendeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Attendee Id"
+            },
+            "msg": {
+              "type": "string",
+              "title": "Msg"
+            }
+          },
+          "required": [
+            "notificationId",
+            "attendeeId",
+            "msg"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/notification/notification-sent",
+          "title": "Notification Sent"
+        },
+        "factory": []
+      }
+    },
+    "eventReducers": {
+      "OpenSpaceApp.OpenSpace": {
+        "OpenSpaceApp.OpenSpace.OpenSpacePlanned": [
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": {
+                  "$merge": [
+                    "information",
+                    "event"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "OpenSpaceApp.Topic": {
+        "OpenSpaceApp.Topic.TopicSuggested": [
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": {
+                  "topicId": "event.topicId",
+                  "name": "event.name",
+                  "openSpace": "event.openSpaceId"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "OpenSpaceApp.Attendee": {
+        "OpenSpaceApp.Attendee.AttendeeRegistered": [
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": {
+                  "$merge": [
+                    "information",
+                    "event"
+                  ],
+                  "votes": "[]"
+                }
+              }
+            }
+          }
+        ],
+        "OpenSpaceApp.Attendee.TopicVoted": [
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": {
+                  "$merge": [
+                    "information"
+                  ],
+                  "votes": "information.votes|push({topic: event.topicId})"
+                }
+              }
+            }
+          }
+        ],
+        "OpenSpaceApp.Attendee.VotingLimitReached": [
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": "information"
+              }
+            }
+          }
+        ]
+      },
+      "OpenSpaceApp.Notification": {
+        "OpenSpaceApp.Notification.NotificationSent": [
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": {
+                  "$merge": [
+                    "information",
+                    "event"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "queries": {
+      "OpenSpaceApp.GetOpenSpace": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "nLbThURUJ9eXN3ZRBRYGwf",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=nLbThURUJ9eXN3ZRBRYGwf&clicks=1",
+          "_pbVersion": 4,
+          "_pbCreatedAt": "2024-06-13T18:34:21.762Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:17:53.740Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.GetOpenSpace",
+          "returnType": "OpenSpaceApp.App.OpenSpace"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "openSpaceId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Open Space Id"
+            }
+          },
+          "required": [
+            "openSpaceId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Open Space"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.GetOpenSpaceList": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "phq7wLbD451wbjZ1CPe2NT",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=phq7wLbD451wbjZ1CPe2NT&clicks=1",
+          "_pbVersion": 5,
+          "_pbCreatedAt": "2024-06-13T18:35:55.003Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:18:20.631Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.GetOpenSpaceList",
+          "returnType": "OpenSpaceApp.App.OpenSpaceList"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "title": "Get Open Space List"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.GetTopic": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "uBKk9SEVym1RtSaq5WimKe",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=uBKk9SEVym1RtSaq5WimKe&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-13T18:46:58.933Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-13T18:46:58.933Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.GetTopic",
+          "returnType": "OpenSpaceApp.App.Topic"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "topicId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Topic Id"
+            }
+          },
+          "required": [
+            "topicId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Topic"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.GetTopicList": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "71DFpn1qZvn6KVfc4sDiFu",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=71DFpn1qZvn6KVfc4sDiFu&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-13T18:47:29.530Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T12:48:13.920Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.GetTopicList",
+          "returnType": "OpenSpaceApp.App.TopicList"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "title": "Get Topic List"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.GetAttendee": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "aPjjEu5DQHdUXC5Kq7QHpw",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=aPjjEu5DQHdUXC5Kq7QHpw&clicks=1",
+          "_pbVersion": 10,
+          "_pbCreatedAt": "2024-06-15T12:52:16.412Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T18:47:51.555Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.GetAttendee",
+          "returnType": "OpenSpaceApp.App.Attendee"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "attendeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Attendee Id"
+            }
+          },
+          "required": [
+            "attendeeId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Attendee"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.GetAttendeeList": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "gcDxCHWtcxKfiqbBPrQr8q",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=gcDxCHWtcxKfiqbBPrQr8q&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-15T12:52:21.330Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:02:21.852Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.GetAttendeeList",
+          "returnType": "OpenSpaceApp.App.AttendeeList"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "openSpaceId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Open Space Id"
+            }
+          },
+          "required": [
+            "openSpaceId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Attendee List"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.GetNotification": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "6HVgdtVJQn59bnRDnmufEv",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=6HVgdtVJQn59bnRDnmufEv&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-15T13:28:17.333Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:36:47.352Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.GetNotification",
+          "returnType": "OpenSpaceApp.App.Notification"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "notificationId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Notification Id"
+            }
+          },
+          "required": [
+            "notificationId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Notification"
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.GetNotificationList": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "rHspiFJYrYYfiGMvbYWi7b",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=rHspiFJYrYYfiGMvbYWi7b&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-15T13:28:23.332Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:28:23.332Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.GetNotificationList",
+          "returnType": "OpenSpaceApp.App.NotificationList"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "attendeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Attendee Id"
+            }
+          },
+          "required": [
+            "attendeeId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Notification List"
+        },
+        "factory": []
+      },
+      "": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "bt28rz5fRYX1xvcKKTemN4",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=bt28rz5fRYX1xvcKKTemN4&clicks=1",
+          "_pbVersion": 6,
+          "_pbCreatedAt": "2024-06-15T18:47:45.499Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T21:23:07.388Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "",
+          "returnType": "OpenSpaceApp.App.VotedTopic"
+        },
+        "schema": {},
+        "factory": []
+      },
+      "OpenSpaceApp.GetVotedTopics": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "3RuXU4SeX5j1V5ApvfatG4",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=3RuXU4SeX5j1V5ApvfatG4&clicks=1",
+          "_pbVersion": 18,
+          "_pbCreatedAt": "2024-06-15T19:11:34.263Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T22:09:55.830Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.GetVotedTopics",
+          "returnType": "OpenSpaceApp.App.VotedTopics"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "openSpaceId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Open Space Id"
+            }
+          },
+          "required": [
+            "openSpaceId"
+          ],
+          "additionalProperties": false,
+          "title": "Get Voted Topics"
+        },
+        "factory": []
+      }
+    },
+    "resolvers": {
+      "OpenSpaceApp.GetOpenSpace": {},
+      "OpenSpaceApp.GetOpenSpaceList": {},
+      "OpenSpaceApp.GetTopic": {},
+      "OpenSpaceApp.GetTopicList": {},
+      "OpenSpaceApp.GetAttendee": {},
+      "OpenSpaceApp.GetAttendeeList": {
+        "where": {
+          "rule": "always",
+          "then": {
+            "filter": {
+              "eq": {
+                "prop": "openSpaceId",
+                "value": "query.openSpaceId"
+              }
+            }
+          }
+        }
+      },
+      "OpenSpaceApp.GetNotification": {},
+      "OpenSpaceApp.GetNotificationList": {
+        "where": {
+          "rule": "always",
+          "then": {
+            "filter": {
+              "eq": {
+                "prop": "attendeeId",
+                "value": "query.attendeeId"
+              }
+            }
+          }
+        }
+      },
+      "": {},
+      "OpenSpaceApp.GetVotedTopics": {
+        "rules": [
+          {
+            "rule": "always",
+            "then": {
+              "find": {
+                "information": "OpenSpaceApp.App.Topic",
+                "filter": {
+                  "eq": {
+                    "prop": "openSpace",
+                    "value": "query.openSpaceId"
+                  }
+                },
+                "variable": "topics"
+              }
+            }
+          },
+          {
+            "rule": "always",
+            "then": {
+              "find": {
+                "information": "OpenSpaceApp.App.Attendee",
+                "filter": {
+                  "eq": {
+                    "prop": "openSpaceId",
+                    "value": "query.openSpaceId"
+                  }
+                },
+                "variable": "attendees"
+              }
+            }
+          },
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "votedTopics",
+                "value": "{}"
+              }
+            }
+          },
+          {
+            "rule": "always",
+            "then": {
+              "forEach": {
+                "then": {
+                  "assign": {
+                    "variable": "votedTopics",
+                    "value": "votedTopics|set(item.topicId, {topic: item.topicId, votes: 0})"
+                  }
+                },
+                "variable": "topics"
+              }
+            }
+          },
+          {
+            "rule": "always",
+            "then": {
+              "forEach": {
+                "then": {
+                  "execute": {
+                    "rules": [
+                      {
+                        "rule": "always",
+                        "then": {
+                          "assign": {
+                            "variable": "votes",
+                            "value": "item.votes"
+                          }
+                        }
+                      },
+                      {
+                        "rule": "always",
+                        "then": {
+                          "forEach": {
+                            "then": {
+                              "execute": {
+                                "rules": [
+                                  {
+                                    "rule": "always",
+                                    "then": {
+                                      "assign": {
+                                        "variable": "vote",
+                                        "value": "item"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "rule": "always",
+                                    "then": {
+                                      "assign": {
+                                        "variable": "votedTopic",
+                                        "value": "votedTopics|get(vote.topic)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "rule": "always",
+                                    "then": {
+                                      "assign": {
+                                        "variable": "votedTopic",
+                                        "value": "votedTopic|set('votes', votedTopic.votes + 1)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "rule": "always",
+                                    "then": {
+                                      "assign": {
+                                        "variable": "votedTopics",
+                                        "value": "votedTopics|set(vote.topic, votedTopic)"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            "variable": "votes"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "variable": "attendees"
+              }
+            }
+          },
+          {
+            "rule": "always",
+            "then": {
+              "assign": {
+                "variable": "information",
+                "value": "votedTopics|values|orderBy(['votes'], ['desc'])"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "types": {
+      "OpenSpaceApp.App.OpenSpace": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "nLbThURUJ9eXN3ZRBRYGwf",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=nLbThURUJ9eXN3ZRBRYGwf&clicks=1",
+          "_pbVersion": 4,
+          "_pbCreatedAt": "2024-06-13T18:34:21.762Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:17:53.740Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.App.OpenSpace",
+          "hasIdentifier": true,
+          "identifier": "openSpaceId",
+          "isList": false,
+          "isQueryable": true,
+          "query": "OpenSpaceApp.GetOpenSpace",
+          "collection": "open_space_collection"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "openSpaceId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Open Space Id"
+            },
+            "name": {
+              "type": "string",
+              "title": "Name"
+            }
+          },
+          "required": [
+            "openSpaceId",
+            "name"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/app/open-space",
+          "title": "Open Space"
+        },
+        "uiSchema": {
+          "openSpaceId": {
+            "ui:widget": "hidden"
+          },
+          "planOpenSpaceId": {
+            "ui:widget": "hidden"
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.App.OpenSpaceList": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "phq7wLbD451wbjZ1CPe2NT",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=phq7wLbD451wbjZ1CPe2NT&clicks=1",
+          "_pbVersion": 5,
+          "_pbCreatedAt": "2024-06-13T18:35:55.003Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:18:20.631Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.App.OpenSpaceList",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "openSpaceId",
+          "itemType": "OpenSpaceApp.App.OpenSpace",
+          "query": "OpenSpaceApp.GetOpenSpaceList",
+          "collection": "open_space_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/open-space-app/app/open-space"
+          },
+          "$id": "/definitions/open-space-app/app/open-space-list",
+          "title": "Open Space List"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "hideToolbar": true,
+            "columns": [
+              {
+                "field": "name",
+                "headerName": "Name",
+                "flex": 1,
+                "pageLink": "OpenSpaceInfo"
+              }
+            ]
+          },
+          "table": {
+            "hideToolbar": true,
+            "columns": [
+              {
+                "field": "name",
+                "headerName": "Name",
+                "flex": 1,
+                "pageLink": "OpenSpaceInfo"
+              }
+            ]
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.App.Topic": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "uBKk9SEVym1RtSaq5WimKe",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=uBKk9SEVym1RtSaq5WimKe&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-13T18:46:58.933Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-13T18:46:58.933Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.App.Topic",
+          "hasIdentifier": true,
+          "identifier": "topicId",
+          "isList": false,
+          "isQueryable": true,
+          "query": "OpenSpaceApp.GetTopic",
+          "collection": "topic_collection"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "topicId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Topic Id"
+            },
+            "openSpace": {
+              "$ref": "/definitions/open-space-app/app/open-space:openSpaceId",
+              "title": "Open Space"
+            },
+            "name": {
+              "type": "string",
+              "title": "Name"
+            }
+          },
+          "required": [
+            "topicId",
+            "openSpace",
+            "name"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/app/topic",
+          "title": "Topic"
+        },
+        "uiSchema": {
+          "topicId": {
+            "ui:widget": "hidden"
+          },
+          "openSpace": {
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/App/OpenSpaceList",
+              "value": "data.openSpaceId",
+              "text": "data.name"
+            }
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.App.TopicList": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "71DFpn1qZvn6KVfc4sDiFu",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=71DFpn1qZvn6KVfc4sDiFu&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-13T18:47:29.530Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T12:48:13.920Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.App.TopicList",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "topicId",
+          "itemType": "OpenSpaceApp.App.Topic",
+          "query": "OpenSpaceApp.GetTopicList",
+          "collection": "topic_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/open-space-app/app/topic"
+          },
+          "$id": "/definitions/open-space-app/app/topic-list",
+          "title": "Topic List"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "columns": [
+              {
+                "field": "name",
+                "headerName": "Name",
+                "flex": 1
+              },
+              {
+                "field": "openSpace",
+                "ref": {
+                  "data": "/App/OpenSpaceList",
+                  "value": "data.name"
+                },
+                "headerName": "Open Space",
+                "flex": 1
+              }
+            ]
+          },
+          "table": {
+            "columns": [
+              {
+                "field": "name",
+                "headerName": "Name",
+                "flex": 1
+              },
+              {
+                "field": "openSpace",
+                "ref": {
+                  "data": "/App/OpenSpaceList",
+                  "value": "data.name"
+                },
+                "headerName": "Open Space",
+                "flex": 1
+              }
+            ]
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.App.Attendee": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "aPjjEu5DQHdUXC5Kq7QHpw",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=aPjjEu5DQHdUXC5Kq7QHpw&clicks=1",
+          "_pbVersion": 10,
+          "_pbCreatedAt": "2024-06-15T12:52:16.412Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T18:47:51.555Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.App.Attendee",
+          "hasIdentifier": true,
+          "identifier": "attendeeId",
+          "isList": false,
+          "isQueryable": true,
+          "query": "OpenSpaceApp.GetAttendee",
+          "collection": "attendee_collection"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "attendeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Attendee Id"
+            },
+            "openSpaceId": {
+              "$ref": "/definitions/open-space-app/app/open-space:openSpaceId",
+              "title": "Open Space Id"
+            },
+            "name": {
+              "type": "string",
+              "title": "Name"
+            },
+            "userId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "User Id"
+            },
+            "votes": {
+              "type": "array",
+              "items": {
+                "$ref": "/definitions/open-space-app/app/vote"
+              },
+              "title": "Votes"
+            }
+          },
+          "required": [
+            "attendeeId",
+            "openSpaceId",
+            "name",
+            "userId",
+            "votes"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/app/attendee",
+          "title": "Attendee"
+        },
+        "uiSchema": {
+          "attendeeId": {
+            "ui:widget": "hidden"
+          },
+          "openSpaceId": {
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/App/OpenSpaceList",
+              "value": "data.openSpaceId",
+              "text": "data.name"
+            }
+          },
+          "userId": {
+            "ui:widget": "hidden"
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.App.AttendeeList": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "gcDxCHWtcxKfiqbBPrQr8q",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=gcDxCHWtcxKfiqbBPrQr8q&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-15T12:52:21.330Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:02:21.851Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.App.AttendeeList",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "attendeeId",
+          "itemType": "OpenSpaceApp.App.Attendee",
+          "query": "OpenSpaceApp.GetAttendeeList",
+          "collection": "attendee_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/open-space-app/app/attendee"
+          },
+          "$id": "/definitions/open-space-app/app/attendee-list",
+          "title": "Attendee List"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "columns": [
+              {
+                "field": "name",
+                "pageLink": "Voting",
+                "headerName": "Name",
+                "flex": 1
+              },
+              {
+                "field": "openSpaceId",
+                "ref": {
+                  "data": "/App/OpenSpaceList",
+                  "value": "data.name"
+                },
+                "headerName": "Open Space Id",
+                "flex": 1
+              }
+            ]
+          },
+          "table": {
+            "columns": [
+              {
+                "field": "name",
+                "pageLink": "Voting",
+                "headerName": "Name",
+                "flex": 1
+              },
+              {
+                "field": "openSpaceId",
+                "ref": {
+                  "data": "/App/OpenSpaceList",
+                  "value": "data.name"
+                },
+                "headerName": "Open Space Id",
+                "flex": 1
+              }
+            ]
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.App.Notification": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "6HVgdtVJQn59bnRDnmufEv",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=6HVgdtVJQn59bnRDnmufEv&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-15T13:28:17.333Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:36:47.352Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.App.Notification",
+          "hasIdentifier": true,
+          "identifier": "notificationId",
+          "isList": false,
+          "isQueryable": true,
+          "query": "OpenSpaceApp.GetNotification",
+          "collection": "notification_collection"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "notificationId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Notification Id"
+            },
+            "attendeeId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Attendee Id"
+            },
+            "msg": {
+              "type": "string",
+              "title": "Msg"
+            }
+          },
+          "required": [
+            "notificationId",
+            "attendeeId",
+            "msg"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/app/notification",
+          "title": "Notification"
+        },
+        "uiSchema": {
+          "notificationId": {
+            "ui:widget": "hidden"
+          },
+          "attendeeId": {
+            "ui:widget": "hidden"
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.App.NotificationList": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "rHspiFJYrYYfiGMvbYWi7b",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=rHspiFJYrYYfiGMvbYWi7b&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-15T13:28:23.332Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:28:23.332Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.App.NotificationList",
+          "hasIdentifier": true,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "notificationId",
+          "itemType": "OpenSpaceApp.App.Notification",
+          "query": "OpenSpaceApp.GetNotificationList",
+          "collection": "notification_collection"
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/open-space-app/app/notification"
+          },
+          "$id": "/definitions/open-space-app/app/notification-list",
+          "title": "Notification List"
+        },
+        "uiSchema": {
+          "ui:table": {
+            "columns": [
+              {
+                "field": "msg",
+                "headerName": "Msg",
+                "flex": 1
+              }
+            ]
+          },
+          "table": {
+            "columns": [
+              {
+                "field": "msg",
+                "headerName": "Msg",
+                "flex": 1
+              }
+            ]
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.App.Vote": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "iqcYXvysPjQfNnfvexMZ5F",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=iqcYXvysPjQfNnfvexMZ5F&clicks=1",
+          "_pbVersion": 4,
+          "_pbCreatedAt": "2024-06-15T18:47:45.499Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T18:51:23.936Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.App.Vote",
+          "hasIdentifier": false,
+          "isList": false,
+          "isQueryable": false
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "$ref": "/definitions/open-space-app/app/topic:topicId",
+              "title": "Topic"
+            }
+          },
+          "required": [
+            "topic"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/app/vote",
+          "title": "Vote"
+        },
+        "uiSchema": {
+          "topic": {
+            "ui:title": "",
+            "ui:label": false,
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/App/TopicList",
+              "value": "data.topicId",
+              "text": "data.name"
+            }
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.App.VotedTopics": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "3RuXU4SeX5j1V5ApvfatG4",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=3RuXU4SeX5j1V5ApvfatG4&clicks=1",
+          "_pbVersion": 18,
+          "_pbCreatedAt": "2024-06-15T19:11:34.263Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T22:09:55.830Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.App.VotedTopics",
+          "hasIdentifier": false,
+          "isList": true,
+          "isQueryable": true,
+          "itemIdentifier": "topicId",
+          "itemType": "OpenSpaceApp.App.Topic",
+          "query": "OpenSpaceApp.GetVotedTopics",
+          "isNotStored": true
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "/definitions/open-space-app/app/voted-topic"
+          },
+          "$id": "/definitions/open-space-app/app/voted-topics",
+          "title": "Voted Topics"
+        },
+        "uiSchema": {
+          "ui:title": "Topics",
+          "ui:table": {
+            "columns": [
+              {
+                "field": "topic",
+                "ref": {
+                  "data": "/App/TopicList",
+                  "value": "data.name"
+                },
+                "headerName": "Topic",
+                "flex": 1
+              },
+              "votes"
+            ]
+          },
+          "table": {
+            "columns": [
+              {
+                "field": "topic",
+                "ref": {
+                  "data": "/App/TopicList",
+                  "value": "data.name"
+                },
+                "headerName": "Topic",
+                "flex": 1
+              },
+              "votes"
+            ]
+          }
+        },
+        "factory": []
+      },
+      "OpenSpaceApp.App.VotedTopic": {
+        "desc": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "bt28rz5fRYX1xvcKKTemN4",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=bt28rz5fRYX1xvcKKTemN4&clicks=1",
+          "_pbVersion": 2,
+          "_pbCreatedAt": "2024-06-15T19:53:11.304Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T21:23:07.387Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.App.VotedTopic",
+          "hasIdentifier": false,
+          "isList": false,
+          "isQueryable": false
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "$ref": "/definitions/open-space-app/app/topic:topicId",
+              "title": "Topic"
+            },
+            "votes": {
+              "type": "number",
+              "title": "Votes"
+            }
+          },
+          "required": [
+            "topic",
+            "votes"
+          ],
+          "additionalProperties": false,
+          "$id": "/definitions/open-space-app/app/voted-topic",
+          "title": "Voted Topic"
+        },
+        "uiSchema": {
+          "topic": {
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/App/VotedTopics",
+              "value": "data.topicId",
+              "text": "data.name"
+            }
+          },
+          "openSpace": {
+            "ui:widget": "DataSelect",
+            "ui:options": {
+              "data": "/App/OpenSpaceList",
+              "value": "data.openSpaceId",
+              "text": "data.name"
+            }
+          }
+        },
+        "factory": []
+      }
+    },
+    "definitions": {
+      "/definitions/open-space-app/app/open-space": {
+        "type": "object",
+        "properties": {
+          "openSpaceId": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Open Space Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "required": [
+          "openSpaceId",
+          "name"
+        ],
+        "additionalProperties": false,
+        "$id": "/definitions/open-space-app/app/open-space",
+        "title": "Open Space"
+      },
+      "/definitions/open-space-app/app/open-space-list": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/open-space-app/app/open-space"
+        },
+        "$id": "/definitions/open-space-app/app/open-space-list",
+        "title": "Open Space List"
+      },
+      "/definitions/open-space-app/app/topic": {
+        "type": "object",
+        "properties": {
+          "topicId": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Topic Id"
+          },
+          "openSpace": {
+            "$ref": "/definitions/open-space-app/app/open-space:openSpaceId",
+            "title": "Open Space"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "required": [
+          "topicId",
+          "openSpace",
+          "name"
+        ],
+        "additionalProperties": false,
+        "$id": "/definitions/open-space-app/app/topic",
+        "title": "Topic"
+      },
+      "/definitions/open-space-app/app/topic-list": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/open-space-app/app/topic"
+        },
+        "$id": "/definitions/open-space-app/app/topic-list",
+        "title": "Topic List"
+      },
+      "/definitions/open-space-app/app/attendee": {
+        "type": "object",
+        "properties": {
+          "attendeeId": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Attendee Id"
+          },
+          "openSpaceId": {
+            "$ref": "/definitions/open-space-app/app/open-space:openSpaceId",
+            "title": "Open Space Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid",
+            "title": "User Id"
+          },
+          "votes": {
+            "type": "array",
+            "items": {
+              "$ref": "/definitions/open-space-app/app/vote"
+            },
+            "title": "Votes"
+          }
+        },
+        "required": [
+          "attendeeId",
+          "openSpaceId",
+          "name",
+          "userId",
+          "votes"
+        ],
+        "additionalProperties": false,
+        "$id": "/definitions/open-space-app/app/attendee",
+        "title": "Attendee"
+      },
+      "/definitions/open-space-app/app/attendee-list": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/open-space-app/app/attendee"
+        },
+        "$id": "/definitions/open-space-app/app/attendee-list",
+        "title": "Attendee List"
+      },
+      "/definitions/open-space-app/app/notification": {
+        "type": "object",
+        "properties": {
+          "notificationId": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Notification Id"
+          },
+          "attendeeId": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Attendee Id"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Msg"
+          }
+        },
+        "required": [
+          "notificationId",
+          "attendeeId",
+          "msg"
+        ],
+        "additionalProperties": false,
+        "$id": "/definitions/open-space-app/app/notification",
+        "title": "Notification"
+      },
+      "/definitions/open-space-app/app/notification-list": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/open-space-app/app/notification"
+        },
+        "$id": "/definitions/open-space-app/app/notification-list",
+        "title": "Notification List"
+      },
+      "/definitions/open-space-app/app/vote": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "$ref": "/definitions/open-space-app/app/topic:topicId",
+            "title": "Topic"
+          }
+        },
+        "required": [
+          "topic"
+        ],
+        "additionalProperties": false,
+        "$id": "/definitions/open-space-app/app/vote",
+        "title": "Vote"
+      },
+      "/definitions/open-space-app/app/voted-topics": {
+        "type": "array",
+        "items": {
+          "$ref": "/definitions/open-space-app/app/voted-topic"
+        },
+        "$id": "/definitions/open-space-app/app/voted-topics",
+        "title": "Voted Topics"
+      },
+      "/definitions/open-space-app/app/voted-topic": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "$ref": "/definitions/open-space-app/app/topic:topicId",
+            "title": "Topic"
+          },
+          "votes": {
+            "type": "number",
+            "title": "Votes"
+          }
+        },
+        "required": [
+          "topic",
+          "votes"
+        ],
+        "additionalProperties": false,
+        "$id": "/definitions/open-space-app/app/voted-topic",
+        "title": "Voted Topic"
+      }
+    },
+    "eventPolicies": {
+      "OpenSpaceApp.Attendee.VotingLimitReached": {
+        "OpenSpaceApp.NotifyAttendeeAboutLimitReached": {
+          "_pbBoardId": "7c807e5a-db47-4369-beaf-ea9a0fd5f4f4",
+          "_pbCardId": "figUHhKdtARXB41oZruQdi",
+          "_pbLink": "https://app.prooph-board.com/inspectio/board/7c807e5a-db47-4369-beaf-ea9a0fd5f4f4?cells=figUHhKdtARXB41oZruQdi&clicks=1",
+          "_pbVersion": 1,
+          "_pbCreatedAt": "2024-06-15T13:37:54.885Z",
+          "_pbCreatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "_pbLastUpdatedAt": "2024-06-15T13:37:54.885Z",
+          "_pbLastUpdatedBy": "a35267cd-dfd0-410f-b64a-7163fd150352",
+          "name": "OpenSpaceApp.NotifyAttendeeAboutLimitReached",
+          "rules": [
+            {
+              "rule": "always",
+              "then": {
+                "trigger": {
+                  "command": "OpenSpaceApp.SendNotification",
+                  "mapping": {
+                    "notificationId": "uuid()",
+                    "attendeeId": "event.attendeeId",
+                    "msg": "'Voting Limit Reached'"
+                  }
+                }
+              }
+            }
+          ],
+          "dependencies": {},
+          "live": false
+        }
+      }
+    }
+  },
+  "playData": {
+    "streams": {
+      "write_model_stream": [
+        {
+          "uuid": "2fc7d8de-8355-4b4b-9345-ddd49c5d432b",
+          "name": "OpenSpaceApp.OpenSpace.OpenSpacePlanned",
+          "payload": {
+            "openSpaceId": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "name": "Event Modeling Berlin"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "0a7f6291-4a31-4876-83b7-9d00f1a67d89",
+            "aggregateId": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "aggregateType": "OpenSpaceApp.OpenSpace",
+            "aggregateVersion": 1,
+            "causationId": "09d1260a-db4e-4a73-b3c8-50ba1618810f",
+            "causationName": "OpenSpaceApp.PlanOpenSpace"
+          },
+          "createdAt": "2024-06-15T18:27:28.206Z"
+        },
+        {
+          "uuid": "8e32e39a-dd9e-490b-ba7d-88b0e29b22f9",
+          "name": "OpenSpaceApp.Topic.TopicSuggested",
+          "payload": {
+            "topicId": "110aadc4-79b7-4f80-9a09-673a5ea59660",
+            "openSpace": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "name": "From Event Modeling to Code"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "0a7f6291-4a31-4876-83b7-9d00f1a67d89",
+            "aggregateId": "110aadc4-79b7-4f80-9a09-673a5ea59660",
+            "aggregateType": "OpenSpaceApp.Topic",
+            "aggregateVersion": 1,
+            "causationId": "971cea86-c801-48bd-adac-84d360d822ed",
+            "causationName": "OpenSpaceApp.SuggestTopic"
+          },
+          "createdAt": "2024-06-15T18:27:42.354Z"
+        },
+        {
+          "uuid": "ed92144b-5a97-4ea1-b34f-b06ab81b136b",
+          "name": "OpenSpaceApp.Attendee.AttendeeRegistered",
+          "payload": {
+            "openSpaceId": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "attendeeId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "name": "Jane",
+            "userId": "8924ac40-68a4-4203-83b2-72a1e5df81f6"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "8924ac40-68a4-4203-83b2-72a1e5df81f6",
+            "aggregateId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "aggregateType": "OpenSpaceApp.Attendee",
+            "aggregateVersion": 1,
+            "causationId": "f73ec9dd-6219-4393-8bcf-019b04e1f336",
+            "causationName": "OpenSpaceApp.Register"
+          },
+          "createdAt": "2024-06-15T18:29:21.503Z"
+        },
+        {
+          "uuid": "8010282d-0f7c-4913-811b-7abf7535ac70",
+          "name": "OpenSpaceApp.Attendee.TopicVoted",
+          "payload": {
+            "attendeeId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "topicId": "110aadc4-79b7-4f80-9a09-673a5ea59660"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "8924ac40-68a4-4203-83b2-72a1e5df81f6",
+            "aggregateId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "aggregateType": "OpenSpaceApp.Attendee",
+            "aggregateVersion": 2,
+            "causationId": "2c118119-73aa-4826-b283-8865dd262251",
+            "causationName": "OpenSpaceApp.VoteTopic"
+          },
+          "createdAt": "2024-06-15T18:48:48.471Z"
+        },
+        {
+          "uuid": "59cd62bb-22bc-4549-99ae-f9b6a1592b37",
+          "name": "OpenSpaceApp.Topic.TopicSuggested",
+          "payload": {
+            "topicId": "4ed8d2b6-6aa3-481b-a5d8-3dc4d81cebd6",
+            "openSpace": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "name": "Event Modeling in the banking domain"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "8924ac40-68a4-4203-83b2-72a1e5df81f6",
+            "aggregateId": "4ed8d2b6-6aa3-481b-a5d8-3dc4d81cebd6",
+            "aggregateType": "OpenSpaceApp.Topic",
+            "aggregateVersion": 1,
+            "causationId": "c8924a3c-f40f-4e86-9a81-ceec160225c1",
+            "causationName": "OpenSpaceApp.SuggestTopic"
+          },
+          "createdAt": "2024-06-15T18:52:09.620Z"
+        },
+        {
+          "uuid": "f3cc26eb-9ebd-4a5f-a8ae-4df59dab8820",
+          "name": "OpenSpaceApp.Topic.TopicSuggested",
+          "payload": {
+            "topicId": "d715841a-f667-4a49-b12d-0da94bcc7f59",
+            "openSpace": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "name": "Event Modeling meets GenAI"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "8924ac40-68a4-4203-83b2-72a1e5df81f6",
+            "aggregateId": "d715841a-f667-4a49-b12d-0da94bcc7f59",
+            "aggregateType": "OpenSpaceApp.Topic",
+            "aggregateVersion": 1,
+            "causationId": "ab804761-ea0b-467f-bfb8-05523796646c",
+            "causationName": "OpenSpaceApp.SuggestTopic"
+          },
+          "createdAt": "2024-06-15T18:52:21.152Z"
+        },
+        {
+          "uuid": "2548ae5f-44a2-4858-8940-b7f72219fdc5",
+          "name": "OpenSpaceApp.Topic.TopicSuggested",
+          "payload": {
+            "topicId": "c918c25a-5190-4050-8315-6dbf9f1845e1",
+            "openSpace": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "name": "Architecture Modernization"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "8924ac40-68a4-4203-83b2-72a1e5df81f6",
+            "aggregateId": "c918c25a-5190-4050-8315-6dbf9f1845e1",
+            "aggregateType": "OpenSpaceApp.Topic",
+            "aggregateVersion": 1,
+            "causationId": "31d5e1d8-8cda-4051-bf56-c76916b66d78",
+            "causationName": "OpenSpaceApp.SuggestTopic"
+          },
+          "createdAt": "2024-06-15T18:52:32.174Z"
+        },
+        {
+          "uuid": "f4741366-4f04-46fb-a8f4-b8173cf3debd",
+          "name": "OpenSpaceApp.Attendee.TopicVoted",
+          "payload": {
+            "attendeeId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "topicId": "c918c25a-5190-4050-8315-6dbf9f1845e1"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "8924ac40-68a4-4203-83b2-72a1e5df81f6",
+            "aggregateId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "aggregateType": "OpenSpaceApp.Attendee",
+            "aggregateVersion": 3,
+            "causationId": "79cd9ef1-2302-4898-aa5b-782233c0cc07",
+            "causationName": "OpenSpaceApp.VoteTopic"
+          },
+          "createdAt": "2024-06-15T18:54:05.301Z"
+        },
+        {
+          "uuid": "293e8304-05d4-4d54-b9cd-f2b462338a46",
+          "name": "OpenSpaceApp.Topic.TopicSuggested",
+          "payload": {
+            "openSpaceId": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "topicId": "3afa5d60-cce6-45ee-ba23-d565e62aad04",
+            "name": "Requirements Engineering"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "8924ac40-68a4-4203-83b2-72a1e5df81f6",
+            "aggregateId": "3afa5d60-cce6-45ee-ba23-d565e62aad04",
+            "aggregateType": "OpenSpaceApp.Topic",
+            "aggregateVersion": 1,
+            "causationId": "e318cfeb-3955-4763-9e76-f1cef103e650",
+            "causationName": "OpenSpaceApp.SuggestTopic"
+          },
+          "createdAt": "2024-06-15T22:07:03.992Z"
+        },
+        {
+          "uuid": "94508560-80ee-408e-b2c6-37b943ca27ca",
+          "name": "OpenSpaceApp.Attendee.TopicVoted",
+          "payload": {
+            "attendeeId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "topicId": "3afa5d60-cce6-45ee-ba23-d565e62aad04"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "8924ac40-68a4-4203-83b2-72a1e5df81f6",
+            "aggregateId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "aggregateType": "OpenSpaceApp.Attendee",
+            "aggregateVersion": 4,
+            "causationId": "bc19768c-7541-466e-81b2-40aea9273128",
+            "causationName": "OpenSpaceApp.VoteTopic"
+          },
+          "createdAt": "2024-06-15T22:28:17.870Z"
+        },
+        {
+          "uuid": "ebad1e10-01f2-4775-b5d4-80e1a131a011",
+          "name": "OpenSpaceApp.Attendee.VotingLimitReached",
+          "payload": {
+            "attendeeId": "92a88407-a014-41ef-a275-88fe7cfad90a"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "8924ac40-68a4-4203-83b2-72a1e5df81f6",
+            "aggregateId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "aggregateType": "OpenSpaceApp.Attendee",
+            "aggregateVersion": 5,
+            "causationId": "a628e1b7-931f-40b4-b5b1-b1b34a197d07",
+            "causationName": "OpenSpaceApp.VoteTopic"
+          },
+          "createdAt": "2024-06-15T22:28:28.943Z"
+        },
+        {
+          "uuid": "dab3c206-2a7c-40b1-a0fb-68704f7dd81b",
+          "name": "OpenSpaceApp.Notification.NotificationSent",
+          "payload": {
+            "notificationId": "60982d8c-0c6b-43ef-9fb0-4071bbaef992",
+            "attendeeId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "msg": "Voting Limit Reached"
+          },
+          "meta": {
+            "visibility": "service",
+            "version": "v1",
+            "user": "8924ac40-68a4-4203-83b2-72a1e5df81f6",
+            "aggregateId": "60982d8c-0c6b-43ef-9fb0-4071bbaef992",
+            "aggregateType": "OpenSpaceApp.Notification",
+            "aggregateVersion": 1,
+            "causationId": "a628e1b7-931f-40b4-b5b1-b1b34a197d07",
+            "causationName": "OpenSpaceApp.VoteTopic"
+          },
+          "createdAt": "2024-06-15T22:28:28.963Z"
+        }
+      ]
+    },
+    "documents": {
+      "open_space_collection": {
+        "804b0f31-587d-40f3-80f1-a980424f2fec": {
+          "doc": {
+            "openSpaceId": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "name": "Event Modeling Berlin"
+          },
+          "version": 1
+        }
+      },
+      "topic_collection": {
+        "110aadc4-79b7-4f80-9a09-673a5ea59660": {
+          "doc": {
+            "topicId": "110aadc4-79b7-4f80-9a09-673a5ea59660",
+            "openSpace": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "name": "From Event Modeling to Code"
+          },
+          "version": 1
+        },
+        "4ed8d2b6-6aa3-481b-a5d8-3dc4d81cebd6": {
+          "doc": {
+            "topicId": "4ed8d2b6-6aa3-481b-a5d8-3dc4d81cebd6",
+            "openSpace": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "name": "Event Modeling in the banking domain"
+          },
+          "version": 1
+        },
+        "d715841a-f667-4a49-b12d-0da94bcc7f59": {
+          "doc": {
+            "topicId": "d715841a-f667-4a49-b12d-0da94bcc7f59",
+            "openSpace": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "name": "Event Modeling meets GenAI"
+          },
+          "version": 1
+        },
+        "c918c25a-5190-4050-8315-6dbf9f1845e1": {
+          "doc": {
+            "topicId": "c918c25a-5190-4050-8315-6dbf9f1845e1",
+            "openSpace": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "name": "Architecture Modernization"
+          },
+          "version": 1
+        },
+        "3afa5d60-cce6-45ee-ba23-d565e62aad04": {
+          "doc": {
+            "topicId": "3afa5d60-cce6-45ee-ba23-d565e62aad04",
+            "name": "Requirements Engineering",
+            "openSpace": "804b0f31-587d-40f3-80f1-a980424f2fec"
+          },
+          "version": 1
+        }
+      },
+      "attendee_collection": {
+        "92a88407-a014-41ef-a275-88fe7cfad90a": {
+          "doc": {
+            "openSpaceId": "804b0f31-587d-40f3-80f1-a980424f2fec",
+            "attendeeId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "name": "Jane",
+            "userId": "8924ac40-68a4-4203-83b2-72a1e5df81f6",
+            "votes": [
+              {
+                "topic": "110aadc4-79b7-4f80-9a09-673a5ea59660"
+              },
+              {
+                "topic": "c918c25a-5190-4050-8315-6dbf9f1845e1"
+              },
+              {
+                "topic": "3afa5d60-cce6-45ee-ba23-d565e62aad04"
+              }
+            ]
+          },
+          "version": 5
+        }
+      },
+      "notification_collection": {
+        "60982d8c-0c6b-43ef-9fb0-4071bbaef992": {
+          "doc": {
+            "notificationId": "60982d8c-0c6b-43ef-9fb0-4071bbaef992",
+            "attendeeId": "92a88407-a014-41ef-a275-88fe7cfad90a",
+            "msg": "Voting Limit Reached"
+          },
+          "version": 1
+        }
+      }
+    }
+  }
+}
