@@ -49,7 +49,7 @@
         "roles": [
           "Organizer"
         ],
-        "email": "contact@prooph.de",
+        "email": "alex@attendee.local",
         "displayName": "Alex",
         "description": "Alex has the role \"Organizer\" and therefor access to the Open Space Planning.",
         "attributes": {},
