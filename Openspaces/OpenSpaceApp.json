@@ -1111,8 +1111,16 @@
         },
         "schema": {
           "type": "object",
-          "properties": {},
-          "required": [],
+          "properties": {
+            "openSpaceId": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Open Space Id"
+            }
+          },
+          "required": [
+            "openSpaceId"
+          ],
           "additionalProperties": false,
           "title": "Get Topic List"
         },
