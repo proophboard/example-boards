@@ -516,7 +516,8 @@
               "options": {
                 "match": {
                   "$eventName": "['OpenSpace.TopicVoted']",
-                  "attendee": "meta.user.userId"
+                  "attendee": "meta.user.userId",
+                  "openSpaceId": "command.openSpaceId"
                 }
               }
             }
