@@ -1,52 +1,52 @@
-<mxGraphModel dx="-7706.58" dy="553.51" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff">
+<mxGraphModel dx="-7164.59" dy="179.82" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff">
   <root>
     <mxCell id="e975feae-1579-4c09-98d0-98cbf2108aec"/>
     <mxCell id="7fe80d19-d317-4e9d-8296-96c598786d78" parent="e975feae-1579-4c09-98d0-98cbf2108aec"/>
     <boundedContext label="Open Space Planning" type="boundedContext" tags="pb:eventmodel,pb:defaulteventmodel,pb:connected" id="9FBPaa5gA6LUP9kmGCjGru">
-      <mxCell style="boundedContext;fillColor=none;rounded=1;arcSize=5;fontSize=78;" vertex="1" originalStyle="boundedContext;fillColor=none;rounded=1;arcSize=5;" alternateStyle="boundedContext;fillColor=#a2a2a2;rounded=1;arcSize=5;verticalAlign=middle;fontSize=112;" alternateStyleEnabled="0" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+      <mxCell style="boundedContext;fillColor=#a2a2a2;rounded=1;arcSize=5;verticalAlign=middle;fontSize=78;" vertex="1" originalStyle="boundedContext;fillColor=none;rounded=1;arcSize=5;" alternateStyle="boundedContext;fillColor=#a2a2a2;rounded=1;arcSize=5;verticalAlign=middle;fontSize=112;" alternateStyleEnabled="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
         <mxGeometry x="-294" y="-352" width="2390" height="2139" as="geometry">
           <mxRectangle x="-294" y="-352" width="2390" height="2139" as="alternateBounds"/>
         </mxGeometry>
       </mxCell>
     </boundedContext>
-    <mxCell id="o8DQB1vy6pKo6hT3RFdoEu" style="curved=1;html=1;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="79pgF1WuB3Ju4pGvtGoHPK" target="5a3Jj3VSYw7AEfVbMUvtkk">
+    <mxCell id="o8DQB1vy6pKo6hT3RFdoEu" style="curved=1;html=1;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="79pgF1WuB3Ju4pGvtGoHPK" target="5a3Jj3VSYw7AEfVbMUvtkk">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <ui label="Planning" type="ui" tags="pb:connected" metadata="{&#xa;  &quot;commands&quot;: [&#xa;    &quot;OpenSpace.PlanOpenSpace&quot;&#xa;  ],&#xa;  &quot;views&quot;: [&#xa;    &quot;OpenSpace.App.MyOpenSpaces&quot;&#xa;  ],&#xa;  &quot;route&quot;: &quot;/open-space/planning&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Planning&quot;,&#xa;    &quot;icon&quot;: &quot;table-clock&quot;,&#xa;    &quot;hidden:expr&quot;: &quot;!user|role(&#39;Organizer&#39;)&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Planning&quot;&#xa;}" id="79pgF1WuB3Ju4pGvtGoHPK">
-      <mxCell style="ui" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="600" y="589" width="160" height="100" as="geometry"/>
       </mxCell>
     </ui>
-    <mxCell id="aLxRaeYWsTZQLf8cvUdzas" style="curved=1;html=1;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="5a3Jj3VSYw7AEfVbMUvtkk" target="gRPcEpRpsrLt8MTepiDe5A">
+    <mxCell id="aLxRaeYWsTZQLf8cvUdzas" style="curved=1;html=1;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="5a3Jj3VSYw7AEfVbMUvtkk" target="gRPcEpRpsrLt8MTepiDe5A">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <command label="Plan Open Space&lt;hr id=&quot;null&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- Open Space id&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- Name&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- Voting Limit&lt;/div&gt;" type="command" tags="pb:connected" metadata="{&#xa;  &quot;aggregateCommand&quot;: false,&#xa;  &quot;newAggregate&quot;: false,&#xa;  &quot;dependencies&quot;: {},&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;openSpaceId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;ui:form&quot;: {&#xa;      &quot;data&quot;: {&#xa;        &quot;openSpaceId&quot;: &quot;uuid()&quot;&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;schema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string&quot;,&#xa;    &quot;votingLimit&quot;: &quot;integer|minimum:1&quot;&#xa;  },&#xa;  &quot;rules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;condition&quot;,&#xa;      &quot;if_not&quot;: &quot;meta.user|role(&#39;Organizer&#39;)&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;throw&quot;: {&#xa;          &quot;error&quot;: &quot;&#39;Only organizers are allowed to plan an Open Space!&#39;&quot;&#xa;        }&#xa;      }&#xa;    },&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;record&quot;: {&#xa;          &quot;event&quot;: &quot;Open Space Planned&quot;,&#xa;          &quot;mapping&quot;: {&#xa;            &quot;$merge&quot;: &quot;command&quot;,&#xa;            &quot;organizer&quot;: &quot;meta.user.userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="5a3Jj3VSYw7AEfVbMUvtkk">
-      <mxCell style="command;autosize=1;" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="command;autosize=1;" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="600" y="895" width="160" height="148" as="geometry"/>
       </mxCell>
     </command>
-    <mxCell id="vmVeg5X8anyRP9c6VvruTe" style="curved=1;html=1;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="gRPcEpRpsrLt8MTepiDe5A" target="rB9pwqBJVQfJpyvL6vNFqF">
+    <mxCell id="vmVeg5X8anyRP9c6VvruTe" style="curved=1;html=1;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="gRPcEpRpsrLt8MTepiDe5A" target="rB9pwqBJVQfJpyvL6vNFqF">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <event label="Open Space Planned" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string&quot;,&#xa;    &quot;votingLimit&quot;: &quot;integer&quot;,&#xa;    &quot;organizer&quot;: &quot;string|format:uuid&quot;&#xa;  }&#xa;}" id="gRPcEpRpsrLt8MTepiDe5A">
-      <mxCell style="event" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="600" y="1189" width="160" height="100" as="geometry"/>
       </mxCell>
     </event>
     <document label="My Open Spaces" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/App&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: {&#xa;      &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;      &quot;name&quot;: &quot;string&quot;,&#xa;      &quot;votingLimit&quot;: &quot;integer&quot;,&#xa;      &quot;organizer&quot;: &quot;string|format:uuid&quot;&#xa;    }&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        {&#xa;          &quot;field&quot;: &quot;name&quot;,&#xa;          &quot;pageLink&quot;: &quot;OpenSpaceSettings&quot;&#xa;        },&#xa;        &quot;votingLimit&quot;&#xa;      ]&#xa;    }&#xa;  },&#xa;  &quot;collection&quot;: &quot;open_spaces_collection&quot;,&#xa;  &quot;identifier&quot;: &quot;openSpaceId&quot;,&#xa;  &quot;projection&quot;: {&#xa;    &quot;name&quot;: &quot;OpenSpacesProjection&quot;,&#xa;    &quot;live&quot;: true,&#xa;    &quot;cases&quot;: [&#xa;      {&#xa;        &quot;when&quot;: &quot;Open Space Planned&quot;,&#xa;        &quot;then&quot;: {&#xa;          &quot;upsert&quot;: {&#xa;            &quot;id&quot;: &quot;event.openSpaceId&quot;,&#xa;            &quot;set&quot;: &quot;event&quot;&#xa;          }&#xa;        }&#xa;      },&#xa;      {&#xa;        &quot;when&quot;: &quot;Open Space Changed&quot;,&#xa;        &quot;then&quot;: {&#xa;          &quot;update&quot;: {&#xa;            &quot;filter&quot;: {&#xa;              &quot;docId&quot;: &quot;event.openSpaceId&quot;&#xa;            },&#xa;            &quot;set&quot;: &quot;event&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    ]&#xa;  },&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;eq&quot;: {&#xa;            &quot;prop&quot;: &quot;organizer&quot;,&#xa;            &quot;value&quot;: &quot;meta.user.userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;querySchema&quot;: {},&#xa;  &quot;entity&quot;: false&#xa;}" tags="pb:connected" id="rB9pwqBJVQfJpyvL6vNFqF">
-      <mxCell style="document" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="992" y="869" width="160" height="100" as="geometry"/>
       </mxCell>
     </document>
-    <mxCell id="fttUxjJjNNzpiipoFUzNaY" style="curved=1;html=1;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="vnDK5GWcVxJQZz2gnX6WqV" target="uMTMNXsR6dvRDwFBAjPD91">
+    <mxCell id="fttUxjJjNNzpiipoFUzNaY" style="curved=1;html=1;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="vnDK5GWcVxJQZz2gnX6WqV" target="uMTMNXsR6dvRDwFBAjPD91">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <ui label="Open Space Settings" type="ui" metadata="{&#xa;  &quot;commands&quot;: [&#xa;    &quot;OpenSpace.ChangeOpenSpace&quot;&#xa;  ],&#xa;  &quot;views&quot;: [&#xa;    &quot;OpenSpace.App.OpenSpace&quot;&#xa;  ],&#xa;  &quot;route&quot;: &quot;/open-space/planning/:openSpaceId&quot;,&#xa;  &quot;breadcrumb&quot;: &quot;Open Space Settings&quot;,&#xa;  &quot;parent&quot;: &quot;79pgF1WuB3Ju4pGvtGoHPK&quot;&#xa;}" tags="pb:connected" id="vnDK5GWcVxJQZz2gnX6WqV">
-      <mxCell style="ui" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="1520" y="589" width="160" height="100" as="geometry"/>
       </mxCell>
     </ui>
-    <mxCell id="qiyjpAa62zvk5CcbuwHGyf" style="curved=1;html=1;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="dnBumKJretXHepeGsR3jzk" target="vnDK5GWcVxJQZz2gnX6WqV">
+    <mxCell id="qiyjpAa62zvk5CcbuwHGyf" style="curved=1;html=1;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="dnBumKJretXHepeGsR3jzk" target="vnDK5GWcVxJQZz2gnX6WqV">
       <mxGeometry relative="1" as="geometry">
         <Array as="points">
           <mxPoint x="1360" y="639"/>
@@ -54,155 +54,155 @@
       </mxGeometry>
     </mxCell>
     <document label="Open Space" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/App&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string&quot;,&#xa;    &quot;votingLimit&quot;: &quot;integer&quot;,&#xa;    &quot;organizer&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;collection&quot;: &quot;open_spaces_collection&quot;,&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;openSpaceId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;organizer&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    }&#xa;  },&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;eq&quot;: {&#xa;            &quot;prop&quot;: &quot;openSpaceId&quot;,&#xa;            &quot;value&quot;: &quot;query.openSpaceId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;identifier&quot;: &quot;openSpaceId&quot;&#xa;}" tags="pb:connected" id="dnBumKJretXHepeGsR3jzk">
-      <mxCell style="document" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="1280" y="869" width="160" height="100" as="geometry"/>
       </mxCell>
     </document>
-    <mxCell id="aikboUnwccszQGdfmdXU4x" style="curved=1;html=1;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="uMTMNXsR6dvRDwFBAjPD91" target="keDbZLSZBZhBJdRZJTxJFm">
+    <mxCell id="aikboUnwccszQGdfmdXU4x" style="curved=1;html=1;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="uMTMNXsR6dvRDwFBAjPD91" target="keDbZLSZBZhBJdRZJTxJFm">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <command label="Change Open Space" type="command" tags="pb:connected" metadata="{&#xa;  &quot;aggregateCommand&quot;: false,&#xa;  &quot;newAggregate&quot;: false,&#xa;  &quot;dependencies&quot;: {&#xa;    &quot;events&quot;: {&#xa;      &quot;type&quot;: &quot;events&quot;,&#xa;      &quot;options&quot;: {&#xa;        &quot;match&quot;: {&#xa;          &quot;$eventName&quot;: &quot;[&#39;OpenSpace.OpenSpacePlanned&#39;]&quot;,&#xa;          &quot;openSpaceId&quot;: &quot;command.openSpaceId&quot;&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;openSpaceId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;organizer&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;ui:form&quot;: {&#xa;      &quot;data&quot;: &quot;page|data(&#39;/App/OpenSpace&#39;)|unset(&#39;organizer&#39;)&quot;&#xa;    }&#xa;  },&#xa;  &quot;schema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string&quot;,&#xa;    &quot;votingLimit&quot;: &quot;integer&quot;&#xa;  },&#xa;  &quot;rules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;condition&quot;,&#xa;      &quot;if&quot;: &quot;!events[0]&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;throw&quot;: {&#xa;          &quot;error&quot;: &quot;&#39;No Open Space planned with this id&#39;&quot;&#xa;        }&#xa;      },&#xa;      &quot;stop&quot;: true&#xa;    },&#xa;    {&#xa;      &quot;rule&quot;: &quot;condition&quot;,&#xa;      &quot;if&quot;: &quot;events[0].payload.organizer != meta.user.userId&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;throw&quot;: {&#xa;          &quot;error&quot;: &quot;&#39;User is not allowed to change open space&#39;&quot;&#xa;        }&#xa;      },&#xa;      &quot;stop&quot;: true&#xa;    },&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;record&quot;: {&#xa;          &quot;event&quot;: &quot;Open Space Changed&quot;,&#xa;          &quot;mapping&quot;: &quot;command&quot;&#xa;        }&#xa;      }&#xa;    }&#xa;  ]&#xa;}" id="uMTMNXsR6dvRDwFBAjPD91">
-      <mxCell style="command" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="command" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="1520" y="845" width="160" height="100" as="geometry"/>
       </mxCell>
     </command>
-    <mxCell id="jVyoiGTp7NWNHBA8mY6f63" style="curved=1;html=1;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="keDbZLSZBZhBJdRZJTxJFm" target="texZ2enrc8teaTswVNmE9F">
+    <mxCell id="jVyoiGTp7NWNHBA8mY6f63" style="curved=1;html=1;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="keDbZLSZBZhBJdRZJTxJFm" target="texZ2enrc8teaTswVNmE9F">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <event label="Open Space Changed" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string&quot;,&#xa;    &quot;votingLimit&quot;: &quot;integer&quot;&#xa;  }&#xa;}" id="keDbZLSZBZhBJdRZJTxJFm">
-      <mxCell style="event" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="1520" y="1189" width="160" height="100" as="geometry"/>
       </mxCell>
     </event>
     <document label="My Open Spaces" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/App&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: {&#xa;      &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;      &quot;name&quot;: &quot;string&quot;,&#xa;      &quot;votingLimit&quot;: &quot;integer&quot;,&#xa;      &quot;organizer&quot;: &quot;string|format:uuid&quot;&#xa;    }&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        {&#xa;          &quot;field&quot;: &quot;name&quot;,&#xa;          &quot;pageLink&quot;: &quot;OpenSpaceSettings&quot;&#xa;        },&#xa;        &quot;votingLimit&quot;&#xa;      ]&#xa;    }&#xa;  },&#xa;  &quot;collection&quot;: &quot;open_spaces_collection&quot;,&#xa;  &quot;identifier&quot;: &quot;openSpaceId&quot;,&#xa;  &quot;projection&quot;: {&#xa;    &quot;name&quot;: &quot;OpenSpacesProjection&quot;,&#xa;    &quot;live&quot;: true,&#xa;    &quot;cases&quot;: [&#xa;      {&#xa;        &quot;when&quot;: &quot;Open Space Planned&quot;,&#xa;        &quot;then&quot;: {&#xa;          &quot;upsert&quot;: {&#xa;            &quot;id&quot;: &quot;event.openSpaceId&quot;,&#xa;            &quot;set&quot;: &quot;event&quot;&#xa;          }&#xa;        }&#xa;      },&#xa;      {&#xa;        &quot;when&quot;: &quot;Open Space Changed&quot;,&#xa;        &quot;then&quot;: {&#xa;          &quot;update&quot;: {&#xa;            &quot;filter&quot;: {&#xa;              &quot;docId&quot;: &quot;event.openSpaceId&quot;&#xa;            },&#xa;            &quot;set&quot;: &quot;event&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    ]&#xa;  },&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;eq&quot;: {&#xa;            &quot;prop&quot;: &quot;organizer&quot;,&#xa;            &quot;value&quot;: &quot;meta.user.userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;querySchema&quot;: {},&#xa;  &quot;entity&quot;: false&#xa;}" tags="pb:connected" id="texZ2enrc8teaTswVNmE9F">
-      <mxCell style="document" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="1839.7777777777778" y="847" width="160" height="100" as="geometry"/>
       </mxCell>
     </document>
     <icon label="" type="icon" tags="pb:connected,pb:lanehandle,pb:ethidden" id="bAKMcLqrXcsZsvSWuu7fAJ">
-      <mxCell style="icon;locked=1;resizable=0;rotatable=0;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;fill:#4D4D4D&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z&quot;/&gt;&lt;/svg&gt;;" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="icon;locked=1;resizable=0;rotatable=0;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;fill:#4D4D4D&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z&quot;/&gt;&lt;/svg&gt;;" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="12.945945945945823" y="1072.9459459459458" width="48" height="30" as="geometry"/>
       </mxCell>
     </icon>
     <UserObject label="" tags="pb:connected" id="e56uhxpYns9sdzngqrk4f2">
-      <mxCell style="html=1;strokeWidth=5;edgeStyle=isometricEdgeStyle" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="bAKMcLqrXcsZsvSWuu7fAJ" target="duiE7PJfYroBeU3xdE2iNg">
+      <mxCell style="html=1;strokeWidth=5;edgeStyle=isometricEdgeStyle" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="bAKMcLqrXcsZsvSWuu7fAJ" target="duiE7PJfYroBeU3xdE2iNg">
         <mxGeometry relative="1" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="x653viY7rWc8MfspSwrqeR">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="13" y="1389" width="16" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
-    <mxCell id="uHgDg3NXY4GCGB5fk79g9Q" style="edgeStyle=isometricEdgeStyle;html=1;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="x653viY7rWc8MfspSwrqeR" target="aJRceKyXqcYko74boM63zo">
+    <mxCell id="uHgDg3NXY4GCGB5fk79g9Q" style="edgeStyle=isometricEdgeStyle;html=1;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="x653viY7rWc8MfspSwrqeR" target="aJRceKyXqcYko74boM63zo">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="eL7LgUkVNAH4BSK51H6jR8">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="17" y="789" width="16" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
-    <mxCell id="sQG7ZPeWGstJuimTv6QDdG" style="edgeStyle=isometricEdgeStyle;html=1;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="eL7LgUkVNAH4BSK51H6jR8" target="9B5VakZdczotCAcPcqSe4q">
+    <mxCell id="sQG7ZPeWGstJuimTv6QDdG" style="edgeStyle=isometricEdgeStyle;html=1;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="eL7LgUkVNAH4BSK51H6jR8" target="9B5VakZdczotCAcPcqSe4q">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <UserObject label="Organizer" tags="pb:connected,pb:lanehandle" id="iq89Mad8V4AHMmmVgcRzRM">
-      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="10" y="589" width="182" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="Planning" tags="pb:connected,pb:lanehandle" id="7pmuGWJZKpNjQfcSZ4YkFo">
-      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="10" y="1189" width="166" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="" tags="pb:connected,pb:lanehandle,pb:apilabel,pb:ethidden" id="rZakQcegynk6DryxtDvXsV">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0;fillColor=transparent;" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0;fillColor=transparent;" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="9.95945945945914" y="895" width="1" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="u19XDPLQwb6b9StJFBZeRb">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="17" y="489" width="16" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
-    <mxCell id="ah8PA2qYPgtwP5duJsKfm" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="u19XDPLQwb6b9StJFBZeRb" target="qdiiHqkGsisLX2A7tWmTSX">
+    <mxCell id="ah8PA2qYPgtwP5duJsKfm" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="u19XDPLQwb6b9StJFBZeRb" target="qdiiHqkGsisLX2A7tWmTSX">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <UserObject label="Attendee" tags="pb:connected,pb:lanehandle" id="sCToW1Qh72pM2i4qchXARR">
-      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="10" y="289" width="182" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="47atncSJfcZTYGERB1dJpR">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="13" y="1689" width="16" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
-    <mxCell id="2rQL5J8aCsHYrbC3sNe1Bn" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="47atncSJfcZTYGERB1dJpR" target="kXixouYhPJay3gmR7Xx8qT">
+    <mxCell id="2rQL5J8aCsHYrbC3sNe1Bn" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="47atncSJfcZTYGERB1dJpR" target="kXixouYhPJay3gmR7Xx8qT">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <UserObject label="Registration" tags="pb:connected,pb:lanehandle" id="76ebG26Q2W2YumQtARUe9K">
-      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="10" y="1489" width="214" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="5XTH5e4aNnVfta8Vs396Gm">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="13" y="1989" width="16" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
-    <mxCell id="ubQufehNvnfTRwFg1M4x6C" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru" source="5XTH5e4aNnVfta8Vs396Gm" target="7dHoJHjdPo9XGf6K448qo6">
+    <mxCell id="ubQufehNvnfTRwFg1M4x6C" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru" source="5XTH5e4aNnVfta8Vs396Gm" target="7dHoJHjdPo9XGf6K448qo6">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <UserObject label="Topics" tags="pb:connected,pb:lanehandle" id="6AsqE5fEJqjFXyagqvfaMT">
-      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="10" y="1789" width="214" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="duiE7PJfYroBeU3xdE2iNg">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="2350" y="1033" width="20" height="112" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="aJRceKyXqcYko74boM63zo">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="2350" y="1389" width="20" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="9B5VakZdczotCAcPcqSe4q">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="2350" y="789" width="20" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="qdiiHqkGsisLX2A7tWmTSX">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="2350" y="489" width="20" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="kXixouYhPJay3gmR7Xx8qT">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="2350" y="1689" width="20" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="7dHoJHjdPo9XGf6K448qo6">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="9FBPaa5gA6LUP9kmGCjGru">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="9FBPaa5gA6LUP9kmGCjGru">
         <mxGeometry x="2350" y="1989" width="20" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
     <boundedContext label="Open Space Registration" type="boundedContext" tags="pb:eventmodel,pb:connected,pb:defaulteventmodel" id="uDA9cBPNxmgyjTzLrGdqjM">
-      <mxCell style="boundedContext;fillColor=#E6E6E6;rounded=1;arcSize=5;fontSize=78;" vertex="1" originalStyle="boundedContext;fillColor=#E6E6E6;rounded=1;arcSize=5;" alternateStyle="boundedContext;fillColor=#a2a2a2;rounded=1;arcSize=5;verticalAlign=middle;fontSize=112;" alternateStyleEnabled="0" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
+      <mxCell style="boundedContext;fillColor=#a2a2a2;rounded=1;arcSize=5;verticalAlign=middle;fontSize=78;" vertex="1" originalStyle="boundedContext;fillColor=#E6E6E6;rounded=1;arcSize=5;" alternateStyle="boundedContext;fillColor=#a2a2a2;rounded=1;arcSize=5;verticalAlign=middle;fontSize=112;" alternateStyleEnabled="1" parent="7fe80d19-d317-4e9d-8296-96c598786d78">
         <mxGeometry x="2408" y="-352" width="2200" height="2139" as="geometry"/>
       </mxCell>
     </boundedContext>
-    <mxCell id="stjRNwN8fvGiLw3SF9zuEn" style="curved=1;html=1;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="dc7PTa7AbFSHJPH73stwpR" target="3XpAV1NynKSEx57jQaLbDq">
+    <mxCell id="stjRNwN8fvGiLw3SF9zuEn" style="curved=1;html=1;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="dc7PTa7AbFSHJPH73stwpR" target="3XpAV1NynKSEx57jQaLbDq">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <ui label="Open Spaces" type="ui" metadata="{&#xa;  &quot;commands&quot;: [],&#xa;  &quot;views&quot;: [&#xa;    &quot;OpenSpace.App.OpenSpaces&quot;&#xa;  ],&#xa;  &quot;route&quot;: &quot;/open-space/open-spaces&quot;,&#xa;  &quot;sidebar&quot;: {&#xa;    &quot;label&quot;: &quot;Open Spaces&quot;,&#xa;    &quot;icon&quot;: &quot;calendar-star-outline&quot;&#xa;  },&#xa;  &quot;breadcrumb&quot;: &quot;Open Spaces&quot;&#xa;}" tags="pb:connected" id="dc7PTa7AbFSHJPH73stwpR">
-      <mxCell style="ui" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="504" y="289" width="160" height="100" as="geometry"/>
       </mxCell>
     </ui>
-    <mxCell id="3YiV7mGMXogUkSHqsHdr2C" style="curved=1;html=1;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="ufDFVFT6GGcxfLCiRqYeEL" target="dc7PTa7AbFSHJPH73stwpR">
+    <mxCell id="3YiV7mGMXogUkSHqsHdr2C" style="curved=1;html=1;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="ufDFVFT6GGcxfLCiRqYeEL" target="dc7PTa7AbFSHJPH73stwpR">
       <mxGeometry relative="1" as="geometry">
         <Array as="points">
           <mxPoint x="343" y="340"/>
@@ -210,35 +210,35 @@
       </mxGeometry>
     </mxCell>
     <document label="Open Spaces" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/App&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: {&#xa;      &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;      &quot;name&quot;: &quot;string&quot;,&#xa;      &quot;votingLimit&quot;: &quot;integer&quot;,&#xa;      &quot;organizer&quot;: &quot;string|format:uuid&quot;&#xa;    }&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        {&#xa;          &quot;field&quot;: &quot;name&quot;,&#xa;          &quot;pageLink&quot;: &quot;OpenSpaceInfo&quot;&#xa;        }&#xa;      ]&#xa;    }&#xa;  },&#xa;  &quot;collection&quot;: &quot;open_spaces_collection&quot;,&#xa;  &quot;identifier&quot;: &quot;openSpaceId&quot;,&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;any&quot;: true&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;querySchema&quot;: {},&#xa;  &quot;entity&quot;: false&#xa;}" tags="pb:connected" id="ufDFVFT6GGcxfLCiRqYeEL">
-      <mxCell style="document" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="262.7692307692305" y="913.9358974358975" width="160" height="100" as="geometry"/>
       </mxCell>
     </document>
-    <mxCell id="zwWq7jBH65r4HaD65VMPa" style="curved=1;html=1;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="okwstohPQWZZwr6t8Bq4ax" target="oKMGKnZwyUhgo9rUuH3Dcp">
+    <mxCell id="zwWq7jBH65r4HaD65VMPa" style="curved=1;html=1;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="okwstohPQWZZwr6t8Bq4ax" target="oKMGKnZwyUhgo9rUuH3Dcp">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <command label="Register" type="command" metadata="{&#xa;  &quot;aggregateCommand&quot;: false,&#xa;  &quot;newAggregate&quot;: false,&#xa;  &quot;dependencies&quot;: {},&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:button&quot;: {&#xa;      &quot;disabled&quot;: &quot;page|data(&#39;/App/AttendeeInfo&#39;, {isRegistered: false}).isRegistered&quot;&#xa;    },&#xa;    &quot;openSpaceId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    }&#xa;  },&#xa;  &quot;rules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;record&quot;: {&#xa;          &quot;event&quot;: &quot;Attendee Registered&quot;,&#xa;          &quot;mapping&quot;: {&#xa;            &quot;$merge&quot;: &quot;command&quot;,&#xa;            &quot;attendee&quot;: &quot;meta.user.userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ],&#xa;  &quot;schema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;&#xa;  }&#xa;}" tags="pb:connected" id="okwstohPQWZZwr6t8Bq4ax">
-      <mxCell style="command" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="command" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="1144" y="914" width="160" height="100" as="geometry"/>
       </mxCell>
     </command>
-    <mxCell id="ns5bzu4fW1Nm6PFPcz5C43" style="curved=1;html=1;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="oKMGKnZwyUhgo9rUuH3Dcp" target="j4CHMRD4e66erqNpeTC5ms">
+    <mxCell id="ns5bzu4fW1Nm6PFPcz5C43" style="curved=1;html=1;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="oKMGKnZwyUhgo9rUuH3Dcp" target="j4CHMRD4e66erqNpeTC5ms">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <event label="Attendee Registered" type="event" tags="pb:connected" metadata="{&#xa;  &quot;public&quot;: false,&#xa;  &quot;schema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;    &quot;attendee&quot;: &quot;string|format:uuid&quot;&#xa;  }&#xa;}" id="oKMGKnZwyUhgo9rUuH3Dcp">
-      <mxCell style="event" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="event" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="1144" y="1508" width="160" height="100" as="geometry"/>
       </mxCell>
     </event>
-    <mxCell id="6k7Snv6BZgNMokvVUyzY81" style="curved=1;html=1;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="3XpAV1NynKSEx57jQaLbDq" target="okwstohPQWZZwr6t8Bq4ax">
+    <mxCell id="6k7Snv6BZgNMokvVUyzY81" style="curved=1;html=1;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="3XpAV1NynKSEx57jQaLbDq" target="okwstohPQWZZwr6t8Bq4ax">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <ui label="Open Space Info" type="ui" metadata="{&#xa;  &quot;commands&quot;: [&#xa;    &quot;OpenSpace.Register&quot;&#xa;  ],&#xa;  &quot;views&quot;: [&#xa;    &quot;OpenSpace.App.OpenSpace&quot;,&#xa;    &quot;OpenSpace.App.AttendeeInfo&quot;&#xa;  ],&#xa;  &quot;route&quot;: &quot;/open-space/open-spaces/:openSpaceId/info&quot;,&#xa;  &quot;breadcrumb&quot;: {&#xa;    &quot;data&quot;: &quot;/App/OpenSpace&quot;,&#xa;    &quot;label&quot;: &quot;data.name + &#39; / Info&#39;&quot;&#xa;  },&#xa;  &quot;tab&quot;: {&#xa;    &quot;group&quot;: &quot;open-space-info&quot;,&#xa;    &quot;label&quot;: &quot;Info&quot;,&#xa;    &quot;icon&quot;: &quot;information&quot;&#xa;  }&#xa;}" tags="pb:connected" id="3XpAV1NynKSEx57jQaLbDq">
-      <mxCell style="ui" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="ui" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="1143" y="289" width="160" height="100" as="geometry"/>
       </mxCell>
     </ui>
-    <mxCell id="rdQ34v4wAYePJ6jddkzyN9" style="curved=1;html=1;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="RcSmS1NEU6WpnZXjFMZeV" target="3XpAV1NynKSEx57jQaLbDq">
+    <mxCell id="rdQ34v4wAYePJ6jddkzyN9" style="curved=1;html=1;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="RcSmS1NEU6WpnZXjFMZeV" target="3XpAV1NynKSEx57jQaLbDq">
       <mxGeometry relative="1" as="geometry">
         <Array as="points">
           <mxPoint x="760" y="339"/>
@@ -246,16 +246,16 @@
       </mxGeometry>
     </mxCell>
     <document label="Open Space" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/App&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;name&quot;: &quot;string&quot;,&#xa;    &quot;votingLimit&quot;: &quot;integer&quot;,&#xa;    &quot;organizer&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;collection&quot;: &quot;open_spaces_collection&quot;,&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;openSpaceId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;organizer&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    }&#xa;  },&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;eq&quot;: {&#xa;            &quot;prop&quot;: &quot;openSpaceId&quot;,&#xa;            &quot;value&quot;: &quot;query.openSpaceId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;identifier&quot;: &quot;openSpaceId&quot;&#xa;}" tags="pb:connected" id="RcSmS1NEU6WpnZXjFMZeV">
-      <mxCell style="document" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="664.0555555555557" y="914.1111111111111" width="160" height="100" as="geometry"/>
       </mxCell>
     </document>
     <document label="Attendee List" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/App&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;$items&quot;: {&#xa;      &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;,&#xa;      &quot;name&quot;: &quot;string|minLength:1&quot;,&#xa;      &quot;attendee&quot;: &quot;string|format:uuid&quot;&#xa;    }&#xa;  },&#xa;  &quot;collection&quot;: &quot;attendee_list_collection&quot;,&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:table&quot;: {&#xa;      &quot;columns&quot;: [&#xa;        &quot;name&quot;&#xa;      ]&#xa;    }&#xa;  },&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;resolve&quot;: {&#xa;    &quot;where&quot;: {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;filter&quot;: {&#xa;          &quot;eq&quot;: {&#xa;            &quot;prop&quot;: &quot;openSpaceId&quot;,&#xa;            &quot;value&quot;: &quot;query.openSpaceId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;projection&quot;: {&#xa;    &quot;name&quot;: &quot;AttendeeListProjection&quot;,&#xa;    &quot;live&quot;: true,&#xa;    &quot;cases&quot;: [&#xa;      {&#xa;        &quot;when&quot;: &quot;Attendee Registered&quot;,&#xa;        &quot;then&quot;: {&#xa;          &quot;insert&quot;: {&#xa;            &quot;id&quot;: &quot;uuid()&quot;,&#xa;            &quot;set&quot;: &quot;event&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    ]&#xa;  }&#xa;}" tags="pb:connected" id="j4CHMRD4e66erqNpeTC5ms">
-      <mxCell style="document" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="1512" y="914" width="160" height="100" as="geometry"/>
       </mxCell>
     </document>
-    <mxCell id="gb7xTqq2izN712U4vVp1dB" style="curved=1;html=1;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="j13g8hxL2f8VVFPNYXSfZG" target="3XpAV1NynKSEx57jQaLbDq">
+    <mxCell id="gb7xTqq2izN712U4vVp1dB" style="curved=1;html=1;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="j13g8hxL2f8VVFPNYXSfZG" target="3XpAV1NynKSEx57jQaLbDq">
       <mxGeometry relative="1" as="geometry">
         <Array as="points">
           <mxPoint x="983" y="339"/>
@@ -263,117 +263,117 @@
       </mxGeometry>
     </mxCell>
     <document label="Attendee Info" type="document" metadata="{&#xa;  &quot;ns&quot;: &quot;/App&quot;,&#xa;  &quot;schema&quot;: {&#xa;    &quot;isRegistered&quot;: &quot;boolean&quot;&#xa;  },&#xa;  &quot;collection&quot;: false,&#xa;  &quot;querySchema&quot;: {&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;resolve&quot;: {&#xa;    &quot;rules&quot;: [&#xa;      {&#xa;        &quot;rule&quot;: &quot;always&quot;,&#xa;        &quot;then&quot;: {&#xa;          &quot;find&quot;: {&#xa;            &quot;information&quot;: &quot;/App/AttendeeList&quot;,&#xa;            &quot;limit&quot;: 1,&#xa;            &quot;variable&quot;: &quot;attendees&quot;,&#xa;            &quot;filter&quot;: {&#xa;              &quot;and&quot;: [&#xa;                {&#xa;                  &quot;eq&quot;: {&#xa;                    &quot;prop&quot;: &quot;openSpaceId&quot;,&#xa;                    &quot;value&quot;: &quot;query.openSpaceId&quot;&#xa;                  }&#xa;                },&#xa;                {&#xa;                  &quot;eq&quot;: {&#xa;                    &quot;prop&quot;: &quot;attendee&quot;,&#xa;                    &quot;value&quot;: &quot;meta.user.userId&quot;&#xa;                  }&#xa;                }&#xa;              ]&#xa;            }&#xa;          }&#xa;        }&#xa;      },&#xa;      {&#xa;        &quot;rule&quot;: &quot;always&quot;,&#xa;        &quot;then&quot;: {&#xa;          &quot;assign&quot;: {&#xa;            &quot;variable&quot;: &quot;information&quot;,&#xa;            &quot;value&quot;: &quot;{isRegistered: count(attendees) == 1}&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    ]&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:hidden&quot;: &quot;!page|data(&#39;/App/AttendeeInfo&#39;, {isRegistered: false}).isRegistered&quot;,&#xa;    &quot;isRegistered&quot;: {&#xa;      &quot;ui:title&quot;: &quot;You&#39;ve registered for the Open Space&quot;&#xa;    }&#xa;  }&#xa;}" tags="pb:connected" id="j13g8hxL2f8VVFPNYXSfZG">
-      <mxCell style="document" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="document" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="887" y="914" width="160" height="100" as="geometry"/>
       </mxCell>
     </document>
     <icon label="" type="icon" tags="pb:connected,pb:lanehandle,pb:ethidden" id="hvL8T7w9WtWiw1j3ZJpPDM">
-      <mxCell style="icon;locked=1;resizable=0;rotatable=0;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;fill:#4D4D4D&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z&quot;/&gt;&lt;/svg&gt;;" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="icon;locked=1;resizable=0;rotatable=0;image=data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;fill:#4D4D4D&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z&quot;/&gt;&lt;/svg&gt;;" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="12.945945945945823" y="1072.9459459459458" width="48" height="30" as="geometry"/>
       </mxCell>
     </icon>
     <UserObject label="" tags="pb:connected" id="qtQDcBWfuGXGn3dwjsCXFj">
-      <mxCell style="html=1;strokeWidth=5;edgeStyle=isometricEdgeStyle" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="hvL8T7w9WtWiw1j3ZJpPDM" target="2vhtCpr8L9BtnRixeoz75z">
+      <mxCell style="html=1;strokeWidth=5;edgeStyle=isometricEdgeStyle" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="hvL8T7w9WtWiw1j3ZJpPDM" target="2vhtCpr8L9BtnRixeoz75z">
         <mxGeometry relative="1" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="gntHhp8918yNFgNNY1uneh">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="13" y="1389" width="16" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
-    <mxCell id="uQmfj8KApQT2DSZHMZC8x2" style="edgeStyle=isometricEdgeStyle;html=1;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="gntHhp8918yNFgNNY1uneh" target="c28zhmg7Dm193ihXDkwh5o">
+    <mxCell id="uQmfj8KApQT2DSZHMZC8x2" style="edgeStyle=isometricEdgeStyle;html=1;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="gntHhp8918yNFgNNY1uneh" target="c28zhmg7Dm193ihXDkwh5o">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="nDEVwLNQFmQmKtJoyStBxb">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="17" y="789" width="16" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
-    <mxCell id="7xbQ9zvgqsjSqnkUDtdAhy" style="edgeStyle=isometricEdgeStyle;html=1;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="nDEVwLNQFmQmKtJoyStBxb" target="eAG5Hy8vBx7kyuvQB2e6jV">
+    <mxCell id="7xbQ9zvgqsjSqnkUDtdAhy" style="edgeStyle=isometricEdgeStyle;html=1;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="nDEVwLNQFmQmKtJoyStBxb" target="eAG5Hy8vBx7kyuvQB2e6jV">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <UserObject label="Organizer" tags="pb:connected,pb:lanehandle" id="sVCgfKRjieHSoWpq5hcXgt">
-      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="10" y="589" width="182" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="Planning" tags="pb:connected,pb:lanehandle" id="bBn9GecEye6WkJDyzRR9W1">
-      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="10" y="1189" width="166" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="" tags="pb:connected,pb:lanehandle,pb:apilabel,pb:ethidden" id="hhywoa3q4wwDJoohrgch5c">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0;fillColor=transparent;" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0;fillColor=transparent;" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="9.95945945945914" y="895" width="1" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="9URquXfh1zatYVhSFd2zCy">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="17" y="489" width="16" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
-    <mxCell id="t1qTcmekUsrorLfeN5DH8P" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="9URquXfh1zatYVhSFd2zCy" target="gsXEBUnT24GbtbvhEfyLy6">
+    <mxCell id="t1qTcmekUsrorLfeN5DH8P" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="9URquXfh1zatYVhSFd2zCy" target="gsXEBUnT24GbtbvhEfyLy6">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <UserObject label="Attendee" tags="pb:connected,pb:lanehandle" id="qrzo9CFtMeLLVtmGLKsMyG">
-      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="10" y="289" width="182" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="chhqedZb3XQtjeNKYE4Lt7">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="13" y="1689" width="16" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
-    <mxCell id="5x2H9h22xrc5wEm6XA9cqC" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="chhqedZb3XQtjeNKYE4Lt7" target="jWb2NFxUNnEsxFyCFJZqt6">
+    <mxCell id="5x2H9h22xrc5wEm6XA9cqC" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="chhqedZb3XQtjeNKYE4Lt7" target="jWb2NFxUNnEsxFyCFJZqt6">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <UserObject label="Registration" tags="pb:connected,pb:lanehandle" id="kUf6EedGBDWCk5F3eixZ3u">
-      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="10" y="1489" width="214" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:lanehandle,pb:ethidden" id="i6hEd1b87S6nJg3FP2m7TB">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="13" y="1989" width="16" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
-    <mxCell id="7mFVxz5fH1nzBQ1HsxgijS" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM" source="i6hEd1b87S6nJg3FP2m7TB" target="tgS4Pa7PS1DbfGFnReUnVA">
+    <mxCell id="7mFVxz5fH1nzBQ1HsxgijS" value="" style="edgeStyle=isometricEdgeStyle;html=1;startArrow=none;endArrow=none;strokeWidth=2;strokeColor=#bababa;" edge="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM" source="i6hEd1b87S6nJg3FP2m7TB" target="tgS4Pa7PS1DbfGFnReUnVA">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <UserObject label="Topics" tags="pb:connected,pb:lanehandle" id="epHVwoUYwpbRpkjrtmafqf">
-      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;fontSize=24;fontColor=#4d4d4d;fontStyle=1;align=left;" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="10" y="1789" width="214" height="100" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="2vhtCpr8L9BtnRixeoz75z">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="2160" y="1033" width="20" height="112" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="c28zhmg7Dm193ihXDkwh5o">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="2160" y="1389" width="20" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="eAG5Hy8vBx7kyuvQB2e6jV">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="2160" y="789" width="20" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="gsXEBUnT24GbtbvhEfyLy6">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="2160" y="489" width="20" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="jWb2NFxUNnEsxFyCFJZqt6">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="2160" y="1689" width="20" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
     <UserObject label="&amp;nbsp;" tags="pb:timehandle,pb:ethidden" id="tgS4Pa7PS1DbfGFnReUnVA">
-      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="1" parent="uDA9cBPNxmgyjTzLrGdqjM">
+      <mxCell style="freeText;locked=1;resizable=0;rotatable=0" vertex="1" tempVisible="0" parent="uDA9cBPNxmgyjTzLrGdqjM">
         <mxGeometry x="2160" y="1989" width="20" height="12" as="geometry"/>
       </mxCell>
     </UserObject>
@@ -675,7 +675,7 @@
     <mxCell id="eNBcCpBeHYfDJQycX49RPD" style="curved=1;html=1;" edge="1" tempVisible="1" parent="pHP62E8YabXKUpo8xQ3xYk" source="98DQ13Wwj5r4E4FtwbDJUY" target="4zYc2odnMjNSc4HR5Dzdne">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <command label="Vote" type="command" metadata="{&#xa;  &quot;aggregateCommand&quot;: false,&#xa;  &quot;newAggregate&quot;: false,&#xa;  &quot;dependencies&quot;: {&#xa;    &quot;OpenSpace.GetOpenSpace&quot;: {&#xa;      &quot;type&quot;: &quot;query&quot;,&#xa;      &quot;alias&quot;: &quot;openSpace&quot;&#xa;    },&#xa;    &quot;votedEvents&quot;: {&#xa;      &quot;type&quot;: &quot;events&quot;,&#xa;      &quot;options&quot;: {&#xa;        &quot;match&quot;: {&#xa;          &quot;$eventName&quot;: &quot;[&#39;OpenSpace.TopicVoted&#39;]&quot;,&#xa;          &quot;attendee&quot;: &quot;meta.user.userId&quot;&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:description&quot;: &quot;You&#39;ll receive a notification when voting limit is reached.&quot;,&#xa;    &quot;ui:button&quot;: {&#xa;      &quot;hidden&quot;: &quot;!page|data(&#39;/App/AttendeeInfo&#39;, {isRegistered: false}).isRegistered&quot;,&#xa;      &quot;disabled&quot;: &quot;page|data(&#39;/App/OpenSpace&#39;, {votingLimit: 0}).votingLimit &lt;= count(page|data(&#39;/App/MyVotes&#39;, []))&quot;&#xa;    },&#xa;    &quot;topicId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;openSpaceId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    }&#xa;  },&#xa;  &quot;schema&quot;: {&#xa;    &quot;topicId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;rules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;condition&quot;,&#xa;      &quot;if&quot;: &quot;openSpace.votingLimit &lt;= count(votedEvents)&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;throw&quot;: {&#xa;          &quot;error&quot;: &quot;&#39;Voting Limit is reached&#39;&quot;&#xa;        }&#xa;      }&#xa;    },&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;record&quot;: {&#xa;          &quot;event&quot;: &quot;Topic Voted&quot;,&#xa;          &quot;mapping&quot;: {&#xa;            &quot;$merge&quot;: &quot;command&quot;,&#xa;            &quot;attendee&quot;: &quot;meta.user.userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ],&#xa;  &quot;streamId&quot;: &quot;command.openSpaceId + &#39;_&#39; + meta.user.userId&quot;&#xa;}" tags="pb:connected" id="98DQ13Wwj5r4E4FtwbDJUY">
+    <command label="Vote" type="command" metadata="{&#xa;  &quot;aggregateCommand&quot;: false,&#xa;  &quot;newAggregate&quot;: false,&#xa;  &quot;dependencies&quot;: {&#xa;    &quot;OpenSpace.GetOpenSpace&quot;: {&#xa;      &quot;type&quot;: &quot;query&quot;,&#xa;      &quot;alias&quot;: &quot;openSpace&quot;&#xa;    },&#xa;    &quot;votedEvents&quot;: {&#xa;      &quot;type&quot;: &quot;events&quot;,&#xa;      &quot;options&quot;: {&#xa;        &quot;match&quot;: {&#xa;          &quot;$eventName&quot;: &quot;[&#39;OpenSpace.TopicVoted&#39;]&quot;,&#xa;          &quot;attendee&quot;: &quot;meta.user.userId&quot;,&#xa;          &quot;openSpaceId&quot;: &quot;command.openSpaceId&quot;&#xa;        }&#xa;      }&#xa;    }&#xa;  },&#xa;  &quot;uiSchema&quot;: {&#xa;    &quot;ui:description&quot;: &quot;You&#39;ll receive a notification when voting limit is reached.&quot;,&#xa;    &quot;ui:button&quot;: {&#xa;      &quot;hidden&quot;: &quot;!page|data(&#39;/App/AttendeeInfo&#39;, {isRegistered: false}).isRegistered&quot;,&#xa;      &quot;disabled&quot;: &quot;page|data(&#39;/App/OpenSpace&#39;, {votingLimit: 0}).votingLimit &lt;= count(page|data(&#39;/App/MyVotes&#39;, []))&quot;&#xa;    },&#xa;    &quot;topicId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    },&#xa;    &quot;openSpaceId&quot;: {&#xa;      &quot;ui:widget&quot;: &quot;hidden&quot;&#xa;    }&#xa;  },&#xa;  &quot;schema&quot;: {&#xa;    &quot;topicId&quot;: &quot;string|format:uuid&quot;,&#xa;    &quot;openSpaceId&quot;: &quot;string|format:uuid&quot;&#xa;  },&#xa;  &quot;rules&quot;: [&#xa;    {&#xa;      &quot;rule&quot;: &quot;condition&quot;,&#xa;      &quot;if&quot;: &quot;openSpace.votingLimit &lt;= count(votedEvents)&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;throw&quot;: {&#xa;          &quot;error&quot;: &quot;&#39;Voting Limit is reached&#39;&quot;&#xa;        }&#xa;      }&#xa;    },&#xa;    {&#xa;      &quot;rule&quot;: &quot;always&quot;,&#xa;      &quot;then&quot;: {&#xa;        &quot;record&quot;: {&#xa;          &quot;event&quot;: &quot;Topic Voted&quot;,&#xa;          &quot;mapping&quot;: {&#xa;            &quot;$merge&quot;: &quot;command&quot;,&#xa;            &quot;attendee&quot;: &quot;meta.user.userId&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  ],&#xa;  &quot;streamId&quot;: &quot;command.openSpaceId + &#39;_&#39; + meta.user.userId&quot;&#xa;}" tags="pb:connected" id="98DQ13Wwj5r4E4FtwbDJUY">
       <mxCell style="command" vertex="1" tempVisible="1" parent="pHP62E8YabXKUpo8xQ3xYk">
         <mxGeometry x="1048" y="876.9999999999999" width="160" height="100" as="geometry"/>
       </mxCell>
