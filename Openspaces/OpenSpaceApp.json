@@ -66,23 +66,9 @@
         "userId": "8924ac40-68a4-4203-83b2-72a1e5df81f6"
       }
     ],
-    "pages": {
-      "Dashboard": {
-        "service": "CrmTest",
-        "commands": [],
-        "components": [
-          "Core.Welcome"
-        ],
-        "sidebar": {
-          "label": "Dashboard",
-          "icon": "ViewDashboard",
-          "position": -1
-        },
-        "route": "/dashboard",
-        "topLevel": true,
-        "breadcrumb": "Dashboard"
-      },
+    "pages": {      
       "OpenSpaceApp.OpenSpacePlanning": {
+        "name": "OpenSpaceApp.OpenSpacePlanning",
         "service": "OpenSpaceApp",
         "route": "/open-space-app/open-space-planning",
         "commands": [
@@ -101,6 +87,7 @@
         "breadcrumb": "Open Space Planning"
       },
       "OpenSpaceApp.OpenSpaces": {
+        "name": "OpenSpaceApp.OpenSpaces",
         "service": "OpenSpaceApp",
         "route": "/open-space-app/open-spaces",
         "commands": [],
@@ -116,6 +103,7 @@
         "breadcrumb": "Open Spaces"
       },
       "OpenSpaceApp.OpenSpaceInfo": {
+        "name": "OpenSpaceApp.OpenSpaceInfo",
         "service": "OpenSpaceApp",
         "route": "/open-space-app/open-spaces/:openSpaceId",
         "routeParams": [
@@ -137,6 +125,7 @@
         }
       },
       "OpenSpaceApp.Voting": {
+        "name": "OpenSpaceApp.Voting",
         "service": "OpenSpaceApp",
         "route": "/open-space-app/open-spaces/:openSpaceId/attendee/:attendeeId",
         "routeParams": [
