@@ -67,22 +67,9 @@
       }
     ],
     "pages": {
-      "Dashboard": {
-        "service": "CrmTest",
-        "commands": [],
-        "components": [
-          "Core.Welcome"
-        ],
-        "sidebar": {
-          "label": "Dashboard",
-          "icon": "ViewDashboard",
-          "position": -1
-        },
-        "route": "/dashboard",
-        "topLevel": true,
-        "breadcrumb": "Dashboard"
-      },
+      
       "OpenSpace.Planning": {
+        "name": "OpenSpace.Planning",
         "service": "OpenSpace",
         "route": "/open-space/planning",
         "commands": [
@@ -101,6 +88,7 @@
         "breadcrumb": "Planning"
       },
       "OpenSpace.OpenSpaceSettings": {
+        "name": "OpenSpace.OpenSpaceSettings",
         "service": "OpenSpace",
         "route": "/open-space/planning/:openSpaceId",
         "routeParams": [
@@ -116,6 +104,7 @@
         "breadcrumb": "Open Space Settings"
       },
       "OpenSpace.OpenSpaces": {
+        "name": "OpenSpace.OpenSpaces",
         "service": "OpenSpace",
         "route": "/open-space/open-spaces",
         "commands": [],
@@ -131,6 +120,7 @@
         "breadcrumb": "Open Spaces"
       },
       "OpenSpace.OpenSpaceInfo": {
+        "name": "OpenSpace.OpenSpaceInfo",
         "service": "OpenSpace",
         "route": "/open-space/open-spaces/:openSpaceId/info",
         "routeParams": [
@@ -155,6 +145,7 @@
         }
       },
       "OpenSpace.Topics": {
+        "name": "OpenSpace.Topics",
         "service": "OpenSpace",
         "route": "/open-space/open-spaces/:openSpaceId/topics",
         "routeParams": [
@@ -182,6 +173,7 @@
         }
       },
       "OpenSpace.Topic": {
+        "name": "OpenSpace.Topic",
         "service": "OpenSpace",
         "route": "/open-space/open-spaces/:openSpaceId/topics/:topicId",
         "routeParams": [
@@ -213,6 +205,7 @@
         }
       },
       "OpenSpace.Notifications": {
+        "name": "OpenSpace.Notifications",
         "service": "OpenSpace",
         "route": "/open-space/notifications",
         "commands": [],
